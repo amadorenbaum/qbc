@@ -1,0 +1,149 @@
+DECLARE SUB explosion ()
+DECLARE SUB super ()
+CLS
+SCREEN 13
+COLOR 14
+LOCATE 10, 1
+PRINT " Ultimo Nivel, (esta vez de verdad)"
+SLEEP
+COLOR 10
+CLS
+LOCATE 10, 1
+PRINT " Demon:_ Jet ha encontrado todos los cristales."
+SLEEP
+PRINT
+PRINT " Fobos:_ Zombie ha sido vencido."
+SLEEP
+PRINT
+PRINT " Demon:_ Debemos vengarnos."
+SLEEP
+PRINT
+PRINT " Deimos:_ Si, por nuestro hermano . . ."
+SLEEP
+CLS
+LOCATE 10, 1
+PRINT " Deimos:_         ­­­Zombie!!!"
+DO
+LOOP UNTIL INKEY$ = CHR$(13)
+CLS
+COLOR 4
+PRINT " Jet:_ Soy Super Jet, est n muertos hermanos de Zombie..."
+SLEEP
+CLS
+PRINT " Jet:_ Ahora los cinco cristales est n juntos en un solo cristal"
+SLEEP
+CLS
+PRINT " Jet:_ Y junto a Jettecdif y Laura"
+SLEEP
+CLS
+PRINT "Jet:_ Los vencer‚!!!"
+SLEEP
+CLS
+explosion
+CLS
+COLOR 14
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT "     Ahora si, Jet ha ganado "
+PRINT
+PRINT
+PRINT
+PRINT "  Autor de truco especial: Pablo Barenbaum"
+PRINT
+PRINT
+PRINT "   Trucos del Juego"
+PRINT
+PRINT "        Sjet2  =  M s vidas, energ¡a, tiempo y disparos"
+PRINT "        Sec    =  Personajes secretos"
+PRINT "        Sup    =  Jet -> SuperJet"
+PRINT "        X      =  Pasar de Nivel"
+PRINT "        V      =  Vidas Infinitas"
+PRINT "        En     =  Energ¡a Infinita"
+PRINT "        Tm     =  Tiempo Infinito"
+PRINT "        A      =  Balas Infinitas"
+PRINT "        M      =  Todas las Monedas"
+PRINT
+PRINT
+PRINT "        Episodio 4"
+PRINT
+PRINT "           W = Fase especial"
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT "   Passwords:"
+PRINT "          210AMA21JET2"
+PRINT "          310AMA22JET2"
+PRINT "          410AMA23JET2"
+PRINT "          510AMA24JET2"
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT "      Ahora si . . ."
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT "     JUEGO TERMINADO."
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT "      Amadorenbaum Company© (C)"
+PRINT
+PRINT " Inc. Todos los derechos reservados"
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT "                1997"
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+super
+RUN "MENU.000"
+
+SUB explosion
+SCREEN 13
+FOR i = 0 TO 100
+PAINT (100, 100), i
+PLAY "p60"
+NEXT i
+END SUB
+
+SUB super
+SCREEN 13
+FOR i = 14 TO 30
+PAINT (100, 100), i
+NEXT i
+END SUB
+

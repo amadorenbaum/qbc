@@ -1,0 +1,1995 @@
+<html>
+  <head>
+    <script type='text/javascript' src='../runtime/utilities.js'></script>
+    <script type='text/javascript' src='../runtime/error_handling.js'></script>
+    <script type='text/javascript' src='../runtime/types.js'></script>
+    <script type='text/javascript' src='../runtime/rng.js'></script>
+    <script type='text/javascript' src='../runtime/palette.js'></script>
+    
+	<script type='text/javascript' src='../runtime/fonts/screen0.js'></script>
+
+    <script type='text/javascript' src='../runtime/screen.js'></script>
+    <script type='text/javascript' src='../runtime/base64.js'></script>
+    <script type='text/javascript' src='../runtime/input.js'></script>
+    <script type='text/javascript' src='../runtime/builtins.js'></script>
+    <script type='text/javascript' src='../runtime/vm.js'></script>
+    <script type='text/javascript'>
+      function init() {
+
+        var screen_container = document.getElementById('screen_container');
+        var errmsg_container = document.getElementById('errmsg_container');
+		var shared = {"verb$": 1,"rar$": 1,"sust$": 1,"art$": 1,"lug$": 1,"adj$": 1};
+		
+
+		
+		var L1 = 0; /* POESIA.BAS:_main */
+		var L2 = 515; /* POESIA.BAS:errenedea:start */
+		var L3 = 52; /* $IF:1 */
+		var L4 = 52; /* $IF:END */
+		var L5 = 64; /* $IF:1 */
+		var L6 = 64; /* $IF:END */
+		var L7 = 76; /* $IF:1 */
+		var L8 = 76; /* $IF:END */
+		var L9 = 88; /* $IF:1 */
+		var L10 = 88; /* $IF:END */
+		var L11 = 95; /* $IF:1 */
+		var L12 = 95; /* $IF:END */
+		var L13 = 101; /* $IF:1 */
+		var L14 = 101; /* $IF:END */
+		var L15 = 107; /* $IF:1 */
+		var L16 = 107; /* $IF:END */
+		var L17 = 113; /* $IF:1 */
+		var L18 = 113; /* $IF:END */
+		var L19 = 141; /* $IF:1 */
+		var L20 = 141; /* $IF:END */
+		var L21 = 153; /* $IF:1 */
+		var L22 = 153; /* $IF:END */
+		var L23 = 165; /* $IF:1 */
+		var L24 = 165; /* $IF:END */
+		var L25 = 177; /* $IF:1 */
+		var L26 = 177; /* $IF:END */
+		var L27 = 184; /* $IF:1 */
+		var L28 = 184; /* $IF:END */
+		var L29 = 190; /* $IF:1 */
+		var L30 = 190; /* $IF:END */
+		var L31 = 196; /* $IF:1 */
+		var L32 = 196; /* $IF:END */
+		var L33 = 202; /* $IF:1 */
+		var L34 = 202; /* $IF:END */
+		var L35 = 232; /* $IF:1 */
+		var L36 = 232; /* $IF:END */
+		var L37 = 244; /* $IF:1 */
+		var L38 = 244; /* $IF:END */
+		var L39 = 256; /* $IF:1 */
+		var L40 = 256; /* $IF:END */
+		var L41 = 268; /* $IF:1 */
+		var L42 = 268; /* $IF:END */
+		var L43 = 281; /* $IF:1 */
+		var L44 = 281; /* $IF:END */
+		var L45 = 287; /* $IF:1 */
+		var L46 = 287; /* $IF:END */
+		var L47 = 293; /* $IF:1 */
+		var L48 = 293; /* $IF:END */
+		var L49 = 299; /* $IF:1 */
+		var L50 = 299; /* $IF:END */
+		var L51 = 348; /* $IF:1 */
+		var L52 = 348; /* $IF:END */
+		var L53 = 360; /* $IF:1 */
+		var L54 = 360; /* $IF:END */
+		var L55 = 372; /* $IF:1 */
+		var L56 = 372; /* $IF:END */
+		var L57 = 384; /* $IF:1 */
+		var L58 = 384; /* $IF:END */
+		var L59 = 391; /* $IF:1 */
+		var L60 = 391; /* $IF:END */
+		var L61 = 397; /* $IF:1 */
+		var L62 = 397; /* $IF:END */
+		var L63 = 403; /* $IF:1 */
+		var L64 = 403; /* $IF:END */
+		var L65 = 409; /* $IF:1 */
+		var L66 = 409; /* $IF:END */
+		var L67 = 437; /* $IF:1 */
+		var L68 = 437; /* $IF:END */
+		var L69 = 449; /* $IF:1 */
+		var L70 = 449; /* $IF:END */
+		var L71 = 461; /* $IF:1 */
+		var L72 = 461; /* $IF:END */
+		var L73 = 473; /* $IF:1 */
+		var L74 = 473; /* $IF:END */
+		var L75 = 480; /* $IF:1 */
+		var L76 = 480; /* $IF:END */
+		var L77 = 486; /* $IF:1 */
+		var L78 = 486; /* $IF:END */
+		var L79 = 492; /* $IF:1 */
+		var L80 = 492; /* $IF:END */
+		var L81 = 498; /* $IF:1 */
+		var L82 = 498; /* $IF:END */
+		var L83 = 1534; /* POESIA.BAS:errenedea:end */
+		var L84 = 531; /* $IF:1 */
+		var L85 = 531; /* $IF:END */
+		var L86 = 537; /* $IF:1 */
+		var L87 = 537; /* $IF:END */
+		var L88 = 543; /* $IF:1 */
+		var L89 = 543; /* $IF:END */
+		var L90 = 549; /* $IF:1 */
+		var L91 = 549; /* $IF:END */
+		var L92 = 555; /* $IF:1 */
+		var L93 = 555; /* $IF:END */
+		var L94 = 561; /* $IF:1 */
+		var L95 = 561; /* $IF:END */
+		var L96 = 567; /* $IF:1 */
+		var L97 = 567; /* $IF:END */
+		var L98 = 573; /* $IF:1 */
+		var L99 = 573; /* $IF:END */
+		var L100 = 579; /* $IF:1 */
+		var L101 = 579; /* $IF:END */
+		var L102 = 585; /* $IF:1 */
+		var L103 = 585; /* $IF:END */
+		var L104 = 591; /* $IF:1 */
+		var L105 = 591; /* $IF:END */
+		var L106 = 597; /* $IF:1 */
+		var L107 = 597; /* $IF:END */
+		var L108 = 610; /* $IF:1 */
+		var L109 = 610; /* $IF:END */
+		var L110 = 616; /* $IF:1 */
+		var L111 = 616; /* $IF:END */
+		var L112 = 622; /* $IF:1 */
+		var L113 = 622; /* $IF:END */
+		var L114 = 628; /* $IF:1 */
+		var L115 = 628; /* $IF:END */
+		var L116 = 634; /* $IF:1 */
+		var L117 = 634; /* $IF:END */
+		var L118 = 640; /* $IF:1 */
+		var L119 = 640; /* $IF:END */
+		var L120 = 646; /* $IF:1 */
+		var L121 = 646; /* $IF:END */
+		var L122 = 652; /* $IF:1 */
+		var L123 = 652; /* $IF:END */
+		var L124 = 658; /* $IF:1 */
+		var L125 = 658; /* $IF:END */
+		var L126 = 664; /* $IF:1 */
+		var L127 = 664; /* $IF:END */
+		var L128 = 670; /* $IF:1 */
+		var L129 = 670; /* $IF:END */
+		var L130 = 676; /* $IF:1 */
+		var L131 = 676; /* $IF:END */
+		var L132 = 682; /* $IF:1 */
+		var L133 = 682; /* $IF:END */
+		var L134 = 688; /* $IF:1 */
+		var L135 = 688; /* $IF:END */
+		var L136 = 694; /* $IF:1 */
+		var L137 = 694; /* $IF:END */
+		var L138 = 700; /* $IF:1 */
+		var L139 = 700; /* $IF:END */
+		var L140 = 706; /* $IF:1 */
+		var L141 = 706; /* $IF:END */
+		var L142 = 712; /* $IF:1 */
+		var L143 = 712; /* $IF:END */
+		var L144 = 718; /* $IF:1 */
+		var L145 = 718; /* $IF:END */
+		var L146 = 724; /* $IF:1 */
+		var L147 = 724; /* $IF:END */
+		var L148 = 730; /* $IF:1 */
+		var L149 = 730; /* $IF:END */
+		var L150 = 736; /* $IF:1 */
+		var L151 = 736; /* $IF:END */
+		var L152 = 742; /* $IF:1 */
+		var L153 = 742; /* $IF:END */
+		var L154 = 748; /* $IF:1 */
+		var L155 = 748; /* $IF:END */
+		var L156 = 754; /* $IF:1 */
+		var L157 = 754; /* $IF:END */
+		var L158 = 760; /* $IF:1 */
+		var L159 = 760; /* $IF:END */
+		var L160 = 766; /* $IF:1 */
+		var L161 = 766; /* $IF:END */
+		var L162 = 772; /* $IF:1 */
+		var L163 = 772; /* $IF:END */
+		var L164 = 778; /* $IF:1 */
+		var L165 = 778; /* $IF:END */
+		var L166 = 784; /* $IF:1 */
+		var L167 = 784; /* $IF:END */
+		var L168 = 790; /* $IF:1 */
+		var L169 = 790; /* $IF:END */
+		var L170 = 796; /* $IF:1 */
+		var L171 = 796; /* $IF:END */
+		var L172 = 802; /* $IF:1 */
+		var L173 = 802; /* $IF:END */
+		var L174 = 808; /* $IF:1 */
+		var L175 = 808; /* $IF:END */
+		var L176 = 814; /* $IF:1 */
+		var L177 = 814; /* $IF:END */
+		var L178 = 820; /* $IF:1 */
+		var L179 = 820; /* $IF:END */
+		var L180 = 826; /* $IF:1 */
+		var L181 = 826; /* $IF:END */
+		var L182 = 832; /* $IF:1 */
+		var L183 = 832; /* $IF:END */
+		var L184 = 838; /* $IF:1 */
+		var L185 = 838; /* $IF:END */
+		var L186 = 844; /* $IF:1 */
+		var L187 = 844; /* $IF:END */
+		var L188 = 850; /* $IF:1 */
+		var L189 = 850; /* $IF:END */
+		var L190 = 856; /* $IF:1 */
+		var L191 = 856; /* $IF:END */
+		var L192 = 862; /* $IF:1 */
+		var L193 = 862; /* $IF:END */
+		var L194 = 868; /* $IF:1 */
+		var L195 = 868; /* $IF:END */
+		var L196 = 874; /* $IF:1 */
+		var L197 = 874; /* $IF:END */
+		var L198 = 887; /* $IF:1 */
+		var L199 = 887; /* $IF:END */
+		var L200 = 893; /* $IF:1 */
+		var L201 = 893; /* $IF:END */
+		var L202 = 899; /* $IF:1 */
+		var L203 = 899; /* $IF:END */
+		var L204 = 905; /* $IF:1 */
+		var L205 = 905; /* $IF:END */
+		var L206 = 911; /* $IF:1 */
+		var L207 = 911; /* $IF:END */
+		var L208 = 917; /* $IF:1 */
+		var L209 = 917; /* $IF:END */
+		var L210 = 923; /* $IF:1 */
+		var L211 = 923; /* $IF:END */
+		var L212 = 929; /* $IF:1 */
+		var L213 = 929; /* $IF:END */
+		var L214 = 935; /* $IF:1 */
+		var L215 = 935; /* $IF:END */
+		var L216 = 941; /* $IF:1 */
+		var L217 = 941; /* $IF:END */
+		var L218 = 947; /* $IF:1 */
+		var L219 = 947; /* $IF:END */
+		var L220 = 953; /* $IF:1 */
+		var L221 = 953; /* $IF:END */
+		var L222 = 959; /* $IF:1 */
+		var L223 = 959; /* $IF:END */
+		var L224 = 965; /* $IF:1 */
+		var L225 = 965; /* $IF:END */
+		var L226 = 971; /* $IF:1 */
+		var L227 = 971; /* $IF:END */
+		var L228 = 977; /* $IF:1 */
+		var L229 = 977; /* $IF:END */
+		var L230 = 983; /* $IF:1 */
+		var L231 = 983; /* $IF:END */
+		var L232 = 989; /* $IF:1 */
+		var L233 = 989; /* $IF:END */
+		var L234 = 995; /* $IF:1 */
+		var L235 = 995; /* $IF:END */
+		var L236 = 1001; /* $IF:1 */
+		var L237 = 1001; /* $IF:END */
+		var L238 = 1007; /* $IF:1 */
+		var L239 = 1007; /* $IF:END */
+		var L240 = 1013; /* $IF:1 */
+		var L241 = 1013; /* $IF:END */
+		var L242 = 1019; /* $IF:1 */
+		var L243 = 1019; /* $IF:END */
+		var L244 = 1025; /* $IF:1 */
+		var L245 = 1025; /* $IF:END */
+		var L246 = 1031; /* $IF:1 */
+		var L247 = 1031; /* $IF:END */
+		var L248 = 1037; /* $IF:1 */
+		var L249 = 1037; /* $IF:END */
+		var L250 = 1043; /* $IF:1 */
+		var L251 = 1043; /* $IF:END */
+		var L252 = 1049; /* $IF:1 */
+		var L253 = 1049; /* $IF:END */
+		var L254 = 1055; /* $IF:1 */
+		var L255 = 1055; /* $IF:END */
+		var L256 = 1061; /* $IF:1 */
+		var L257 = 1061; /* $IF:END */
+		var L258 = 1067; /* $IF:1 */
+		var L259 = 1067; /* $IF:END */
+		var L260 = 1073; /* $IF:1 */
+		var L261 = 1073; /* $IF:END */
+		var L262 = 1079; /* $IF:1 */
+		var L263 = 1079; /* $IF:END */
+		var L264 = 1092; /* $IF:1 */
+		var L265 = 1092; /* $IF:END */
+		var L266 = 1098; /* $IF:1 */
+		var L267 = 1098; /* $IF:END */
+		var L268 = 1104; /* $IF:1 */
+		var L269 = 1104; /* $IF:END */
+		var L270 = 1110; /* $IF:1 */
+		var L271 = 1110; /* $IF:END */
+		var L272 = 1116; /* $IF:1 */
+		var L273 = 1116; /* $IF:END */
+		var L274 = 1122; /* $IF:1 */
+		var L275 = 1122; /* $IF:END */
+		var L276 = 1128; /* $IF:1 */
+		var L277 = 1128; /* $IF:END */
+		var L278 = 1134; /* $IF:1 */
+		var L279 = 1134; /* $IF:END */
+		var L280 = 1140; /* $IF:1 */
+		var L281 = 1140; /* $IF:END */
+		var L282 = 1146; /* $IF:1 */
+		var L283 = 1146; /* $IF:END */
+		var L284 = 1152; /* $IF:1 */
+		var L285 = 1152; /* $IF:END */
+		var L286 = 1158; /* $IF:1 */
+		var L287 = 1158; /* $IF:END */
+		var L288 = 1164; /* $IF:1 */
+		var L289 = 1164; /* $IF:END */
+		var L290 = 1170; /* $IF:1 */
+		var L291 = 1170; /* $IF:END */
+		var L292 = 1176; /* $IF:1 */
+		var L293 = 1176; /* $IF:END */
+		var L294 = 1182; /* $IF:1 */
+		var L295 = 1182; /* $IF:END */
+		var L296 = 1188; /* $IF:1 */
+		var L297 = 1188; /* $IF:END */
+		var L298 = 1194; /* $IF:1 */
+		var L299 = 1194; /* $IF:END */
+		var L300 = 1200; /* $IF:1 */
+		var L301 = 1200; /* $IF:END */
+		var L302 = 1206; /* $IF:1 */
+		var L303 = 1206; /* $IF:END */
+		var L304 = 1212; /* $IF:1 */
+		var L305 = 1212; /* $IF:END */
+		var L306 = 1218; /* $IF:1 */
+		var L307 = 1218; /* $IF:END */
+		var L308 = 1224; /* $IF:1 */
+		var L309 = 1224; /* $IF:END */
+		var L310 = 1230; /* $IF:1 */
+		var L311 = 1230; /* $IF:END */
+		var L312 = 1236; /* $IF:1 */
+		var L313 = 1236; /* $IF:END */
+		var L314 = 1242; /* $IF:1 */
+		var L315 = 1242; /* $IF:END */
+		var L316 = 1248; /* $IF:1 */
+		var L317 = 1248; /* $IF:END */
+		var L318 = 1254; /* $IF:1 */
+		var L319 = 1254; /* $IF:END */
+		var L320 = 1260; /* $IF:1 */
+		var L321 = 1260; /* $IF:END */
+		var L322 = 1266; /* $IF:1 */
+		var L323 = 1266; /* $IF:END */
+		var L324 = 1272; /* $IF:1 */
+		var L325 = 1272; /* $IF:END */
+		var L326 = 1278; /* $IF:1 */
+		var L327 = 1278; /* $IF:END */
+		var L328 = 1284; /* $IF:1 */
+		var L329 = 1284; /* $IF:END */
+		var L330 = 1290; /* $IF:1 */
+		var L331 = 1290; /* $IF:END */
+		var L332 = 1296; /* $IF:1 */
+		var L333 = 1296; /* $IF:END */
+		var L334 = 1302; /* $IF:1 */
+		var L335 = 1302; /* $IF:END */
+		var L336 = 1308; /* $IF:1 */
+		var L337 = 1308; /* $IF:END */
+		var L338 = 1314; /* $IF:1 */
+		var L339 = 1314; /* $IF:END */
+		var L340 = 1320; /* $IF:1 */
+		var L341 = 1320; /* $IF:END */
+		var L342 = 1326; /* $IF:1 */
+		var L343 = 1326; /* $IF:END */
+		var L344 = 1332; /* $IF:1 */
+		var L345 = 1332; /* $IF:END */
+		var L346 = 1338; /* $IF:1 */
+		var L347 = 1338; /* $IF:END */
+		var L348 = 1344; /* $IF:1 */
+		var L349 = 1344; /* $IF:END */
+		var L350 = 1350; /* $IF:1 */
+		var L351 = 1350; /* $IF:END */
+		var L352 = 1363; /* $IF:1 */
+		var L353 = 1363; /* $IF:END */
+		var L354 = 1369; /* $IF:1 */
+		var L355 = 1369; /* $IF:END */
+		var L356 = 1375; /* $IF:1 */
+		var L357 = 1375; /* $IF:END */
+		var L358 = 1381; /* $IF:1 */
+		var L359 = 1381; /* $IF:END */
+		var L360 = 1387; /* $IF:1 */
+		var L361 = 1387; /* $IF:END */
+		var L362 = 1393; /* $IF:1 */
+		var L363 = 1393; /* $IF:END */
+		var L364 = 1399; /* $IF:1 */
+		var L365 = 1399; /* $IF:END */
+		var L366 = 1405; /* $IF:1 */
+		var L367 = 1405; /* $IF:END */
+		var L368 = 1411; /* $IF:1 */
+		var L369 = 1411; /* $IF:END */
+		var L370 = 1417; /* $IF:1 */
+		var L371 = 1417; /* $IF:END */
+		var L372 = 1423; /* $IF:1 */
+		var L373 = 1423; /* $IF:END */
+		var L374 = 1429; /* $IF:1 */
+		var L375 = 1429; /* $IF:END */
+		var L376 = 1442; /* $IF:1 */
+		var L377 = 1442; /* $IF:END */
+		var L378 = 1448; /* $IF:1 */
+		var L379 = 1448; /* $IF:END */
+		var L380 = 1454; /* $IF:1 */
+		var L381 = 1454; /* $IF:END */
+		var L382 = 1460; /* $IF:1 */
+		var L383 = 1460; /* $IF:END */
+		var L384 = 1466; /* $IF:1 */
+		var L385 = 1466; /* $IF:END */
+		var L386 = 1472; /* $IF:1 */
+		var L387 = 1472; /* $IF:END */
+		var L388 = 1478; /* $IF:1 */
+		var L389 = 1478; /* $IF:END */
+		var L390 = 1484; /* $IF:1 */
+		var L391 = 1484; /* $IF:END */
+		var L392 = 1490; /* $IF:1 */
+		var L393 = 1490; /* $IF:END */
+		var L394 = 1496; /* $IF:1 */
+		var L395 = 1496; /* $IF:END */
+		var L396 = 1502; /* $IF:1 */
+		var L397 = 1502; /* $IF:END */
+		var L398 = 1508; /* $IF:1 */
+		var L399 = 1508; /* $IF:END */
+		var L400 = 1514; /* $IF:1 */
+		var L401 = 1514; /* $IF:END */
+		var L402 = 1520; /* $IF:1 */
+		var L403 = 1520; /* $IF:END */
+		var L404 = 1526; /* $IF:1 */
+		var L405 = 1526; /* $IF:END */
+		var L406 = 1532; /* $IF:1 */
+		var L407 = 1532; /* $IF:END */
+		var L408 = 1532; /* POESIA.BAS:errenedea:exit */
+        var code = [
+			new OpPushConstant("") /* :0 */,
+			new OpSetRef("art$") /* :1 */,
+			new OpPushConstant("") /* :2 */,
+			new OpSetRef("sust$") /* :3 */,
+			new OpPushConstant("") /* :4 */,
+			new OpSetRef("verb$") /* :5 */,
+			new OpPushConstant("") /* :6 */,
+			new OpSetRef("adj$") /* :7 */,
+			new OpPushConstant("") /* :8 */,
+			new OpSetRef("rar$") /* :9 */,
+			new OpPushConstant("") /* :10 */,
+			new OpSetRef("lug$") /* :11 */,
+			new OpPushConstant(10) /* :12 */,
+			new OpPushConstant(1) /* :13 */,
+			new OpCallPrimitiveStatement('COLOR', 2) /* :14 */,
+			new OpCallPrimitiveStatement('CLS', 0) /* :15 */,
+			new OpCallPrimitiveFunction('TIMER', 0) /* :16 */,
+			new OpCallPrimitiveStatement('RANDOMIZE', 1) /* :17 */,
+			new OpGosub(L2) /* :18 */,
+			new OpPushConstant("                     ") /* :19 */,
+			new OpGetRef("art$") /* :20 */,
+			new OpCallPrimitiveFunction('+', 2) /* :21 */,
+			new OpGetRef("verb$") /* :22 */,
+			new OpCallPrimitiveFunction('+', 2) /* :23 */,
+			new OpGetRef("sust$") /* :24 */,
+			new OpCallPrimitiveFunction('+', 2) /* :25 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :26 */,
+			new OpPushConstant("\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd") /* :27 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :28 */,
+			new OpPushConstant("") /* :29 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :30 */,
+			new OpGosub(L2) /* :31 */,
+			new OpGosub(L2) /* :32 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :33 */,
+			new OpPushConstant(4) /* :34 */,
+			new OpCallPrimitiveFunction('*', 2) /* :35 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :36 */,
+			new OpPushConstant(1) /* :37 */,
+			new OpCallPrimitiveFunction('+', 2) /* :38 */,
+			new OpSetRef("x") /* :39 */,
+			new OpGetRef("x") /* :40 */,
+			new OpPushConstant(1) /* :41 */,
+			new OpCallPrimitiveFunction('=', 2) /* :42 */,
+			new OpJumpIfFalse(L3) /* :43 */,
+			new OpGetRef("art$") /* :44 */,
+			new OpGetRef("sust$") /* :45 */,
+			new OpCallPrimitiveFunction('+', 2) /* :46 */,
+			new OpGetRef("verb$") /* :47 */,
+			new OpCallPrimitiveFunction('+', 2) /* :48 */,
+			new OpGetRef("adj$") /* :49 */,
+			new OpCallPrimitiveFunction('+', 2) /* :50 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :51 */,
+			new OpGetRef("x") /* :52 */,
+			new OpPushConstant(2) /* :53 */,
+			new OpCallPrimitiveFunction('=', 2) /* :54 */,
+			new OpJumpIfFalse(L5) /* :55 */,
+			new OpGetRef("art$") /* :56 */,
+			new OpGetRef("verb$") /* :57 */,
+			new OpCallPrimitiveFunction('+', 2) /* :58 */,
+			new OpGetRef("sust$") /* :59 */,
+			new OpCallPrimitiveFunction('+', 2) /* :60 */,
+			new OpGetRef("adj$") /* :61 */,
+			new OpCallPrimitiveFunction('+', 2) /* :62 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :63 */,
+			new OpGetRef("x") /* :64 */,
+			new OpPushConstant(3) /* :65 */,
+			new OpCallPrimitiveFunction('=', 2) /* :66 */,
+			new OpJumpIfFalse(L7) /* :67 */,
+			new OpGetRef("adj$") /* :68 */,
+			new OpGetRef("art$") /* :69 */,
+			new OpCallPrimitiveFunction('+', 2) /* :70 */,
+			new OpGetRef("sust$") /* :71 */,
+			new OpCallPrimitiveFunction('+', 2) /* :72 */,
+			new OpGetRef("verb$") /* :73 */,
+			new OpCallPrimitiveFunction('+', 2) /* :74 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :75 */,
+			new OpGetRef("x") /* :76 */,
+			new OpPushConstant(4) /* :77 */,
+			new OpCallPrimitiveFunction('=', 2) /* :78 */,
+			new OpJumpIfFalse(L9) /* :79 */,
+			new OpGetRef("adj$") /* :80 */,
+			new OpGetRef("art$") /* :81 */,
+			new OpCallPrimitiveFunction('+', 2) /* :82 */,
+			new OpGetRef("verb$") /* :83 */,
+			new OpCallPrimitiveFunction('+', 2) /* :84 */,
+			new OpGetRef("sust$") /* :85 */,
+			new OpCallPrimitiveFunction('+', 2) /* :86 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :87 */,
+			new OpGosub(L2) /* :88 */,
+			new OpGetRef("x") /* :89 */,
+			new OpPushConstant(1) /* :90 */,
+			new OpCallPrimitiveFunction('=', 2) /* :91 */,
+			new OpJumpIfFalse(L11) /* :92 */,
+			new OpPushConstant("MIENTRAS ") /* :93 */,
+			new OpSetRef("co$") /* :94 */,
+			new OpGetRef("x") /* :95 */,
+			new OpPushConstant(2) /* :96 */,
+			new OpCallPrimitiveFunction('=', 2) /* :97 */,
+			new OpJumpIfFalse(L13) /* :98 */,
+			new OpPushConstant("Y, ") /* :99 */,
+			new OpSetRef("co$") /* :100 */,
+			new OpGetRef("x") /* :101 */,
+			new OpPushConstant(3) /* :102 */,
+			new OpCallPrimitiveFunction('=', 2) /* :103 */,
+			new OpJumpIfFalse(L15) /* :104 */,
+			new OpPushConstant("ADEMAS ") /* :105 */,
+			new OpSetRef("co$") /* :106 */,
+			new OpGetRef("x") /* :107 */,
+			new OpPushConstant(4) /* :108 */,
+			new OpCallPrimitiveFunction('=', 2) /* :109 */,
+			new OpJumpIfFalse(L17) /* :110 */,
+			new OpPushConstant("TAMBIEN ") /* :111 */,
+			new OpSetRef("co$") /* :112 */,
+			new OpGetRef("art$") /* :113 */,
+			new OpGetRef("verb$") /* :114 */,
+			new OpCallPrimitiveFunction('+', 2) /* :115 */,
+			new OpGetRef("sust$") /* :116 */,
+			new OpCallPrimitiveFunction('+', 2) /* :117 */,
+			new OpGetRef("co$") /* :118 */,
+			new OpCallPrimitiveFunction('+', 2) /* :119 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :120 */,
+			new OpGosub(L2) /* :121 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :122 */,
+			new OpPushConstant(4) /* :123 */,
+			new OpCallPrimitiveFunction('*', 2) /* :124 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :125 */,
+			new OpPushConstant(1) /* :126 */,
+			new OpCallPrimitiveFunction('+', 2) /* :127 */,
+			new OpSetRef("x") /* :128 */,
+			new OpGetRef("x") /* :129 */,
+			new OpPushConstant(1) /* :130 */,
+			new OpCallPrimitiveFunction('=', 2) /* :131 */,
+			new OpJumpIfFalse(L19) /* :132 */,
+			new OpGetRef("art$") /* :133 */,
+			new OpGetRef("sust$") /* :134 */,
+			new OpCallPrimitiveFunction('+', 2) /* :135 */,
+			new OpGetRef("verb$") /* :136 */,
+			new OpCallPrimitiveFunction('+', 2) /* :137 */,
+			new OpGetRef("adj$") /* :138 */,
+			new OpCallPrimitiveFunction('+', 2) /* :139 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :140 */,
+			new OpGetRef("x") /* :141 */,
+			new OpPushConstant(2) /* :142 */,
+			new OpCallPrimitiveFunction('=', 2) /* :143 */,
+			new OpJumpIfFalse(L21) /* :144 */,
+			new OpGetRef("art$") /* :145 */,
+			new OpGetRef("verb$") /* :146 */,
+			new OpCallPrimitiveFunction('+', 2) /* :147 */,
+			new OpGetRef("sust$") /* :148 */,
+			new OpCallPrimitiveFunction('+', 2) /* :149 */,
+			new OpGetRef("adj$") /* :150 */,
+			new OpCallPrimitiveFunction('+', 2) /* :151 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :152 */,
+			new OpGetRef("x") /* :153 */,
+			new OpPushConstant(3) /* :154 */,
+			new OpCallPrimitiveFunction('=', 2) /* :155 */,
+			new OpJumpIfFalse(L23) /* :156 */,
+			new OpGetRef("adj$") /* :157 */,
+			new OpGetRef("art$") /* :158 */,
+			new OpCallPrimitiveFunction('+', 2) /* :159 */,
+			new OpGetRef("sust$") /* :160 */,
+			new OpCallPrimitiveFunction('+', 2) /* :161 */,
+			new OpGetRef("verb$") /* :162 */,
+			new OpCallPrimitiveFunction('+', 2) /* :163 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :164 */,
+			new OpGetRef("x") /* :165 */,
+			new OpPushConstant(4) /* :166 */,
+			new OpCallPrimitiveFunction('=', 2) /* :167 */,
+			new OpJumpIfFalse(L25) /* :168 */,
+			new OpGetRef("adj$") /* :169 */,
+			new OpGetRef("art$") /* :170 */,
+			new OpCallPrimitiveFunction('+', 2) /* :171 */,
+			new OpGetRef("verb$") /* :172 */,
+			new OpCallPrimitiveFunction('+', 2) /* :173 */,
+			new OpGetRef("sust$") /* :174 */,
+			new OpCallPrimitiveFunction('+', 2) /* :175 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :176 */,
+			new OpGosub(L2) /* :177 */,
+			new OpGetRef("x") /* :178 */,
+			new OpPushConstant(1) /* :179 */,
+			new OpCallPrimitiveFunction('=', 2) /* :180 */,
+			new OpJumpIfFalse(L27) /* :181 */,
+			new OpPushConstant("MIENTRAS ") /* :182 */,
+			new OpSetRef("co$") /* :183 */,
+			new OpGetRef("x") /* :184 */,
+			new OpPushConstant(2) /* :185 */,
+			new OpCallPrimitiveFunction('=', 2) /* :186 */,
+			new OpJumpIfFalse(L29) /* :187 */,
+			new OpPushConstant("Y, ") /* :188 */,
+			new OpSetRef("co$") /* :189 */,
+			new OpGetRef("x") /* :190 */,
+			new OpPushConstant(3) /* :191 */,
+			new OpCallPrimitiveFunction('=', 2) /* :192 */,
+			new OpJumpIfFalse(L31) /* :193 */,
+			new OpPushConstant("ADEMAS ") /* :194 */,
+			new OpSetRef("co$") /* :195 */,
+			new OpGetRef("x") /* :196 */,
+			new OpPushConstant(4) /* :197 */,
+			new OpCallPrimitiveFunction('=', 2) /* :198 */,
+			new OpJumpIfFalse(L33) /* :199 */,
+			new OpPushConstant("TAMBIEN ") /* :200 */,
+			new OpSetRef("co$") /* :201 */,
+			new OpGetRef("art$") /* :202 */,
+			new OpGetRef("verb$") /* :203 */,
+			new OpCallPrimitiveFunction('+', 2) /* :204 */,
+			new OpGetRef("sust$") /* :205 */,
+			new OpCallPrimitiveFunction('+', 2) /* :206 */,
+			new OpGetRef("rar$") /* :207 */,
+			new OpCallPrimitiveFunction('+', 2) /* :208 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :209 */,
+			new OpPushConstant("          \xc4O\xc4") /* :210 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :211 */,
+			new OpGosub(L2) /* :212 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :213 */,
+			new OpPushConstant(4) /* :214 */,
+			new OpCallPrimitiveFunction('*', 2) /* :215 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :216 */,
+			new OpPushConstant(1) /* :217 */,
+			new OpCallPrimitiveFunction('+', 2) /* :218 */,
+			new OpSetRef("x") /* :219 */,
+			new OpGetRef("x") /* :220 */,
+			new OpPushConstant(1) /* :221 */,
+			new OpCallPrimitiveFunction('=', 2) /* :222 */,
+			new OpJumpIfFalse(L35) /* :223 */,
+			new OpGetRef("art$") /* :224 */,
+			new OpGetRef("sust$") /* :225 */,
+			new OpCallPrimitiveFunction('+', 2) /* :226 */,
+			new OpGetRef("verb$") /* :227 */,
+			new OpCallPrimitiveFunction('+', 2) /* :228 */,
+			new OpGetRef("adj$") /* :229 */,
+			new OpCallPrimitiveFunction('+', 2) /* :230 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :231 */,
+			new OpGetRef("x") /* :232 */,
+			new OpPushConstant(2) /* :233 */,
+			new OpCallPrimitiveFunction('=', 2) /* :234 */,
+			new OpJumpIfFalse(L37) /* :235 */,
+			new OpGetRef("art$") /* :236 */,
+			new OpGetRef("verb$") /* :237 */,
+			new OpCallPrimitiveFunction('+', 2) /* :238 */,
+			new OpGetRef("sust$") /* :239 */,
+			new OpCallPrimitiveFunction('+', 2) /* :240 */,
+			new OpGetRef("adj$") /* :241 */,
+			new OpCallPrimitiveFunction('+', 2) /* :242 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :243 */,
+			new OpGetRef("x") /* :244 */,
+			new OpPushConstant(3) /* :245 */,
+			new OpCallPrimitiveFunction('=', 2) /* :246 */,
+			new OpJumpIfFalse(L39) /* :247 */,
+			new OpGetRef("adj$") /* :248 */,
+			new OpGetRef("art$") /* :249 */,
+			new OpCallPrimitiveFunction('+', 2) /* :250 */,
+			new OpGetRef("sust$") /* :251 */,
+			new OpCallPrimitiveFunction('+', 2) /* :252 */,
+			new OpGetRef("verb$") /* :253 */,
+			new OpCallPrimitiveFunction('+', 2) /* :254 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :255 */,
+			new OpGetRef("x") /* :256 */,
+			new OpPushConstant(4) /* :257 */,
+			new OpCallPrimitiveFunction('=', 2) /* :258 */,
+			new OpJumpIfFalse(L41) /* :259 */,
+			new OpGetRef("adj$") /* :260 */,
+			new OpGetRef("art$") /* :261 */,
+			new OpCallPrimitiveFunction('+', 2) /* :262 */,
+			new OpGetRef("verb$") /* :263 */,
+			new OpCallPrimitiveFunction('+', 2) /* :264 */,
+			new OpGetRef("sust$") /* :265 */,
+			new OpCallPrimitiveFunction('+', 2) /* :266 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :267 */,
+			new OpGosub(L2) /* :268 */,
+			new OpPushConstant("EN ") /* :269 */,
+			new OpGetRef("art$") /* :270 */,
+			new OpCallPrimitiveFunction('+', 2) /* :271 */,
+			new OpGetRef("lug$") /* :272 */,
+			new OpCallPrimitiveFunction('+', 2) /* :273 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :274 */,
+			new OpGetRef("x") /* :275 */,
+			new OpPushConstant(1) /* :276 */,
+			new OpCallPrimitiveFunction('=', 2) /* :277 */,
+			new OpJumpIfFalse(L43) /* :278 */,
+			new OpPushConstant("MIENTRAS ") /* :279 */,
+			new OpSetRef("co$") /* :280 */,
+			new OpGetRef("x") /* :281 */,
+			new OpPushConstant(2) /* :282 */,
+			new OpCallPrimitiveFunction('=', 2) /* :283 */,
+			new OpJumpIfFalse(L45) /* :284 */,
+			new OpPushConstant("Y, ") /* :285 */,
+			new OpSetRef("co$") /* :286 */,
+			new OpGetRef("x") /* :287 */,
+			new OpPushConstant(3) /* :288 */,
+			new OpCallPrimitiveFunction('=', 2) /* :289 */,
+			new OpJumpIfFalse(L47) /* :290 */,
+			new OpPushConstant("ADEMAS ") /* :291 */,
+			new OpSetRef("co$") /* :292 */,
+			new OpGetRef("x") /* :293 */,
+			new OpPushConstant(4) /* :294 */,
+			new OpCallPrimitiveFunction('=', 2) /* :295 */,
+			new OpJumpIfFalse(L49) /* :296 */,
+			new OpPushConstant("TAMBIEN ") /* :297 */,
+			new OpSetRef("co$") /* :298 */,
+			new OpGosub(L2) /* :299 */,
+			new OpGetRef("art$") /* :300 */,
+			new OpGetRef("verb$") /* :301 */,
+			new OpCallPrimitiveFunction('+', 2) /* :302 */,
+			new OpGetRef("sust$") /* :303 */,
+			new OpCallPrimitiveFunction('+', 2) /* :304 */,
+			new OpGetRef("rar$") /* :305 */,
+			new OpCallPrimitiveFunction('+', 2) /* :306 */,
+			new OpGetRef("co$") /* :307 */,
+			new OpCallPrimitiveFunction('+', 2) /* :308 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :309 */,
+			new OpGosub(L2) /* :310 */,
+			new OpGetRef("art$") /* :311 */,
+			new OpGetRef("sust$") /* :312 */,
+			new OpCallPrimitiveFunction('+', 2) /* :313 */,
+			new OpGetRef("verb$") /* :314 */,
+			new OpCallPrimitiveFunction('+', 2) /* :315 */,
+			new OpGetRef("adj$") /* :316 */,
+			new OpCallPrimitiveFunction('+', 2) /* :317 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :318 */,
+			new OpGosub(L2) /* :319 */,
+			new OpGetRef("art$") /* :320 */,
+			new OpGetRef("verb$") /* :321 */,
+			new OpCallPrimitiveFunction('+', 2) /* :322 */,
+			new OpGetRef("sust$") /* :323 */,
+			new OpCallPrimitiveFunction('+', 2) /* :324 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :325 */,
+			new OpPushConstant("          \xc4O\xc4") /* :326 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :327 */,
+			new OpGosub(L2) /* :328 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :329 */,
+			new OpPushConstant(4) /* :330 */,
+			new OpCallPrimitiveFunction('*', 2) /* :331 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :332 */,
+			new OpPushConstant(1) /* :333 */,
+			new OpCallPrimitiveFunction('+', 2) /* :334 */,
+			new OpSetRef("x") /* :335 */,
+			new OpGetRef("x") /* :336 */,
+			new OpPushConstant(1) /* :337 */,
+			new OpCallPrimitiveFunction('=', 2) /* :338 */,
+			new OpJumpIfFalse(L51) /* :339 */,
+			new OpGetRef("art$") /* :340 */,
+			new OpGetRef("sust$") /* :341 */,
+			new OpCallPrimitiveFunction('+', 2) /* :342 */,
+			new OpGetRef("verb$") /* :343 */,
+			new OpCallPrimitiveFunction('+', 2) /* :344 */,
+			new OpGetRef("adj$") /* :345 */,
+			new OpCallPrimitiveFunction('+', 2) /* :346 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :347 */,
+			new OpGetRef("x") /* :348 */,
+			new OpPushConstant(2) /* :349 */,
+			new OpCallPrimitiveFunction('=', 2) /* :350 */,
+			new OpJumpIfFalse(L53) /* :351 */,
+			new OpGetRef("art$") /* :352 */,
+			new OpGetRef("verb$") /* :353 */,
+			new OpCallPrimitiveFunction('+', 2) /* :354 */,
+			new OpGetRef("sust$") /* :355 */,
+			new OpCallPrimitiveFunction('+', 2) /* :356 */,
+			new OpGetRef("adj$") /* :357 */,
+			new OpCallPrimitiveFunction('+', 2) /* :358 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :359 */,
+			new OpGetRef("x") /* :360 */,
+			new OpPushConstant(3) /* :361 */,
+			new OpCallPrimitiveFunction('=', 2) /* :362 */,
+			new OpJumpIfFalse(L55) /* :363 */,
+			new OpGetRef("adj$") /* :364 */,
+			new OpGetRef("art$") /* :365 */,
+			new OpCallPrimitiveFunction('+', 2) /* :366 */,
+			new OpGetRef("sust$") /* :367 */,
+			new OpCallPrimitiveFunction('+', 2) /* :368 */,
+			new OpGetRef("verb$") /* :369 */,
+			new OpCallPrimitiveFunction('+', 2) /* :370 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :371 */,
+			new OpGetRef("x") /* :372 */,
+			new OpPushConstant(4) /* :373 */,
+			new OpCallPrimitiveFunction('=', 2) /* :374 */,
+			new OpJumpIfFalse(L57) /* :375 */,
+			new OpGetRef("adj$") /* :376 */,
+			new OpGetRef("art$") /* :377 */,
+			new OpCallPrimitiveFunction('+', 2) /* :378 */,
+			new OpGetRef("verb$") /* :379 */,
+			new OpCallPrimitiveFunction('+', 2) /* :380 */,
+			new OpGetRef("sust$") /* :381 */,
+			new OpCallPrimitiveFunction('+', 2) /* :382 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :383 */,
+			new OpGosub(L2) /* :384 */,
+			new OpGetRef("x") /* :385 */,
+			new OpPushConstant(1) /* :386 */,
+			new OpCallPrimitiveFunction('=', 2) /* :387 */,
+			new OpJumpIfFalse(L59) /* :388 */,
+			new OpPushConstant("MIENTRAS ") /* :389 */,
+			new OpSetRef("co$") /* :390 */,
+			new OpGetRef("x") /* :391 */,
+			new OpPushConstant(2) /* :392 */,
+			new OpCallPrimitiveFunction('=', 2) /* :393 */,
+			new OpJumpIfFalse(L61) /* :394 */,
+			new OpPushConstant("Y, ") /* :395 */,
+			new OpSetRef("co$") /* :396 */,
+			new OpGetRef("x") /* :397 */,
+			new OpPushConstant(3) /* :398 */,
+			new OpCallPrimitiveFunction('=', 2) /* :399 */,
+			new OpJumpIfFalse(L63) /* :400 */,
+			new OpPushConstant("ADEMAS ") /* :401 */,
+			new OpSetRef("co$") /* :402 */,
+			new OpGetRef("x") /* :403 */,
+			new OpPushConstant(4) /* :404 */,
+			new OpCallPrimitiveFunction('=', 2) /* :405 */,
+			new OpJumpIfFalse(L65) /* :406 */,
+			new OpPushConstant("TAMBIEN ") /* :407 */,
+			new OpSetRef("co$") /* :408 */,
+			new OpGetRef("art$") /* :409 */,
+			new OpGetRef("verb$") /* :410 */,
+			new OpCallPrimitiveFunction('+', 2) /* :411 */,
+			new OpGetRef("sust$") /* :412 */,
+			new OpCallPrimitiveFunction('+', 2) /* :413 */,
+			new OpGetRef("co$") /* :414 */,
+			new OpCallPrimitiveFunction('+', 2) /* :415 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :416 */,
+			new OpGosub(L2) /* :417 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :418 */,
+			new OpPushConstant(4) /* :419 */,
+			new OpCallPrimitiveFunction('*', 2) /* :420 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :421 */,
+			new OpPushConstant(1) /* :422 */,
+			new OpCallPrimitiveFunction('+', 2) /* :423 */,
+			new OpSetRef("x") /* :424 */,
+			new OpGetRef("x") /* :425 */,
+			new OpPushConstant(1) /* :426 */,
+			new OpCallPrimitiveFunction('=', 2) /* :427 */,
+			new OpJumpIfFalse(L67) /* :428 */,
+			new OpGetRef("art$") /* :429 */,
+			new OpGetRef("sust$") /* :430 */,
+			new OpCallPrimitiveFunction('+', 2) /* :431 */,
+			new OpGetRef("verb$") /* :432 */,
+			new OpCallPrimitiveFunction('+', 2) /* :433 */,
+			new OpGetRef("adj$") /* :434 */,
+			new OpCallPrimitiveFunction('+', 2) /* :435 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :436 */,
+			new OpGetRef("x") /* :437 */,
+			new OpPushConstant(2) /* :438 */,
+			new OpCallPrimitiveFunction('=', 2) /* :439 */,
+			new OpJumpIfFalse(L69) /* :440 */,
+			new OpGetRef("art$") /* :441 */,
+			new OpGetRef("verb$") /* :442 */,
+			new OpCallPrimitiveFunction('+', 2) /* :443 */,
+			new OpGetRef("sust$") /* :444 */,
+			new OpCallPrimitiveFunction('+', 2) /* :445 */,
+			new OpGetRef("adj$") /* :446 */,
+			new OpCallPrimitiveFunction('+', 2) /* :447 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :448 */,
+			new OpGetRef("x") /* :449 */,
+			new OpPushConstant(3) /* :450 */,
+			new OpCallPrimitiveFunction('=', 2) /* :451 */,
+			new OpJumpIfFalse(L71) /* :452 */,
+			new OpGetRef("adj$") /* :453 */,
+			new OpGetRef("art$") /* :454 */,
+			new OpCallPrimitiveFunction('+', 2) /* :455 */,
+			new OpGetRef("sust$") /* :456 */,
+			new OpCallPrimitiveFunction('+', 2) /* :457 */,
+			new OpGetRef("verb$") /* :458 */,
+			new OpCallPrimitiveFunction('+', 2) /* :459 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :460 */,
+			new OpGetRef("x") /* :461 */,
+			new OpPushConstant(4) /* :462 */,
+			new OpCallPrimitiveFunction('=', 2) /* :463 */,
+			new OpJumpIfFalse(L73) /* :464 */,
+			new OpGetRef("adj$") /* :465 */,
+			new OpGetRef("art$") /* :466 */,
+			new OpCallPrimitiveFunction('+', 2) /* :467 */,
+			new OpGetRef("verb$") /* :468 */,
+			new OpCallPrimitiveFunction('+', 2) /* :469 */,
+			new OpGetRef("sust$") /* :470 */,
+			new OpCallPrimitiveFunction('+', 2) /* :471 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :472 */,
+			new OpGosub(L2) /* :473 */,
+			new OpGetRef("x") /* :474 */,
+			new OpPushConstant(1) /* :475 */,
+			new OpCallPrimitiveFunction('=', 2) /* :476 */,
+			new OpJumpIfFalse(L75) /* :477 */,
+			new OpPushConstant("MIENTRAS ") /* :478 */,
+			new OpSetRef("co$") /* :479 */,
+			new OpGetRef("x") /* :480 */,
+			new OpPushConstant(2) /* :481 */,
+			new OpCallPrimitiveFunction('=', 2) /* :482 */,
+			new OpJumpIfFalse(L77) /* :483 */,
+			new OpPushConstant("Y, ") /* :484 */,
+			new OpSetRef("co$") /* :485 */,
+			new OpGetRef("x") /* :486 */,
+			new OpPushConstant(3) /* :487 */,
+			new OpCallPrimitiveFunction('=', 2) /* :488 */,
+			new OpJumpIfFalse(L79) /* :489 */,
+			new OpPushConstant("ADEMAS ") /* :490 */,
+			new OpSetRef("co$") /* :491 */,
+			new OpGetRef("x") /* :492 */,
+			new OpPushConstant(4) /* :493 */,
+			new OpCallPrimitiveFunction('=', 2) /* :494 */,
+			new OpJumpIfFalse(L81) /* :495 */,
+			new OpPushConstant("TAMBIEN ") /* :496 */,
+			new OpSetRef("co$") /* :497 */,
+			new OpGetRef("adj$") /* :498 */,
+			new OpGetRef("art$") /* :499 */,
+			new OpCallPrimitiveFunction('+', 2) /* :500 */,
+			new OpGetRef("sust$") /* :501 */,
+			new OpCallPrimitiveFunction('+', 2) /* :502 */,
+			new OpGetRef("verb$") /* :503 */,
+			new OpCallPrimitiveFunction('+', 2) /* :504 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :505 */,
+			new OpPushConstant("          \xc4O\xc4") /* :506 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :507 */,
+			new OpPushConstant("                                  FIN") /* :508 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :509 */,
+			new OpPushConstant("                             PABLO BARENBAUM") /* :510 */,
+			new OpCallPrimitiveStatement('PRINT', 1) /* :511 */,
+			new OpCallPrimitiveStatement('SLEEP', 0) /* :512 */,
+			new OpCallPrimitiveStatement('SYSTEM', 0) /* :513 */,
+			new OpJump(L83) /* :514 */,
+			new OpEnter([]) /* :515 */,
+			new OpCallPrimitiveFunction('TIMER', 0) /* :516 */,
+			new OpCallPrimitiveStatement('RANDOMIZE', 1) /* :517 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :518 */,
+			new OpPushConstant(12) /* :519 */,
+			new OpCallPrimitiveFunction('*', 2) /* :520 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :521 */,
+			new OpPushConstant(1) /* :522 */,
+			new OpCallPrimitiveFunction('+', 2) /* :523 */,
+			new OpSetRef("art") /* :524 */,
+			new OpGetRef("art") /* :525 */,
+			new OpPushConstant(1) /* :526 */,
+			new OpCallPrimitiveFunction('=', 2) /* :527 */,
+			new OpJumpIfFalse(L84) /* :528 */,
+			new OpPushConstant("EL ") /* :529 */,
+			new OpSetRef("art$") /* :530 */,
+			new OpGetRef("art") /* :531 */,
+			new OpPushConstant(2) /* :532 */,
+			new OpCallPrimitiveFunction('=', 2) /* :533 */,
+			new OpJumpIfFalse(L86) /* :534 */,
+			new OpPushConstant("LA ") /* :535 */,
+			new OpSetRef("art$") /* :536 */,
+			new OpGetRef("art") /* :537 */,
+			new OpPushConstant(3) /* :538 */,
+			new OpCallPrimitiveFunction('=', 2) /* :539 */,
+			new OpJumpIfFalse(L88) /* :540 */,
+			new OpPushConstant("LAS ") /* :541 */,
+			new OpSetRef("art$") /* :542 */,
+			new OpGetRef("art") /* :543 */,
+			new OpPushConstant(4) /* :544 */,
+			new OpCallPrimitiveFunction('=', 2) /* :545 */,
+			new OpJumpIfFalse(L90) /* :546 */,
+			new OpPushConstant("LOS ") /* :547 */,
+			new OpSetRef("art$") /* :548 */,
+			new OpGetRef("art") /* :549 */,
+			new OpPushConstant(5) /* :550 */,
+			new OpCallPrimitiveFunction('=', 2) /* :551 */,
+			new OpJumpIfFalse(L92) /* :552 */,
+			new OpPushConstant("UN ") /* :553 */,
+			new OpSetRef("art$") /* :554 */,
+			new OpGetRef("art") /* :555 */,
+			new OpPushConstant(6) /* :556 */,
+			new OpCallPrimitiveFunction('=', 2) /* :557 */,
+			new OpJumpIfFalse(L94) /* :558 */,
+			new OpPushConstant("UNA ") /* :559 */,
+			new OpSetRef("art$") /* :560 */,
+			new OpGetRef("art") /* :561 */,
+			new OpPushConstant(7) /* :562 */,
+			new OpCallPrimitiveFunction('=', 2) /* :563 */,
+			new OpJumpIfFalse(L96) /* :564 */,
+			new OpPushConstant("UNAS ") /* :565 */,
+			new OpSetRef("art$") /* :566 */,
+			new OpGetRef("art") /* :567 */,
+			new OpPushConstant(8) /* :568 */,
+			new OpCallPrimitiveFunction('=', 2) /* :569 */,
+			new OpJumpIfFalse(L98) /* :570 */,
+			new OpPushConstant("UNOS ") /* :571 */,
+			new OpSetRef("art$") /* :572 */,
+			new OpGetRef("art") /* :573 */,
+			new OpPushConstant(9) /* :574 */,
+			new OpCallPrimitiveFunction('=', 2) /* :575 */,
+			new OpJumpIfFalse(L100) /* :576 */,
+			new OpPushConstant("MI ") /* :577 */,
+			new OpSetRef("art$") /* :578 */,
+			new OpGetRef("art") /* :579 */,
+			new OpPushConstant(10) /* :580 */,
+			new OpCallPrimitiveFunction('=', 2) /* :581 */,
+			new OpJumpIfFalse(L102) /* :582 */,
+			new OpPushConstant("TU ") /* :583 */,
+			new OpSetRef("art$") /* :584 */,
+			new OpGetRef("art") /* :585 */,
+			new OpPushConstant(11) /* :586 */,
+			new OpCallPrimitiveFunction('=', 2) /* :587 */,
+			new OpJumpIfFalse(L104) /* :588 */,
+			new OpPushConstant("SU ") /* :589 */,
+			new OpSetRef("art$") /* :590 */,
+			new OpGetRef("art") /* :591 */,
+			new OpPushConstant(12) /* :592 */,
+			new OpCallPrimitiveFunction('=', 2) /* :593 */,
+			new OpJumpIfFalse(L106) /* :594 */,
+			new OpPushConstant("NUESTRO ") /* :595 */,
+			new OpSetRef("art$") /* :596 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :597 */,
+			new OpPushConstant(45) /* :598 */,
+			new OpCallPrimitiveFunction('*', 2) /* :599 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :600 */,
+			new OpPushConstant(1) /* :601 */,
+			new OpCallPrimitiveFunction('+', 2) /* :602 */,
+			new OpSetRef("sust") /* :603 */,
+			new OpGetRef("sust") /* :604 */,
+			new OpPushConstant(1) /* :605 */,
+			new OpCallPrimitiveFunction('=', 2) /* :606 */,
+			new OpJumpIfFalse(L108) /* :607 */,
+			new OpPushConstant("PERRO ") /* :608 */,
+			new OpSetRef("sust$") /* :609 */,
+			new OpGetRef("sust") /* :610 */,
+			new OpPushConstant(2) /* :611 */,
+			new OpCallPrimitiveFunction('=', 2) /* :612 */,
+			new OpJumpIfFalse(L110) /* :613 */,
+			new OpPushConstant("GATOS ") /* :614 */,
+			new OpSetRef("sust$") /* :615 */,
+			new OpGetRef("sust") /* :616 */,
+			new OpPushConstant(3) /* :617 */,
+			new OpCallPrimitiveFunction('=', 2) /* :618 */,
+			new OpJumpIfFalse(L112) /* :619 */,
+			new OpPushConstant("LUZ ") /* :620 */,
+			new OpSetRef("sust$") /* :621 */,
+			new OpGetRef("sust") /* :622 */,
+			new OpPushConstant(4) /* :623 */,
+			new OpCallPrimitiveFunction('=', 2) /* :624 */,
+			new OpJumpIfFalse(L114) /* :625 */,
+			new OpPushConstant("SILLAS ") /* :626 */,
+			new OpSetRef("sust$") /* :627 */,
+			new OpGetRef("sust") /* :628 */,
+			new OpPushConstant(5) /* :629 */,
+			new OpCallPrimitiveFunction('=', 2) /* :630 */,
+			new OpJumpIfFalse(L116) /* :631 */,
+			new OpPushConstant("CUADERNO ") /* :632 */,
+			new OpSetRef("sust$") /* :633 */,
+			new OpGetRef("sust") /* :634 */,
+			new OpPushConstant(6) /* :635 */,
+			new OpCallPrimitiveFunction('=', 2) /* :636 */,
+			new OpJumpIfFalse(L118) /* :637 */,
+			new OpPushConstant("CABEZA ") /* :638 */,
+			new OpSetRef("sust$") /* :639 */,
+			new OpGetRef("sust") /* :640 */,
+			new OpPushConstant(7) /* :641 */,
+			new OpCallPrimitiveFunction('=', 2) /* :642 */,
+			new OpJumpIfFalse(L120) /* :643 */,
+			new OpPushConstant("VOZ ") /* :644 */,
+			new OpSetRef("sust$") /* :645 */,
+			new OpGetRef("sust") /* :646 */,
+			new OpPushConstant(8) /* :647 */,
+			new OpCallPrimitiveFunction('=', 2) /* :648 */,
+			new OpJumpIfFalse(L122) /* :649 */,
+			new OpPushConstant("DEDO ") /* :650 */,
+			new OpSetRef("sust$") /* :651 */,
+			new OpGetRef("sust") /* :652 */,
+			new OpPushConstant(9) /* :653 */,
+			new OpCallPrimitiveFunction('=', 2) /* :654 */,
+			new OpJumpIfFalse(L124) /* :655 */,
+			new OpPushConstant("NARIZ ") /* :656 */,
+			new OpSetRef("sust$") /* :657 */,
+			new OpGetRef("sust") /* :658 */,
+			new OpPushConstant(10) /* :659 */,
+			new OpCallPrimitiveFunction('=', 2) /* :660 */,
+			new OpJumpIfFalse(L126) /* :661 */,
+			new OpPushConstant("ESCUADRA ") /* :662 */,
+			new OpSetRef("sust$") /* :663 */,
+			new OpGetRef("sust") /* :664 */,
+			new OpPushConstant(11) /* :665 */,
+			new OpCallPrimitiveFunction('=', 2) /* :666 */,
+			new OpJumpIfFalse(L128) /* :667 */,
+			new OpPushConstant("MIEDO ") /* :668 */,
+			new OpSetRef("sust$") /* :669 */,
+			new OpGetRef("sust") /* :670 */,
+			new OpPushConstant(12) /* :671 */,
+			new OpCallPrimitiveFunction('=', 2) /* :672 */,
+			new OpJumpIfFalse(L130) /* :673 */,
+			new OpPushConstant("CUBO ") /* :674 */,
+			new OpSetRef("sust$") /* :675 */,
+			new OpGetRef("sust") /* :676 */,
+			new OpPushConstant(13) /* :677 */,
+			new OpCallPrimitiveFunction('=', 2) /* :678 */,
+			new OpJumpIfFalse(L132) /* :679 */,
+			new OpPushConstant("ESCRITURA ") /* :680 */,
+			new OpSetRef("sust$") /* :681 */,
+			new OpGetRef("sust") /* :682 */,
+			new OpPushConstant(14) /* :683 */,
+			new OpCallPrimitiveFunction('=', 2) /* :684 */,
+			new OpJumpIfFalse(L134) /* :685 */,
+			new OpPushConstant("OJO ") /* :686 */,
+			new OpSetRef("sust$") /* :687 */,
+			new OpGetRef("sust") /* :688 */,
+			new OpPushConstant(15) /* :689 */,
+			new OpCallPrimitiveFunction('=', 2) /* :690 */,
+			new OpJumpIfFalse(L136) /* :691 */,
+			new OpPushConstant("CERO ") /* :692 */,
+			new OpSetRef("sust$") /* :693 */,
+			new OpGetRef("sust") /* :694 */,
+			new OpPushConstant(16) /* :695 */,
+			new OpCallPrimitiveFunction('=', 2) /* :696 */,
+			new OpJumpIfFalse(L138) /* :697 */,
+			new OpPushConstant("ALMOHADA ") /* :698 */,
+			new OpSetRef("sust$") /* :699 */,
+			new OpGetRef("sust") /* :700 */,
+			new OpPushConstant(17) /* :701 */,
+			new OpCallPrimitiveFunction('=', 2) /* :702 */,
+			new OpJumpIfFalse(L140) /* :703 */,
+			new OpPushConstant("MONEDA ") /* :704 */,
+			new OpSetRef("sust$") /* :705 */,
+			new OpGetRef("sust") /* :706 */,
+			new OpPushConstant(18) /* :707 */,
+			new OpCallPrimitiveFunction('=', 2) /* :708 */,
+			new OpJumpIfFalse(L142) /* :709 */,
+			new OpPushConstant("PINTURA ") /* :710 */,
+			new OpSetRef("sust$") /* :711 */,
+			new OpGetRef("sust") /* :712 */,
+			new OpPushConstant(19) /* :713 */,
+			new OpCallPrimitiveFunction('=', 2) /* :714 */,
+			new OpJumpIfFalse(L144) /* :715 */,
+			new OpPushConstant("NENE ") /* :716 */,
+			new OpSetRef("sust$") /* :717 */,
+			new OpGetRef("sust") /* :718 */,
+			new OpPushConstant(20) /* :719 */,
+			new OpCallPrimitiveFunction('=', 2) /* :720 */,
+			new OpJumpIfFalse(L146) /* :721 */,
+			new OpPushConstant("SE\xa5OR ") /* :722 */,
+			new OpSetRef("sust$") /* :723 */,
+			new OpGetRef("sust") /* :724 */,
+			new OpPushConstant(21) /* :725 */,
+			new OpCallPrimitiveFunction('=', 2) /* :726 */,
+			new OpJumpIfFalse(L148) /* :727 */,
+			new OpPushConstant("MUJER ") /* :728 */,
+			new OpSetRef("sust$") /* :729 */,
+			new OpGetRef("sust") /* :730 */,
+			new OpPushConstant(22) /* :731 */,
+			new OpCallPrimitiveFunction('=', 2) /* :732 */,
+			new OpJumpIfFalse(L150) /* :733 */,
+			new OpPushConstant("VARON ") /* :734 */,
+			new OpSetRef("sust$") /* :735 */,
+			new OpGetRef("sust") /* :736 */,
+			new OpPushConstant(23) /* :737 */,
+			new OpCallPrimitiveFunction('=', 2) /* :738 */,
+			new OpJumpIfFalse(L152) /* :739 */,
+			new OpPushConstant("HOMBRE ") /* :740 */,
+			new OpSetRef("sust$") /* :741 */,
+			new OpGetRef("sust") /* :742 */,
+			new OpPushConstant(24) /* :743 */,
+			new OpCallPrimitiveFunction('=', 2) /* :744 */,
+			new OpJumpIfFalse(L154) /* :745 */,
+			new OpPushConstant("SE\xa5ORA ") /* :746 */,
+			new OpSetRef("sust$") /* :747 */,
+			new OpGetRef("sust") /* :748 */,
+			new OpPushConstant(25) /* :749 */,
+			new OpCallPrimitiveFunction('=', 2) /* :750 */,
+			new OpJumpIfFalse(L156) /* :751 */,
+			new OpPushConstant("NENA ") /* :752 */,
+			new OpSetRef("sust$") /* :753 */,
+			new OpGetRef("sust") /* :754 */,
+			new OpPushConstant(26) /* :755 */,
+			new OpCallPrimitiveFunction('=', 2) /* :756 */,
+			new OpJumpIfFalse(L158) /* :757 */,
+			new OpPushConstant("CHICA ") /* :758 */,
+			new OpSetRef("sust$") /* :759 */,
+			new OpGetRef("sust") /* :760 */,
+			new OpPushConstant(27) /* :761 */,
+			new OpCallPrimitiveFunction('=', 2) /* :762 */,
+			new OpJumpIfFalse(L160) /* :763 */,
+			new OpPushConstant("LEON ") /* :764 */,
+			new OpSetRef("sust$") /* :765 */,
+			new OpGetRef("sust") /* :766 */,
+			new OpPushConstant(28) /* :767 */,
+			new OpCallPrimitiveFunction('=', 2) /* :768 */,
+			new OpJumpIfFalse(L162) /* :769 */,
+			new OpPushConstant("TIGRE ") /* :770 */,
+			new OpSetRef("sust$") /* :771 */,
+			new OpGetRef("sust") /* :772 */,
+			new OpPushConstant(29) /* :773 */,
+			new OpCallPrimitiveFunction('=', 2) /* :774 */,
+			new OpJumpIfFalse(L164) /* :775 */,
+			new OpPushConstant("ELEFANTE ") /* :776 */,
+			new OpSetRef("sust$") /* :777 */,
+			new OpGetRef("sust") /* :778 */,
+			new OpPushConstant(30) /* :779 */,
+			new OpCallPrimitiveFunction('=', 2) /* :780 */,
+			new OpJumpIfFalse(L166) /* :781 */,
+			new OpPushConstant("AZULEJO ") /* :782 */,
+			new OpSetRef("sust$") /* :783 */,
+			new OpGetRef("sust") /* :784 */,
+			new OpPushConstant(31) /* :785 */,
+			new OpCallPrimitiveFunction('=', 2) /* :786 */,
+			new OpJumpIfFalse(L168) /* :787 */,
+			new OpPushConstant("ANILLO ") /* :788 */,
+			new OpSetRef("sust$") /* :789 */,
+			new OpGetRef("sust") /* :790 */,
+			new OpPushConstant(32) /* :791 */,
+			new OpCallPrimitiveFunction('=', 2) /* :792 */,
+			new OpJumpIfFalse(L170) /* :793 */,
+			new OpPushConstant("TELEFONO ") /* :794 */,
+			new OpSetRef("sust$") /* :795 */,
+			new OpGetRef("sust") /* :796 */,
+			new OpPushConstant(33) /* :797 */,
+			new OpCallPrimitiveFunction('=', 2) /* :798 */,
+			new OpJumpIfFalse(L172) /* :799 */,
+			new OpPushConstant("SOGA ") /* :800 */,
+			new OpSetRef("sust$") /* :801 */,
+			new OpGetRef("sust") /* :802 */,
+			new OpPushConstant(34) /* :803 */,
+			new OpCallPrimitiveFunction('=', 2) /* :804 */,
+			new OpJumpIfFalse(L174) /* :805 */,
+			new OpPushConstant("GUILLOTINA ") /* :806 */,
+			new OpSetRef("sust$") /* :807 */,
+			new OpGetRef("sust") /* :808 */,
+			new OpPushConstant(35) /* :809 */,
+			new OpCallPrimitiveFunction('=', 2) /* :810 */,
+			new OpJumpIfFalse(L176) /* :811 */,
+			new OpPushConstant("HORCA ") /* :812 */,
+			new OpSetRef("sust$") /* :813 */,
+			new OpGetRef("sust") /* :814 */,
+			new OpPushConstant(36) /* :815 */,
+			new OpCallPrimitiveFunction('=', 2) /* :816 */,
+			new OpJumpIfFalse(L178) /* :817 */,
+			new OpPushConstant("MOSCA ") /* :818 */,
+			new OpSetRef("sust$") /* :819 */,
+			new OpGetRef("sust") /* :820 */,
+			new OpPushConstant(37) /* :821 */,
+			new OpCallPrimitiveFunction('=', 2) /* :822 */,
+			new OpJumpIfFalse(L180) /* :823 */,
+			new OpPushConstant("JIRAFA ") /* :824 */,
+			new OpSetRef("sust$") /* :825 */,
+			new OpGetRef("sust") /* :826 */,
+			new OpPushConstant(38) /* :827 */,
+			new OpCallPrimitiveFunction('=', 2) /* :828 */,
+			new OpJumpIfFalse(L182) /* :829 */,
+			new OpPushConstant("HIPOPOTAMO ") /* :830 */,
+			new OpSetRef("sust$") /* :831 */,
+			new OpGetRef("sust") /* :832 */,
+			new OpPushConstant(39) /* :833 */,
+			new OpCallPrimitiveFunction('=', 2) /* :834 */,
+			new OpJumpIfFalse(L184) /* :835 */,
+			new OpPushConstant("HORMIGA ") /* :836 */,
+			new OpSetRef("sust$") /* :837 */,
+			new OpGetRef("sust") /* :838 */,
+			new OpPushConstant(40) /* :839 */,
+			new OpCallPrimitiveFunction('=', 2) /* :840 */,
+			new OpJumpIfFalse(L186) /* :841 */,
+			new OpPushConstant("YO ") /* :842 */,
+			new OpSetRef("sust$") /* :843 */,
+			new OpGetRef("sust") /* :844 */,
+			new OpPushConstant(41) /* :845 */,
+			new OpCallPrimitiveFunction('=', 2) /* :846 */,
+			new OpJumpIfFalse(L188) /* :847 */,
+			new OpPushConstant("VOS ") /* :848 */,
+			new OpSetRef("sust$") /* :849 */,
+			new OpGetRef("sust") /* :850 */,
+			new OpPushConstant(42) /* :851 */,
+			new OpCallPrimitiveFunction('=', 2) /* :852 */,
+			new OpJumpIfFalse(L190) /* :853 */,
+			new OpPushConstant("EL ") /* :854 */,
+			new OpSetRef("sust$") /* :855 */,
+			new OpGetRef("sust") /* :856 */,
+			new OpPushConstant(43) /* :857 */,
+			new OpCallPrimitiveFunction('=', 2) /* :858 */,
+			new OpJumpIfFalse(L192) /* :859 */,
+			new OpPushConstant("NOSOTROS ") /* :860 */,
+			new OpSetRef("sust$") /* :861 */,
+			new OpGetRef("sust") /* :862 */,
+			new OpPushConstant(44) /* :863 */,
+			new OpCallPrimitiveFunction('=', 2) /* :864 */,
+			new OpJumpIfFalse(L194) /* :865 */,
+			new OpPushConstant("USTEDES ") /* :866 */,
+			new OpSetRef("sust$") /* :867 */,
+			new OpGetRef("sust") /* :868 */,
+			new OpPushConstant(45) /* :869 */,
+			new OpCallPrimitiveFunction('=', 2) /* :870 */,
+			new OpJumpIfFalse(L196) /* :871 */,
+			new OpPushConstant("ELLOS ") /* :872 */,
+			new OpSetRef("sust$") /* :873 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :874 */,
+			new OpPushConstant(33) /* :875 */,
+			new OpCallPrimitiveFunction('*', 2) /* :876 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :877 */,
+			new OpPushConstant(1) /* :878 */,
+			new OpCallPrimitiveFunction('+', 2) /* :879 */,
+			new OpSetRef("verb") /* :880 */,
+			new OpGetRef("verb") /* :881 */,
+			new OpPushConstant(1) /* :882 */,
+			new OpCallPrimitiveFunction('=', 2) /* :883 */,
+			new OpJumpIfFalse(L198) /* :884 */,
+			new OpPushConstant("LOCO ") /* :885 */,
+			new OpSetRef("verb$") /* :886 */,
+			new OpGetRef("verb") /* :887 */,
+			new OpPushConstant(2) /* :888 */,
+			new OpCallPrimitiveFunction('=', 2) /* :889 */,
+			new OpJumpIfFalse(L200) /* :890 */,
+			new OpPushConstant("TONTOS ") /* :891 */,
+			new OpSetRef("verb$") /* :892 */,
+			new OpGetRef("verb") /* :893 */,
+			new OpPushConstant(3) /* :894 */,
+			new OpCallPrimitiveFunction('=', 2) /* :895 */,
+			new OpJumpIfFalse(L202) /* :896 */,
+			new OpPushConstant("MALA ") /* :897 */,
+			new OpSetRef("verb$") /* :898 */,
+			new OpGetRef("verb") /* :899 */,
+			new OpPushConstant(4) /* :900 */,
+			new OpCallPrimitiveFunction('=', 2) /* :901 */,
+			new OpJumpIfFalse(L204) /* :902 */,
+			new OpPushConstant("PSICOLOGICA ") /* :903 */,
+			new OpSetRef("verb$") /* :904 */,
+			new OpGetRef("verb") /* :905 */,
+			new OpPushConstant(5) /* :906 */,
+			new OpCallPrimitiveFunction('=', 2) /* :907 */,
+			new OpJumpIfFalse(L206) /* :908 */,
+			new OpPushConstant("INTERESANTE ") /* :909 */,
+			new OpSetRef("verb$") /* :910 */,
+			new OpGetRef("verb") /* :911 */,
+			new OpPushConstant(6) /* :912 */,
+			new OpCallPrimitiveFunction('=', 2) /* :913 */,
+			new OpJumpIfFalse(L208) /* :914 */,
+			new OpPushConstant("INTELIGENTE ") /* :915 */,
+			new OpSetRef("verb$") /* :916 */,
+			new OpGetRef("verb") /* :917 */,
+			new OpPushConstant(7) /* :918 */,
+			new OpCallPrimitiveFunction('=', 2) /* :919 */,
+			new OpJumpIfFalse(L210) /* :920 */,
+			new OpPushConstant("INTELIGIBLE ") /* :921 */,
+			new OpSetRef("verb$") /* :922 */,
+			new OpGetRef("verb") /* :923 */,
+			new OpPushConstant(8) /* :924 */,
+			new OpCallPrimitiveFunction('=', 2) /* :925 */,
+			new OpJumpIfFalse(L212) /* :926 */,
+			new OpPushConstant("RECTANGULAR ") /* :927 */,
+			new OpSetRef("verb$") /* :928 */,
+			new OpGetRef("verb") /* :929 */,
+			new OpPushConstant(9) /* :930 */,
+			new OpCallPrimitiveFunction('=', 2) /* :931 */,
+			new OpJumpIfFalse(L214) /* :932 */,
+			new OpPushConstant("CUADRADO ") /* :933 */,
+			new OpSetRef("verb$") /* :934 */,
+			new OpGetRef("verb") /* :935 */,
+			new OpPushConstant(10) /* :936 */,
+			new OpCallPrimitiveFunction('=', 2) /* :937 */,
+			new OpJumpIfFalse(L216) /* :938 */,
+			new OpPushConstant("MAJESTUOSO ") /* :939 */,
+			new OpSetRef("verb$") /* :940 */,
+			new OpGetRef("verb") /* :941 */,
+			new OpPushConstant(11) /* :942 */,
+			new OpCallPrimitiveFunction('=', 2) /* :943 */,
+			new OpJumpIfFalse(L218) /* :944 */,
+			new OpPushConstant("IMPONENTE ") /* :945 */,
+			new OpSetRef("verb$") /* :946 */,
+			new OpGetRef("verb") /* :947 */,
+			new OpPushConstant(12) /* :948 */,
+			new OpCallPrimitiveFunction('=', 2) /* :949 */,
+			new OpJumpIfFalse(L220) /* :950 */,
+			new OpPushConstant("PEDANTE ") /* :951 */,
+			new OpSetRef("verb$") /* :952 */,
+			new OpGetRef("verb") /* :953 */,
+			new OpPushConstant(13) /* :954 */,
+			new OpCallPrimitiveFunction('=', 2) /* :955 */,
+			new OpJumpIfFalse(L222) /* :956 */,
+			new OpPushConstant("GOLOSO ") /* :957 */,
+			new OpSetRef("verb$") /* :958 */,
+			new OpGetRef("verb") /* :959 */,
+			new OpPushConstant(14) /* :960 */,
+			new OpCallPrimitiveFunction('=', 2) /* :961 */,
+			new OpJumpIfFalse(L224) /* :962 */,
+			new OpPushConstant("INTERMITENTE ") /* :963 */,
+			new OpSetRef("verb$") /* :964 */,
+			new OpGetRef("verb") /* :965 */,
+			new OpPushConstant(15) /* :966 */,
+			new OpCallPrimitiveFunction('=', 2) /* :967 */,
+			new OpJumpIfFalse(L226) /* :968 */,
+			new OpPushConstant("SAGAZ ") /* :969 */,
+			new OpSetRef("verb$") /* :970 */,
+			new OpGetRef("verb") /* :971 */,
+			new OpPushConstant(16) /* :972 */,
+			new OpCallPrimitiveFunction('=', 2) /* :973 */,
+			new OpJumpIfFalse(L228) /* :974 */,
+			new OpPushConstant("SOBERBIO ") /* :975 */,
+			new OpSetRef("verb$") /* :976 */,
+			new OpGetRef("verb") /* :977 */,
+			new OpPushConstant(17) /* :978 */,
+			new OpCallPrimitiveFunction('=', 2) /* :979 */,
+			new OpJumpIfFalse(L230) /* :980 */,
+			new OpPushConstant("ROJO ") /* :981 */,
+			new OpSetRef("verb$") /* :982 */,
+			new OpGetRef("verb") /* :983 */,
+			new OpPushConstant(18) /* :984 */,
+			new OpCallPrimitiveFunction('=', 2) /* :985 */,
+			new OpJumpIfFalse(L232) /* :986 */,
+			new OpPushConstant("AZUL ") /* :987 */,
+			new OpSetRef("verb$") /* :988 */,
+			new OpGetRef("verb") /* :989 */,
+			new OpPushConstant(19) /* :990 */,
+			new OpCallPrimitiveFunction('=', 2) /* :991 */,
+			new OpJumpIfFalse(L234) /* :992 */,
+			new OpPushConstant("GRIS ") /* :993 */,
+			new OpSetRef("verb$") /* :994 */,
+			new OpGetRef("verb") /* :995 */,
+			new OpPushConstant(20) /* :996 */,
+			new OpCallPrimitiveFunction('=', 2) /* :997 */,
+			new OpJumpIfFalse(L236) /* :998 */,
+			new OpPushConstant("NEGRO ") /* :999 */,
+			new OpSetRef("verb$") /* :1000 */,
+			new OpGetRef("verb") /* :1001 */,
+			new OpPushConstant(21) /* :1002 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1003 */,
+			new OpJumpIfFalse(L238) /* :1004 */,
+			new OpPushConstant("BLANCO ") /* :1005 */,
+			new OpSetRef("verb$") /* :1006 */,
+			new OpGetRef("verb") /* :1007 */,
+			new OpPushConstant(22) /* :1008 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1009 */,
+			new OpJumpIfFalse(L240) /* :1010 */,
+			new OpPushConstant("VERDE ") /* :1011 */,
+			new OpSetRef("verb$") /* :1012 */,
+			new OpGetRef("verb") /* :1013 */,
+			new OpPushConstant(23) /* :1014 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1015 */,
+			new OpJumpIfFalse(L242) /* :1016 */,
+			new OpPushConstant("AMARILLO ") /* :1017 */,
+			new OpSetRef("verb$") /* :1018 */,
+			new OpGetRef("verb") /* :1019 */,
+			new OpPushConstant(24) /* :1020 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1021 */,
+			new OpJumpIfFalse(L244) /* :1022 */,
+			new OpPushConstant("DORADO ") /* :1023 */,
+			new OpSetRef("verb$") /* :1024 */,
+			new OpGetRef("verb") /* :1025 */,
+			new OpPushConstant(25) /* :1026 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1027 */,
+			new OpJumpIfFalse(L246) /* :1028 */,
+			new OpPushConstant("PLATEADO ") /* :1029 */,
+			new OpSetRef("verb$") /* :1030 */,
+			new OpGetRef("verb") /* :1031 */,
+			new OpPushConstant(26) /* :1032 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1033 */,
+			new OpJumpIfFalse(L248) /* :1034 */,
+			new OpPushConstant("SOLAR ") /* :1035 */,
+			new OpSetRef("verb$") /* :1036 */,
+			new OpGetRef("verb") /* :1037 */,
+			new OpPushConstant(27) /* :1038 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1039 */,
+			new OpJumpIfFalse(L250) /* :1040 */,
+			new OpPushConstant("LUNAR ") /* :1041 */,
+			new OpSetRef("verb$") /* :1042 */,
+			new OpGetRef("verb") /* :1043 */,
+			new OpPushConstant(28) /* :1044 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1045 */,
+			new OpJumpIfFalse(L252) /* :1046 */,
+			new OpPushConstant("FEO ") /* :1047 */,
+			new OpSetRef("verb$") /* :1048 */,
+			new OpGetRef("verb") /* :1049 */,
+			new OpPushConstant(29) /* :1050 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1051 */,
+			new OpJumpIfFalse(L254) /* :1052 */,
+			new OpPushConstant("LINDO ") /* :1053 */,
+			new OpSetRef("verb$") /* :1054 */,
+			new OpGetRef("verb") /* :1055 */,
+			new OpPushConstant(30) /* :1056 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1057 */,
+			new OpJumpIfFalse(L256) /* :1058 */,
+			new OpPushConstant("GORDO ") /* :1059 */,
+			new OpSetRef("verb$") /* :1060 */,
+			new OpGetRef("verb") /* :1061 */,
+			new OpPushConstant(31) /* :1062 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1063 */,
+			new OpJumpIfFalse(L258) /* :1064 */,
+			new OpPushConstant("FLACO ") /* :1065 */,
+			new OpSetRef("verb$") /* :1066 */,
+			new OpGetRef("verb") /* :1067 */,
+			new OpPushConstant(32) /* :1068 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1069 */,
+			new OpJumpIfFalse(L260) /* :1070 */,
+			new OpPushConstant("ALTO ") /* :1071 */,
+			new OpSetRef("verb$") /* :1072 */,
+			new OpGetRef("verb") /* :1073 */,
+			new OpPushConstant(33) /* :1074 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1075 */,
+			new OpJumpIfFalse(L262) /* :1076 */,
+			new OpPushConstant("BAJO ") /* :1077 */,
+			new OpSetRef("verb$") /* :1078 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :1079 */,
+			new OpPushConstant(44) /* :1080 */,
+			new OpCallPrimitiveFunction('*', 2) /* :1081 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :1082 */,
+			new OpPushConstant(1) /* :1083 */,
+			new OpCallPrimitiveFunction('+', 2) /* :1084 */,
+			new OpSetRef("adj") /* :1085 */,
+			new OpGetRef("adj") /* :1086 */,
+			new OpPushConstant(1) /* :1087 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1088 */,
+			new OpJumpIfFalse(L264) /* :1089 */,
+			new OpPushConstant("SALTAN ") /* :1090 */,
+			new OpSetRef("adj$") /* :1091 */,
+			new OpGetRef("adj") /* :1092 */,
+			new OpPushConstant(2) /* :1093 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1094 */,
+			new OpJumpIfFalse(L266) /* :1095 */,
+			new OpPushConstant("CORRE ") /* :1096 */,
+			new OpSetRef("adj$") /* :1097 */,
+			new OpGetRef("adj") /* :1098 */,
+			new OpPushConstant(3) /* :1099 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1100 */,
+			new OpJumpIfFalse(L268) /* :1101 */,
+			new OpPushConstant("MATA ") /* :1102 */,
+			new OpSetRef("adj$") /* :1103 */,
+			new OpGetRef("adj") /* :1104 */,
+			new OpPushConstant(4) /* :1105 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1106 */,
+			new OpJumpIfFalse(L270) /* :1107 */,
+			new OpPushConstant("ATACO ") /* :1108 */,
+			new OpSetRef("adj$") /* :1109 */,
+			new OpGetRef("adj") /* :1110 */,
+			new OpPushConstant(5) /* :1111 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1112 */,
+			new OpJumpIfFalse(L272) /* :1113 */,
+			new OpPushConstant("JUEGA ") /* :1114 */,
+			new OpSetRef("adj$") /* :1115 */,
+			new OpGetRef("adj") /* :1116 */,
+			new OpPushConstant(6) /* :1117 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1118 */,
+			new OpJumpIfFalse(L274) /* :1119 */,
+			new OpPushConstant("TIENE ") /* :1120 */,
+			new OpSetRef("adj$") /* :1121 */,
+			new OpGetRef("adj") /* :1122 */,
+			new OpPushConstant(7) /* :1123 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1124 */,
+			new OpJumpIfFalse(L276) /* :1125 */,
+			new OpPushConstant("VE ") /* :1126 */,
+			new OpSetRef("adj$") /* :1127 */,
+			new OpGetRef("adj") /* :1128 */,
+			new OpPushConstant(8) /* :1129 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1130 */,
+			new OpJumpIfFalse(L278) /* :1131 */,
+			new OpPushConstant("AGARRA ") /* :1132 */,
+			new OpSetRef("adj$") /* :1133 */,
+			new OpGetRef("adj") /* :1134 */,
+			new OpPushConstant(9) /* :1135 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1136 */,
+			new OpJumpIfFalse(L280) /* :1137 */,
+			new OpPushConstant("ESCUPE ") /* :1138 */,
+			new OpSetRef("adj$") /* :1139 */,
+			new OpGetRef("adj") /* :1140 */,
+			new OpPushConstant(10) /* :1141 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1142 */,
+			new OpJumpIfFalse(L282) /* :1143 */,
+			new OpPushConstant("LAMIO ") /* :1144 */,
+			new OpSetRef("adj$") /* :1145 */,
+			new OpGetRef("adj") /* :1146 */,
+			new OpPushConstant(11) /* :1147 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1148 */,
+			new OpJumpIfFalse(L284) /* :1149 */,
+			new OpPushConstant("BEBE ") /* :1150 */,
+			new OpSetRef("adj$") /* :1151 */,
+			new OpGetRef("adj") /* :1152 */,
+			new OpPushConstant(12) /* :1153 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1154 */,
+			new OpJumpIfFalse(L286) /* :1155 */,
+			new OpPushConstant("SACARA ") /* :1156 */,
+			new OpSetRef("adj$") /* :1157 */,
+			new OpGetRef("adj") /* :1158 */,
+			new OpPushConstant(13) /* :1159 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1160 */,
+			new OpJumpIfFalse(L288) /* :1161 */,
+			new OpPushConstant("ESCRIBE ") /* :1162 */,
+			new OpSetRef("adj$") /* :1163 */,
+			new OpGetRef("adj") /* :1164 */,
+			new OpPushConstant(14) /* :1165 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1166 */,
+			new OpJumpIfFalse(L290) /* :1167 */,
+			new OpPushConstant("ARRESTA ") /* :1168 */,
+			new OpSetRef("adj$") /* :1169 */,
+			new OpGetRef("adj") /* :1170 */,
+			new OpPushConstant(15) /* :1171 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1172 */,
+			new OpJumpIfFalse(L292) /* :1173 */,
+			new OpPushConstant("TORTURA ") /* :1174 */,
+			new OpSetRef("adj$") /* :1175 */,
+			new OpGetRef("adj") /* :1176 */,
+			new OpPushConstant(16) /* :1177 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1178 */,
+			new OpJumpIfFalse(L294) /* :1179 */,
+			new OpPushConstant("PELEA ") /* :1180 */,
+			new OpSetRef("adj$") /* :1181 */,
+			new OpGetRef("adj") /* :1182 */,
+			new OpPushConstant(17) /* :1183 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1184 */,
+			new OpJumpIfFalse(L296) /* :1185 */,
+			new OpPushConstant("CAZA ") /* :1186 */,
+			new OpSetRef("adj$") /* :1187 */,
+			new OpGetRef("adj") /* :1188 */,
+			new OpPushConstant(18) /* :1189 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1190 */,
+			new OpJumpIfFalse(L298) /* :1191 */,
+			new OpPushConstant("VUELVE ") /* :1192 */,
+			new OpSetRef("adj$") /* :1193 */,
+			new OpGetRef("adj") /* :1194 */,
+			new OpPushConstant(19) /* :1195 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1196 */,
+			new OpJumpIfFalse(L300) /* :1197 */,
+			new OpPushConstant("SUE\xa5A ") /* :1198 */,
+			new OpSetRef("adj$") /* :1199 */,
+			new OpGetRef("adj") /* :1200 */,
+			new OpPushConstant(20) /* :1201 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1202 */,
+			new OpJumpIfFalse(L302) /* :1203 */,
+			new OpPushConstant("DUERME ") /* :1204 */,
+			new OpSetRef("adj$") /* :1205 */,
+			new OpGetRef("adj") /* :1206 */,
+			new OpPushConstant(21) /* :1207 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1208 */,
+			new OpJumpIfFalse(L304) /* :1209 */,
+			new OpPushConstant("HUELE ") /* :1210 */,
+			new OpSetRef("adj$") /* :1211 */,
+			new OpGetRef("adj") /* :1212 */,
+			new OpPushConstant(22) /* :1213 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1214 */,
+			new OpJumpIfFalse(L306) /* :1215 */,
+			new OpPushConstant("SIENTE ") /* :1216 */,
+			new OpSetRef("adj$") /* :1217 */,
+			new OpGetRef("adj") /* :1218 */,
+			new OpPushConstant(23) /* :1219 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1220 */,
+			new OpJumpIfFalse(L308) /* :1221 */,
+			new OpPushConstant("TOCA ") /* :1222 */,
+			new OpSetRef("adj$") /* :1223 */,
+			new OpGetRef("adj") /* :1224 */,
+			new OpPushConstant(24) /* :1225 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1226 */,
+			new OpJumpIfFalse(L310) /* :1227 */,
+			new OpPushConstant("ACARICIA ") /* :1228 */,
+			new OpSetRef("adj$") /* :1229 */,
+			new OpGetRef("adj") /* :1230 */,
+			new OpPushConstant(25) /* :1231 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1232 */,
+			new OpJumpIfFalse(L312) /* :1233 */,
+			new OpPushConstant("VE ") /* :1234 */,
+			new OpSetRef("adj$") /* :1235 */,
+			new OpGetRef("adj") /* :1236 */,
+			new OpPushConstant(26) /* :1237 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1238 */,
+			new OpJumpIfFalse(L314) /* :1239 */,
+			new OpPushConstant("GUSTA ") /* :1240 */,
+			new OpSetRef("adj$") /* :1241 */,
+			new OpGetRef("adj") /* :1242 */,
+			new OpPushConstant(27) /* :1243 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1244 */,
+			new OpJumpIfFalse(L316) /* :1245 */,
+			new OpPushConstant("AMA ") /* :1246 */,
+			new OpSetRef("adj$") /* :1247 */,
+			new OpGetRef("adj") /* :1248 */,
+			new OpPushConstant(28) /* :1249 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1250 */,
+			new OpJumpIfFalse(L318) /* :1251 */,
+			new OpPushConstant("TEME ") /* :1252 */,
+			new OpSetRef("adj$") /* :1253 */,
+			new OpGetRef("adj") /* :1254 */,
+			new OpPushConstant(29) /* :1255 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1256 */,
+			new OpJumpIfFalse(L320) /* :1257 */,
+			new OpPushConstant("PARTE ") /* :1258 */,
+			new OpSetRef("adj$") /* :1259 */,
+			new OpGetRef("adj") /* :1260 */,
+			new OpPushConstant(30) /* :1261 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1262 */,
+			new OpJumpIfFalse(L322) /* :1263 */,
+			new OpPushConstant("ARMA ") /* :1264 */,
+			new OpSetRef("adj$") /* :1265 */,
+			new OpGetRef("adj") /* :1266 */,
+			new OpPushConstant(31) /* :1267 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1268 */,
+			new OpJumpIfFalse(L324) /* :1269 */,
+			new OpPushConstant("SACA ") /* :1270 */,
+			new OpSetRef("adj$") /* :1271 */,
+			new OpGetRef("adj") /* :1272 */,
+			new OpPushConstant(32) /* :1273 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1274 */,
+			new OpJumpIfFalse(L326) /* :1275 */,
+			new OpPushConstant("QUITA ") /* :1276 */,
+			new OpSetRef("adj$") /* :1277 */,
+			new OpGetRef("adj") /* :1278 */,
+			new OpPushConstant(33) /* :1279 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1280 */,
+			new OpJumpIfFalse(L328) /* :1281 */,
+			new OpPushConstant("LIMPIA ") /* :1282 */,
+			new OpSetRef("adj$") /* :1283 */,
+			new OpGetRef("adj") /* :1284 */,
+			new OpPushConstant(34) /* :1285 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1286 */,
+			new OpJumpIfFalse(L330) /* :1287 */,
+			new OpPushConstant("CORTA ") /* :1288 */,
+			new OpSetRef("adj$") /* :1289 */,
+			new OpGetRef("adj") /* :1290 */,
+			new OpPushConstant(35) /* :1291 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1292 */,
+			new OpJumpIfFalse(L332) /* :1293 */,
+			new OpPushConstant("PULE ") /* :1294 */,
+			new OpSetRef("adj$") /* :1295 */,
+			new OpGetRef("adj") /* :1296 */,
+			new OpPushConstant(36) /* :1297 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1298 */,
+			new OpJumpIfFalse(L334) /* :1299 */,
+			new OpPushConstant("ESMERILA ") /* :1300 */,
+			new OpSetRef("adj$") /* :1301 */,
+			new OpGetRef("adj") /* :1302 */,
+			new OpPushConstant(37) /* :1303 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1304 */,
+			new OpJumpIfFalse(L336) /* :1305 */,
+			new OpPushConstant("BATE ") /* :1306 */,
+			new OpSetRef("adj$") /* :1307 */,
+			new OpGetRef("adj") /* :1308 */,
+			new OpPushConstant(38) /* :1309 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1310 */,
+			new OpJumpIfFalse(L338) /* :1311 */,
+			new OpPushConstant("PICA ") /* :1312 */,
+			new OpSetRef("adj$") /* :1313 */,
+			new OpGetRef("adj") /* :1314 */,
+			new OpPushConstant(39) /* :1315 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1316 */,
+			new OpJumpIfFalse(L340) /* :1317 */,
+			new OpPushConstant("LICUA ") /* :1318 */,
+			new OpSetRef("adj$") /* :1319 */,
+			new OpGetRef("adj") /* :1320 */,
+			new OpPushConstant(40) /* :1321 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1322 */,
+			new OpJumpIfFalse(L342) /* :1323 */,
+			new OpPushConstant("SUFRE ") /* :1324 */,
+			new OpSetRef("adj$") /* :1325 */,
+			new OpGetRef("adj") /* :1326 */,
+			new OpPushConstant(41) /* :1327 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1328 */,
+			new OpJumpIfFalse(L344) /* :1329 */,
+			new OpPushConstant("GRITA ") /* :1330 */,
+			new OpSetRef("adj$") /* :1331 */,
+			new OpGetRef("adj") /* :1332 */,
+			new OpPushConstant(42) /* :1333 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1334 */,
+			new OpJumpIfFalse(L346) /* :1335 */,
+			new OpPushConstant("HABLA ") /* :1336 */,
+			new OpSetRef("adj$") /* :1337 */,
+			new OpGetRef("adj") /* :1338 */,
+			new OpPushConstant(43) /* :1339 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1340 */,
+			new OpJumpIfFalse(L348) /* :1341 */,
+			new OpPushConstant("TRUNCA ") /* :1342 */,
+			new OpSetRef("adj$") /* :1343 */,
+			new OpGetRef("adj") /* :1344 */,
+			new OpPushConstant(44) /* :1345 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1346 */,
+			new OpJumpIfFalse(L350) /* :1347 */,
+			new OpPushConstant("DESARMA ") /* :1348 */,
+			new OpSetRef("adj$") /* :1349 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :1350 */,
+			new OpPushConstant(12) /* :1351 */,
+			new OpCallPrimitiveFunction('*', 2) /* :1352 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :1353 */,
+			new OpPushConstant(1) /* :1354 */,
+			new OpCallPrimitiveFunction('+', 2) /* :1355 */,
+			new OpSetRef("rar") /* :1356 */,
+			new OpGetRef("rar") /* :1357 */,
+			new OpPushConstant(1) /* :1358 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1359 */,
+			new OpJumpIfFalse(L352) /* :1360 */,
+			new OpPushConstant("ABAJO ") /* :1361 */,
+			new OpSetRef("rar$") /* :1362 */,
+			new OpGetRef("rar") /* :1363 */,
+			new OpPushConstant(2) /* :1364 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1365 */,
+			new OpJumpIfFalse(L354) /* :1366 */,
+			new OpPushConstant("ARRIBA ") /* :1367 */,
+			new OpSetRef("rar$") /* :1368 */,
+			new OpGetRef("rar") /* :1369 */,
+			new OpPushConstant(3) /* :1370 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1371 */,
+			new OpJumpIfFalse(L356) /* :1372 */,
+			new OpPushConstant("ABIERTO ") /* :1373 */,
+			new OpSetRef("rar$") /* :1374 */,
+			new OpGetRef("rar") /* :1375 */,
+			new OpPushConstant(4) /* :1376 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1377 */,
+			new OpJumpIfFalse(L358) /* :1378 */,
+			new OpPushConstant("CERRADO ") /* :1379 */,
+			new OpSetRef("rar$") /* :1380 */,
+			new OpGetRef("rar") /* :1381 */,
+			new OpPushConstant(5) /* :1382 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1383 */,
+			new OpJumpIfFalse(L360) /* :1384 */,
+			new OpPushConstant("NORTE ") /* :1385 */,
+			new OpSetRef("rar$") /* :1386 */,
+			new OpGetRef("rar") /* :1387 */,
+			new OpPushConstant(6) /* :1388 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1389 */,
+			new OpJumpIfFalse(L362) /* :1390 */,
+			new OpPushConstant("SUR ") /* :1391 */,
+			new OpSetRef("rar$") /* :1392 */,
+			new OpGetRef("rar") /* :1393 */,
+			new OpPushConstant(7) /* :1394 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1395 */,
+			new OpJumpIfFalse(L364) /* :1396 */,
+			new OpPushConstant("ESTE ") /* :1397 */,
+			new OpSetRef("rar$") /* :1398 */,
+			new OpGetRef("rar") /* :1399 */,
+			new OpPushConstant(8) /* :1400 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1401 */,
+			new OpJumpIfFalse(L366) /* :1402 */,
+			new OpPushConstant("OESTE ") /* :1403 */,
+			new OpSetRef("rar$") /* :1404 */,
+			new OpGetRef("rar") /* :1405 */,
+			new OpPushConstant(9) /* :1406 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1407 */,
+			new OpJumpIfFalse(L368) /* :1408 */,
+			new OpPushConstant("DERECHA ") /* :1409 */,
+			new OpSetRef("rar$") /* :1410 */,
+			new OpGetRef("rar") /* :1411 */,
+			new OpPushConstant(10) /* :1412 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1413 */,
+			new OpJumpIfFalse(L370) /* :1414 */,
+			new OpPushConstant("IZQUIERDA ") /* :1415 */,
+			new OpSetRef("rar$") /* :1416 */,
+			new OpGetRef("rar") /* :1417 */,
+			new OpPushConstant(11) /* :1418 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1419 */,
+			new OpJumpIfFalse(L372) /* :1420 */,
+			new OpPushConstant("ADELANTE ") /* :1421 */,
+			new OpSetRef("rar$") /* :1422 */,
+			new OpGetRef("rar") /* :1423 */,
+			new OpPushConstant(12) /* :1424 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1425 */,
+			new OpJumpIfFalse(L374) /* :1426 */,
+			new OpPushConstant("ATRAS ") /* :1427 */,
+			new OpSetRef("rar$") /* :1428 */,
+			new OpCallPrimitiveFunction('RND', 0) /* :1429 */,
+			new OpPushConstant(16) /* :1430 */,
+			new OpCallPrimitiveFunction('*', 2) /* :1431 */,
+			new OpCallPrimitiveFunction('INT', 1) /* :1432 */,
+			new OpPushConstant(1) /* :1433 */,
+			new OpCallPrimitiveFunction('+', 2) /* :1434 */,
+			new OpSetRef("lug") /* :1435 */,
+			new OpGetRef("lug") /* :1436 */,
+			new OpPushConstant(1) /* :1437 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1438 */,
+			new OpJumpIfFalse(L376) /* :1439 */,
+			new OpPushConstant("ESCUELA ") /* :1440 */,
+			new OpSetRef("lug$") /* :1441 */,
+			new OpGetRef("lug") /* :1442 */,
+			new OpPushConstant(2) /* :1443 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1444 */,
+			new OpJumpIfFalse(L378) /* :1445 */,
+			new OpPushConstant("CASA ") /* :1446 */,
+			new OpSetRef("lug$") /* :1447 */,
+			new OpGetRef("lug") /* :1448 */,
+			new OpPushConstant(3) /* :1449 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1450 */,
+			new OpJumpIfFalse(L380) /* :1451 */,
+			new OpPushConstant("PATIO ") /* :1452 */,
+			new OpSetRef("lug$") /* :1453 */,
+			new OpGetRef("lug") /* :1454 */,
+			new OpPushConstant(4) /* :1455 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1456 */,
+			new OpJumpIfFalse(L382) /* :1457 */,
+			new OpPushConstant("PLAZA ") /* :1458 */,
+			new OpSetRef("lug$") /* :1459 */,
+			new OpGetRef("lug") /* :1460 */,
+			new OpPushConstant(5) /* :1461 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1462 */,
+			new OpJumpIfFalse(L384) /* :1463 */,
+			new OpPushConstant("CLUB ") /* :1464 */,
+			new OpSetRef("lug$") /* :1465 */,
+			new OpGetRef("lug") /* :1466 */,
+			new OpPushConstant(6) /* :1467 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1468 */,
+			new OpJumpIfFalse(L386) /* :1469 */,
+			new OpPushConstant("INSTITUTO ") /* :1470 */,
+			new OpSetRef("lug$") /* :1471 */,
+			new OpGetRef("lug") /* :1472 */,
+			new OpPushConstant(7) /* :1473 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1474 */,
+			new OpJumpIfFalse(L388) /* :1475 */,
+			new OpPushConstant("FACULTAD ") /* :1476 */,
+			new OpSetRef("lug$") /* :1477 */,
+			new OpGetRef("lug") /* :1478 */,
+			new OpPushConstant(8) /* :1479 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1480 */,
+			new OpJumpIfFalse(L390) /* :1481 */,
+			new OpPushConstant("UNIVERSIDAD ") /* :1482 */,
+			new OpSetRef("lug$") /* :1483 */,
+			new OpGetRef("lug") /* :1484 */,
+			new OpPushConstant(9) /* :1485 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1486 */,
+			new OpJumpIfFalse(L392) /* :1487 */,
+			new OpPushConstant("HOGAR ") /* :1488 */,
+			new OpSetRef("lug$") /* :1489 */,
+			new OpGetRef("lug") /* :1490 */,
+			new OpPushConstant(10) /* :1491 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1492 */,
+			new OpJumpIfFalse(L394) /* :1493 */,
+			new OpPushConstant("FABRICA ") /* :1494 */,
+			new OpSetRef("lug$") /* :1495 */,
+			new OpGetRef("lug") /* :1496 */,
+			new OpPushConstant(11) /* :1497 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1498 */,
+			new OpJumpIfFalse(L396) /* :1499 */,
+			new OpPushConstant("EMPRESA ") /* :1500 */,
+			new OpSetRef("lug$") /* :1501 */,
+			new OpGetRef("lug") /* :1502 */,
+			new OpPushConstant(12) /* :1503 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1504 */,
+			new OpJumpIfFalse(L398) /* :1505 */,
+			new OpPushConstant("PILETA ") /* :1506 */,
+			new OpSetRef("lug$") /* :1507 */,
+			new OpGetRef("lug") /* :1508 */,
+			new OpPushConstant(13) /* :1509 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1510 */,
+			new OpJumpIfFalse(L400) /* :1511 */,
+			new OpPushConstant("COLEGIO ") /* :1512 */,
+			new OpSetRef("lug$") /* :1513 */,
+			new OpGetRef("lug") /* :1514 */,
+			new OpPushConstant(14) /* :1515 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1516 */,
+			new OpJumpIfFalse(L402) /* :1517 */,
+			new OpPushConstant("HABITACION ") /* :1518 */,
+			new OpSetRef("lug$") /* :1519 */,
+			new OpGetRef("lug") /* :1520 */,
+			new OpPushConstant(15) /* :1521 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1522 */,
+			new OpJumpIfFalse(L404) /* :1523 */,
+			new OpPushConstant("CUARTO ") /* :1524 */,
+			new OpSetRef("lug$") /* :1525 */,
+			new OpGetRef("lug") /* :1526 */,
+			new OpPushConstant(16) /* :1527 */,
+			new OpCallPrimitiveFunction('=', 2) /* :1528 */,
+			new OpJumpIfFalse(L406) /* :1529 */,
+			new OpPushConstant("PIEZA ") /* :1530 */,
+			new OpSetRef("lug$") /* :1531 */,
+			new OpLeave() /* :1532 */,
+			new OpReturn() /* :1533 */,
+			new OpCallPrimitiveStatement('SYSTEM', 0) /* :1534 */
+		];
+		var available_screens = [
+			{'number': 0, 'data': SCREEN0_DATA}
+		];
+
+		var vm_state = new VirtualMachineState(
+			document,
+			screen_container,
+			errmsg_container,
+			shared,
+			available_screens,
+			code,
+			0
+		);
+
+        var vm = new VirtualMachine(vm_state);
+		vm.run();
+      }
+    </script>
+  </head>
+  <body onload='init()'>
+    <div id='screen_container'>
+    </div>
+    <div id='errmsg_container'>
+    </div>
+  </body>
+</html>

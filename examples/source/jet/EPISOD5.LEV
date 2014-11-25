@@ -1,0 +1,556 @@
+DECLARE SUB laberi (y!, x!, m!)
+DECLARE SUB camina (y!, x!, m!)
+CLS
+COLOR 7, 0
+PRINT "­PASASTE LOS 3 PRIMEROS MUNDOS UNIALES!!!"
+PRINT
+PRINT
+PRINT "                                                            "
+PRINT "                                                            "
+PRINT "                                       ÜÛÛ³                 "
+PRINT "              ÛÛÛÜ                        ³                 "
+PRINT "              ÛÛÛÛÛÜÜÜ                    ³                 "
+PRINT "              Û                           Û                 "
+PRINT "              Û        ÜÜ               ÛÛÛÛÛ               "
+PRINT "       ÛÛÛ ÛÛÛÛ     ÜÛÛÛÛÛÛÜ       ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ          "
+PRINT "      ÛÛÛÛ ÛÛÛÛ    ÛÛÛÛÛÛÛÛÛ   ÛÛÛÛÛÛÛÛÛÛ ÛÛÛÛÛÛÛÛÛÛÛ       "
+PRINT "     ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ      "
+PRINT "ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß"
+SLEEP 100
+FOR d = 1 TO 10
+COLOR 0, 7
+CLS
+PLAY "p30"
+COLOR 7, 0
+CLS
+PLAY "p30"
+NEXT d
+CLS
+PRINT "Y LOS DESTRUISTE!!!!!"
+PRINT
+PRINT
+PRINT "                                                            "
+PRINT "                                                            "
+PRINT "                                                            "
+PRINT "                                                            "
+PRINT "                                                            "
+PRINT "                                                            "
+PRINT "                                                  Û         "
+PRINT "                          Û         Û  ÛÛ         Û         "
+PRINT "      Û                 ÛÛÛ Û      ÛÛÛÛÛ         ÛÛ         "
+PRINT "      ÛÛ           ÛÛÛÛÛÛÛÛÛÛÛ    ÜÜÛÛÛÛÛÜÜÛÛ  ÛÛÛÛÛÛÛ      "
+PRINT "ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß"
+PRINT "                                                            "
+SLEEP 100
+sta4:
+CLS
+PRINT "4 WORLD!!!!!"
+PRINT "BASE 2  STAGE 1"
+PRINT ">>>>>>>>--------[1]*--------- 2 *------ 3*----- 4.2 *----5 *---"
+PRINT "PASSWORD: GHJ-*DKFPP#"
+DO
+LOCATE 4, 1: PRINT "         < < <     <          +           >   <   x  +   "
+PLAY "p10"
+LOCATE 4, 1: PRINT "         - - -     -          x           -   -   +  x   "
+PLAY "p5"
+LOOP WHILE INKEY$ = ""
+CLS
+PRINT "BASE 2"
+SLEEP 1
+PRINT time
+SLEEP 1
+PRINT "LA ENTRADA..."
+SLEEP 5
+CLS
+PRINT "±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±"
+PRINT "                                                                ±"
+PRINT "±±±±±±±±±±± ±±±± ±±± ±±±±±±±±±±±±±±±± ±± ±±±±±±±±±±±±±±±±±±±±±±± ±"
+PRINT "±        ± ± ± ± ±                ± ±  ±                     ± ±"
+PRINT "± ±±±±±±±±± ± ±± ± ±±±±±±±±±±±±±±±± ± ± ±± ±±±± ±±±±±±±±±±±±±± ± ±"
+PRINT "± ±         ±    ± ±                ± ± ±  ±±±             ± ± ±"
+PRINT "± ± ±±±±±±±±±±±±±± ± ±±±±±±±±±±±±±± ± ± ± ±±  ±±±±±±±±±±±±±±±± ± ±"
+PRINT "± ±                ± ±              ± ± ± ±                    ± ±"
+PRINT "± ± ±±±±±±±±±±±±±±±± ± ±±±±±±±±±±±±±± ± ± ±±±±±±±±±±±±±±±±±±±± ± ±"
+PRINT "± ± ±                ± ±              ± ± ±                  ± ± ±"
+PRINT "± ± ± ±±±±±± ±±±±±±±±± ±±± ±±±±±±±±±± ± ± ± ±±±±±±±±±±±±±±±± ± ± ±"
+PRINT "± ± ± ±±   ± ±           ± ±        ± ± ± ± ±              ± ± ± ±"
+PRINT "± ± ± ±  ± ± ±±±±±±±±±± ± ±±±±±±±± ± ± ± ± ± ±±±±±±±±±±±± ± ± ± ±"
+PRINT "± ± ± ± ±± ± ±±±       ± ±        ± ±±± ± ± ± ±            ± ± ± ±"
+PRINT "± ± ± ±±  ±     ±±±±± ± ± ±±±±±± ±     ± ±   ±±±±±±±±±±±±± ±± ±"
+PRINT "± ±±± ±±± ±±±±±± ±  ±±± ± ±   ± ±±±±± ± ±±±±±±±±±±±±±±±±±± ±±± ±"
+PRINT "±              ± ±±±     ±   ±±±±     ± ±                        ±"
+PRINT "±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±"
+laberi 2, 1, 10
+
+CLS
+PRINT
+PRINT "STAGE 2"
+PRINT ">>>>>>>>--------M1 *---------[2]*------ 3*----- 4.2 *----5 *---"
+DO
+LOCATE 4, 1: PRINT "         < < <     <          +           >   <   x  +   "
+PLAY "p10"
+LOCATE 4, 1: PRINT "         - - -     -          x           -   -   +  x   "
+PLAY "p5"
+LOOP WHILE INKEY$ = ""
+CLS
+LOCATE 4
+PRINT "       ³-³                                                             "
+PRINT "ßßßßßßßß³-³                                                          "
+PRINT "        ³-³              ³-³                                       "
+PRINT "        ³-³ßßßßßßßßßßßßßßßß³-³             ³-³                      "
+PRINT "        ³-³                ³-³ßßßßßßßßßßßßßß³-³                      "
+PRINT "        ³-³                ³-³              ³-³                      "
+PRINT "  Û    ³-³                ³-³       ³-³    ³-³                      "
+PRINT "  ßßßßßßßßßßßßßßßßßß ßßßßßßßßßßßßßßßß³-³    ³-³                      "
+PRINT "                                     ³=³    ³-³                      "
+PRINT "                                     ³-³    ³-³                      "
+PRINT "                                            ³-³                      "
+PRINT "                                     ³-³    ³-³                      "
+PRINT "                                    ³-³    ³-³                      "
+PRINT "                  ³-³ßßßßßßßßßßßßßßßßßßßßßßßßßß                      "
+PRINT "                  ³-³                                                "
+PRINT "                  ³-³                                                "
+camina 4, 3, 2
+CLS
+PRINT
+PRINT "STAGE 3"
+PRINT ">>>>>>>>--------M1 *---------M2 *------[3]*---- 4.2 *----5 *---"
+DO
+LOCATE 4, 1: PRINT "         < < <     <          +           >   <   x  +   "
+PLAY "p10"
+LOCATE 4, 1: PRINT "         - - -     -          x           -   -   +  x   "
+PLAY "p5"
+LOOP WHILE INKEY$ = ""
+CLS
+FOR i% = 30 TO 1 STEP -1
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                              ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PLAY "p30"
+
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                              "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PRINT "                                                                               ³"
+PRINT "³                                                                               "
+PLAY "p30"
+SOUND i% + 67, 1 / 9
+NEXT i%
+CLS
+LOCATE 18, 1: PRINT "ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß"
+FOR i% = 2 TO 17
+LOCATE i%, 40: PRINT ""
+PLAY "p30"
+LOCATE i% - 1, 40: PRINT " "
+NEXT i%
+CLS
+PRINT "­QUE POZO!...             JET-"
+SLEEP 5
+CLS
+PRINT "­JETTECDIF­ NO ME HAS DICHO COMO SOBREVIVISTE -JET"
+SLEEP 5
+PRINT "LOGRE ESCAPAR Y... Y ­NO HAY TIEMPO, TENGO QUE DECIRTE!!! -JETTECDIF"
+SLEEP 5
+CLS
+PRINT "PERDI EL PASAJE Y ENGA¥E AL SOLDADO, LUEGO LO DESMAYE     -JET"
+SLEEP 5
+CLS
+PRINT "TOMA ESTE PASE Y METELO EN ESA RANURA, AHI!  -JETTECDIF "
+PRINT
+PRINT "                 ³"
+PRINT "                 ³"
+PRINT "                 ³"
+PRINT "                 ³"
+PRINT " BIEN, LO HARE                -JET"
+SLEEP 30
+CLS
+FOR i% = 1 TO 20
+PRINT "ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ"
+PLAY "P30"
+NEXT i%
+SLEEP 100
+CLS
+PRINT "­­GUAU!!! ¨QUE ES ESO??                 -JET"
+SLEEP 5
+CLS
+PRINT "LA ENTRADA A LAS AGUAS SATURNIANAS CONTINUA ALLI TU MISION -JETTECDIF"
+SLEEP 10
+CLS
+PRINT "BIEN.                  -JET"
+SLEEP 10
+CLS
+PRINT "STAGE 1"
+PRINT "           ßß        ßßßßß   ß"
+PRINT ">??--------_-----____---1*----___--------_--------2*--++}>ÛÛ ÛßÛ ÛÛ"
+PRINT "   ßßß           ßß           ßßßßßß"
+PRINT "la caverna temporal"
+DO
+PLAY "O0L10CCCO1EO0P10CCCO1DO0AB"
+LOOP WHILE INKEY$ = ""
+CLS
+LOCATE 4
+PRINT "   ³-³   ³-³  N§1 FLOOR                LOS 4 PISOS DEL LIMITE.    "
+PRINT "  ß³-³ß/ß³-³                                                      "
+PRINT "   ³-³   ³-³                                                 "
+PRINT "   ßßßßßßßßßßßßßßßßßßßßß                                          "
+camina 4, 3, 3
+CLS
+LOCATE 4
+PRINT "      ³-³      ³-³ ³-³ ³-³                                       "
+PRINT "  ßßßß³-³      ³-³ß³-³ß³-³  ³-³ ³-³                            "
+PRINT "      ³-³    ³-³ ³=³ ßßßßßßß³-³ßß³-³/ßß                         "
+PRINT "      ßßßßßßßßßßßßß³=³        ³-³  ßßßßßßßßß                      "
+PRINT "                              ³-³         N§2 FLOOR               "
+PRINT "                              ³-³                              "
+PRINT "                            ßßßßßßßßßßßßßßßßßßßßßßßßßßß          "
+PRINT "                                                                  "
+camina 4, 3, 3
+CLS
+LOCATE 4
+PRINT "      ³-³      ³-³    ³-³                                     "
+PRINT "  ßßßßßß³-³      ³-³ßßßßßß³-³   N§3 FLOOR                         "
+PRINT "        ³-³      ³-³      ³-³                                     "
+PRINT "        ³-³      ³-³      ³-³    ³-³                           "
+PRINT "        ³-³      ³-³      ³-³ßßßßß³-³ßßßßßß                       "
+PRINT "        ³-³      ³-³      ³=³     ³-³                             "
+PRINT "        ³-³   ³-³              ³-³                            "
+PRINT "        ßßßßßßßßßßßß              ßßßßßß/ßß                       "
+camina 4, 3, 5
+CLS
+LOCATE 4
+PRINT "        ³-³                                                       "
+PRINT "ßßßßßßßß³-³ ³-³                  ³-³                   "
+PRINT "        ßßßßß³-³ ³-³            ³-³ßßßßßßßßßßßßßßß              "
+PRINT "             ßßßßßß³-³   ³-³   ³-³                             "
+PRINT "                   ßßßßßßßßß³-³   ³-³   FLOOR [4]                 "
+PRINT "                 Û        ³-³  ³-³                             "
+PRINT "                 ßßßßßßßßßßßßßßßßßßß                              "
+PRINT "                                                                  "
+camina 4, 3, 3
+CLS
+PRINT "STAGE 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+PRINT "           ßß        ßßßßß   ß"
+PRINT ">??--------_-----____---M1*-1---___--------_-------2*++}>ÛÛ ÛßÛ ÛÛ"
+PRINT "   ßßß           ßß           ßßßßßß"
+PRINT "la caverna temporal"
+SLEEP 100
+CLS
+LOCATE 4
+PRINT "                   ³-³                          Û                 "
+PRINT "  ßßßßßßßßßßßßßßßßßß³-³ßßßßßßßßßß         ßßßßßßßßßß                 "
+PRINT "                    ³-³                                              "
+PRINT "                    ³-³                                              "
+PRINT "      ³-³           ³-³           ³-³                               "
+PRINT "      ³-³-----------³-³------------³-³                               "
+PRINT "      ³-³           ³-³            ³-³                               "
+PRINT "      ³-³           ³=³            ³-³                               "
+PRINT "      ³-³                          ³-³                               "
+PRINT "                                   ³-³                              "
+PRINT "                                   ßßßßßßßßßßßßßßßßß                 "
+camina 4, 3, 3
+sta4.5:
+CLS
+PRINT "ULTIMATE CASTLE WORKING MEN. ULTIMATE AND WARNING MORE STAGE 4.5!"
+PRINT "           ßß        ßßßßß   ß"
+PRINT ">??--------_-----____---M1*-1---___--------_-------M2*ßÛ ÛÛ"
+PRINT "   ßßß           ßß           ßßßßßß"
+SLEEP 100
+PRINT " RINDETE EXTRATERRESTE   -JET"
+SLEEP 5
+CLS
+PRINT " ­NO PODRAS CONMIGO Y ME LLAMO ZOMBIE! -ZOMBIE"
+SLEEP 5
+CLS
+PRINT " TE DESTRUIRE ZOMBIE! -JET"
+SLEEP 5
+FOR i% = 1 TO 10
+COLOR 0, 7
+CLS
+PLAY "P30"
+COLOR 7, 0
+CLS
+PLAY "P30"
+NEXT i%
+CLS
+PRINT "LISTO......"
+SLEEP 1
+PRINT "FIN....."
+SLEEP 1
+PRINT "TERMINO....."
+SLEEP 1
+PRINT "JET HA GANADO.......!"
+SLEEP 5
+CLS
+PRINT "­SI!.......­GANASTE!"
+SLEEP 5
+CLS
+PRINT "PRODUCCION: BRAIAN AMADORI"
+SLEEP 5
+CLS
+PRINT "IDEA Y TODO: BRAIAN AMADORI"
+SLEEP 5
+CLS
+PRINT "ÚÄÄÄÄ¿ÚÄÄÄ¿ÚÄÄÄÄ¿ÚÄÄ¿ ÚÄÄÄ¿ÚÄÄ¿ ÚÄÄÄ¿ÚÄ¿ Ú¿ÚÄÄÄ¿ ÚÄÄÄÄ¿Ú¿ Ú¿ÚÄÄÄ¿"
+PRINT "³ÚÄÄ¿³³   ³³ÚÄÄ¿³³Ú¿À¿³ÚÄ¿³³Ú¿³ ³ÚÄÄÙ³ ³ ³³³Ú¿ ³ ³ÚÄÄ¿³³³ ³³³   ³"
+PRINT "³³  ³³³³³³³³³  ³³³³À¿³³³ ³³³³³³ ³À¿  ³³³ ³³³³³ÚÙ ³³  ³³³³ ³³³³³³³"
+PRINT "³ÀÄÄÙ³³ÃÁ´³³ÀÄÄÙ³³³ ³³³³ ³³³ÀÙÀ¿³ÚÙ  ³³³ ³³³ÀÙÀÄ¿³ÀÄÄÙ³³³ ³³³ÃÁ´³"
+PRINT "³ÚÄÄ¿³³³ ³³³ÚÄÄ¿³³³ÚÙ³³³ ³³³ÚÄ¿³³³   ³³ÀÄÙ³³ÚÄÄ¿³³ÚÄÄ¿³³³ ³³³³ ³³"
+PRINT "³³  ³³³³ ³³³³  ³³³ÀÙÚÙ³ÀÄÙ³³³ ³³³ÀÄÄ¿³ÃÄÄ¿³³ÀÄÄÙ³³³  ³³³ÀÄÙ³³³ ³³"
+PRINT "ÀÙ  ÀÙÀÙ ÀÙÀÙ  ÀÙÀÄÄÙ ÀÄÄÄÙÀÙ ÀÙÀÄÄÄÙÀÙ  ÀÙÀÄÄÄÄÙÀÙ  ÀÙÀÄÄÄÙÀÙ ÀÙ"
+PRINT "                          COMPANY S.A"
+SLEEP
+CLS
+''RUN "d:\super.jet\SuperJET.002\MASCAV.jet"
+
+
+muere:
+CLS
+FOR i = 1 TO 18
+LOCATE i, 40: PRINT " "
+i = i + 1
+LOCATE i, 40: PRINT ""
+PLAY "p30"
+LOCATE i, 40: PRINT " "
+NEXT i
+CLS
+SCREEN 13
+COLOR 4
+LOCATE 12, 1
+PRINT "                 GAME OVER"
+PLAY "l10bag5"
+SLEEP
+RUN "MENU.000"
+MUEREB:
+CLS
+PLAY "a30mbb30g30"
+CLS
+SCREEN 13
+COLOR 4
+LOCATE 12, 1
+PRINT "                GAME OVER"
+PLAY "l10bag5"
+SLEEP
+RUN "MENU.000"
+
+'SUB CAMINA (FILA(y), y COLUMNA(x) DEL PERSONAJE)
+SUB camina (y, x, m)
+0 LET C$ = INKEY$
+COLOR 4
+LOCATE y, x: PRINT ""
+COLOR 7
+LOCATE 1, 1: PRINT "MONEDAS:"; money; "    SCORE:"; p
+LOCATE 2, 1: PRINT "ENEMIGOS MUERTOS:"; mu
+IF UCASE$(C$) = "Q" THEN SYSTEM
+IF C$ = CHR$(0) + "M" THEN x = x + 1: LOCATE y, x - 1: PRINT " ": A = 0
+IF C$ = CHR$(0) + "K" THEN x = x - 1: LOCATE y, x + 1: PRINT " ": A = 1
+IF UCASE$(C$) = "X" THEN GOTO FINAL
+IF SCREEN(y, x) = ASC("Û") THEN x = x - 1: LOCATE y, x + 1: PRINT "Û"
+IF A$ = "si" AND SCREEN(y + 1, x) = ASC("ß") THEN TIMER OFF: A$ = "no"
+IF SCREEN(y + 1, x) = ASC("ß") OR SCREEN(y + 1, x) = ASC("³") OR SCREEN(y + 1, x) = ASC("-") AND F = 0 THEN F = 0 ELSE F = 1
+IF A = 0 AND SCREEN(y + 1, x - 1) = ASC("ß") AND SCREEN(y + 1, x) = ASC("#") THEN LOCATE y, x - 1: PRINT "I"
+IF A = 0 AND SCREEN(y + 1, x - 1) = ASC("ß") AND SCREEN(y + 1, x - 2) = ASC("#") THEN LOCATE y, x - 1: PRINT "I"
+IF A = 1 AND SCREEN(y + 1, x + 1) = ASC("ß") AND SCREEN(y + 1, x) = ASC("#") THEN LOCATE y, x + 1: PRINT "I"
+IF A = 1 AND SCREEN(y + 1, x + 1) = ASC("ß") AND SCREEN(y + 1, x + 2) = ASC("#") THEN LOCATE y, x + 1: PRINT "I"
+IF SCREEN(y, x) = ASC("") THEN GOTO CHARLA
+IF SCREEN(y + 1, x) = ASC("#") THEN GOTO 2
+IF SCREEN(y, x) = ASC("'") THEN GOTO morir
+IF C$ = " " AND A = 1 THEN h = 1: COLOR 10: LOCATE y, x - 1: PRINT "<": COLOR 7: SLEEP 1: LOCATE y, x - 1: PRINT " "
+IF C$ = " " AND A = 0 THEN h = 1: COLOR 10: LOCATE y, x + 1: PRINT ">": COLOR 7: SLEEP 1: LOCATE y, x + 1: PRINT " "
+IF SCREEN(y, x) = ASC("-") AND C$ = CHR$(0) + "M" THEN LOCATE y, x - 1: PRINT "³"
+IF SCREEN(y, x) = ASC("-") AND C$ = CHR$(0) + "K" THEN LOCATE y, x + 1: PRINT "³"
+IF SCREEN(y - 1, x) = ASC("-") AND C$ = CHR$(0) + "H" THEN y = y - 1: LOCATE y + 1, x: PRINT "-": A = 2
+IF SCREEN(y + 1, x) = ASC("-") AND C$ = CHR$(0) + "P" THEN y = y + 1: LOCATE y - 1, x: PRINT "-": A = 3
+IF SCREEN(y + 1, x) = ASC(" ") AND F = 1 THEN FOR y = y TO 18: LOCATE y, x: PRINT " ": y = y + 1: LOCATE y, x: PRINT "": PLAY "p30": LOCATE y, x: PRINT " ": NEXT y: GOTO morir ELSE F = 0
+IF SCREEN(y, x) = ASC("-") THEN LOCATE y, x - 1: PRINT "³"
+IF SCREEN(y, x + 2) = ASC("-") AND A = 1 THEN LOCATE y, x + 1: PRINT "³"
+IF SCREEN(y, x) = ASC("³") AND SCREEN(y, x - 1) = ASC(" ") AND A = 1 THEN LOCATE y, x + 1: PRINT "-"
+IF SCREEN(y, x) = ASC("³") AND SCREEN(y, x + 1) = ASC(" ") THEN LOCATE y, x - 1: PRINT "-"
+IF SCREEN(y, x) = ASC(" ") AND SCREEN(y, x - 2) = ASC("-") THEN LOCATE y, x - 1: PRINT "³" ELSE
+IF SCREEN(y, x) = ASC("³") AND SCREEN(y, x - 1) = ASC(" ") THEN LOCATE y, x + 1: PRINT "-"
+IF SCREEN(y, x) = ASC("") AND money = m THEN p = p + 50: PLAY "p30": p = p + 100: GOTO FINAL
+IF SCREEN(y, x) = ASC("") THEN money = money + 1: p = p + 100: PLAY "p30": p = p + 100: PLAY "a30b30d30"
+IF SCREEN(y, x - 1) = ASC("") THEN A = 0 ELSE
+IF SCREEN(y, x + 1) = ASC("") THEN A = 1 ELSE
+IF SCREEN(y, x + 1) = ASC("") THEN GOTO explo
+IF SCREEN(y, x - 1) = ASC("") THEN GOTO exploB
+IF SCREEN(y, x) = ASC("") AND money < 3 THEN x = x - 1: LOCATE y, x + 1: PRINT ""
+IF SCREEN(y, x) = ASC("") THEN p = p + 500: PLAY "p30fedc"
+IF SCREEN(y, x) = ASC("") THEN p = p + 252: PLAY "p30cdef"
+GOTO 0
+morir:
+SCREEN 1
+CLS
+PRINT "               GAME OVER"
+PLAY "l10bag5"
+SLEEP
+RUN "MENU.000"
+explo:
+LOCATE y, x: PRINT ""
+LOCATE y, x + 1: PRINT ""
+ON TIMER(1) GOSUB MUEREB
+TIMER ON
+DO: LOOP UNTIL INKEY$ = CHR$(32)
+p = p + 500
+PLAY "p30"
+p = p + 500
+mu = mu + 1
+PLAY "mbl30bag"
+TIMER OFF
+LOCATE y, x + 1: PRINT "±": PLAY "p60"
+LOCATE y, x + 1: PRINT "°": PLAY "p60"
+LOCATE y, x + 1: PRINT "²": PLAY "p60"
+LOCATE y, x + 1: PRINT "°": PLAY "p60"
+LOCATE y, x + 1: PRINT "±": PLAY "p60"
+LOCATE y, x + 1: PRINT "²": PLAY "p60"
+LOCATE y, x + 1: PRINT "±": PLAY "p60"
+LOCATE y, x + 1: PRINT "Û": PLAY "p60"
+LOCATE y, x + 1: PRINT "Ý": PLAY "p60"
+LOCATE y, x + 1: PRINT "Þ": PLAY "p60"
+LOCATE y, x + 1: PRINT "ß": PLAY "p60"
+LOCATE y, x + 1: PRINT "Ü": PLAY "p60"
+LOCATE y, x + 1: PRINT "": PLAY "p60"
+LOCATE y, x + 1: PRINT "Û": PLAY "p60"
+LOCATE y, x + 1: PRINT " ": PLAY "p60"
+GOTO 0
+exploB:
+LOCATE y, x: PRINT ""
+LOCATE y, x - 1: PRINT ""
+ON TIMER(1) GOSUB MUEREB
+TIMER ON
+DO: LOOP UNTIL INKEY$ = CHR$(32)
+mu = mu + 1
+PLAY "mbl30bag"
+TIMER OFF
+LOCATE y, x - 1: PRINT "±": PLAY "p60"
+LOCATE y, x - 1: PRINT "°": PLAY "p60"
+LOCATE y, x - 1: PRINT "²": PLAY "p60"
+LOCATE y, x - 1: PRINT "°": PLAY "p60"
+LOCATE y, x - 1: PRINT "±": PLAY "p60"
+LOCATE y, x - 1: PRINT "²": PLAY "p60"
+LOCATE y, x - 1: PRINT "±": PLAY "p60"
+LOCATE y, x - 1: PRINT "Û": PLAY "p60"
+LOCATE y, x - 1: PRINT "Ý": PLAY "p60"
+LOCATE y, x - 1: PRINT "Þ": PLAY "p60"
+LOCATE y, x - 1: PRINT "ß": PLAY "p60"
+LOCATE y, x - 1: PRINT "Ü": PLAY "p60"
+LOCATE y, x - 1: PRINT "": PLAY "p60"
+LOCATE y, x - 1: PRINT "Û": PLAY "p60"
+LOCATE y, x - 1: PRINT " ": PLAY "p60"
+GOTO 0
+2
+ON TIMER(3) GOSUB muere
+TIMER ON
+3 C$ = INKEY$
+LOCATE y, x: PRINT ""
+IF C$ = CHR$(0) + "M" THEN x = x + 1: LOCATE y, x - 1: PRINT " ": A = 0
+IF C$ = CHR$(0) + "K" THEN x = x - 1: LOCATE y, x + 1: PRINT " ": A = 1
+IF SCREEN(y, x) = ASC("") THEN money = money + 1: PLAY "l30bag": p = p + 200
+IF SCREEN(y + 1, x) = ASC("ß") THEN 4
+GOTO 3
+4 TIMER OFF
+GOTO 0
+CHARLA:
+CLS
+PRINT "¨COMO LOGRASTE SOBREVIVIR, JETTECDIF?       -JET"
+SLEEP 3
+CLS
+PRINT "DEBO AVISARTE RAPIDAMENTE         -JETTECDIF"
+SLEEP 3
+CLS
+PRINT "¨UHU?! DIME                       -JET"
+SLEEP 3
+CLS
+PRINT "JET, ¨VEZ ESTE MAPA?, EL SOLDADO Y LA BARRERA ES LO QUE TE"
+PRINT "QUIERO DECIR QUE ES               -JETTECDIF            "
+PRINT "------- 1.2 -**--- 2 -------- 3 ---------- 4 *****³*****3Wßßß"
+SLEEP 5
+CLS
+PRINT "    --  [³]  --"
+PRINT "ES UNA BARRERA, PORQUE ES LA ENTRADA A LA AREA UNIAL 3, NO TE DEJARA QUE "
+PRINT "PASES, TOMA ESTE PASE FALSO PASE PARA PASAR:  -JETTECDIF"
+PRINT
+PRINT "        --------------------------"
+PRINT "       ³     1923045 pase oficial ³"
+PRINT "       ³                          ³"
+PRINT "       ³     ÛÓßáäàšå CODIGO      ³"
+PRINT "        --------------------------"
+SLEEP 10
+CLS
+PRINT "GRACIAS JETTECDIF          -JET"
+SLEEP 5
+CLS
+FINAL:
+END SUB
+
+SUB laberi (y, x, m)
+1000 LET C$ = INKEY$
+LOCATE y, x: PRINT ""
+IF C$ = CHR$(0) + "M" THEN x = x + 1: LOCATE y, x - 1: PRINT " ": A = 1
+IF C$ = CHR$(0) + "K" THEN x = x - 1: LOCATE y, x + 1: PRINT " ": A = 2
+IF C$ = CHR$(0) + "H" THEN y = y - 1: LOCATE y + 1, x: PRINT " ": A = 3
+IF C$ = CHR$(0) + "P" THEN y = y + 1: LOCATE y - 1, x: PRINT " ": A = 4
+IF UCASE$(C$) = "X" THEN GOTO 1001
+IF SCREEN(y, x) = ASC("Û") AND A = 1 THEN x = x - 1: LOCATE y, x + 1: PRINT "Û" ELSE
+IF SCREEN(y, x) = ASC("Û") AND A = 2 THEN x = x + 1: LOCATE y, x - 1: PRINT "Û" ELSE
+IF SCREEN(y, x) = ASC("Û") AND A = 3 THEN y = y + 1: LOCATE y - 1, x: PRINT "Û" ELSE
+IF SCREEN(y, x) = ASC("Û") AND A = 4 THEN y = y - 1: LOCATE y + 1, x: PRINT "Û" ELSE
+IF SCREEN(y, x) = ASC("±") AND A = 1 THEN x = x - 1: LOCATE y, x + 1: PRINT "±" ELSE
+IF SCREEN(y, x) = ASC("±") AND A = 2 THEN x = x + 1: LOCATE y, x - 1: PRINT "±" ELSE
+IF SCREEN(y, x) = ASC("±") AND A = 3 THEN y = y + 1: LOCATE y - 1, x: PRINT "±" ELSE
+IF SCREEN(y, x) = ASC("±") AND A = 4 THEN y = y - 1: LOCATE y + 1, x: PRINT "±" ELSE
+IF SCREEN(y, x) = ASC("") THEN PLAY "l30bag": money = money + 1
+IF money = m AND SCREEN(y, x) = ASC("") THEN 1001
+IF SCREEN(y, x) = ASC("°") THEN GOTO cae
+GOTO 1000
+
+
+cae:
+FOR i = 1 TO 20
+LOCATE i, 40: PRINT ""
+LOCATE i - 1, 40: PRINT " "
+PLAY "p30"
+NEXT i
+COLOR 0, 7
+CLS
+PLAY "p30"
+
+COLOR 7, 0
+CLS
+BEEP
+PRINT "GAME OVER"
+PLAY "bag5"
+SLEEP
+RUN "MENU.000"
+
+
+1001
+END SUB
+

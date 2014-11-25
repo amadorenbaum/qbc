@@ -1,0 +1,93 @@
+
+CLS
+300
+SCREEN 13
+FOR K = 52 TO 55
+COLOR K
+LOCATE 3, 10
+PRINT "PRIMAL MENU"
+PRINT ""
+COLOR 64
+LOCATE 5, 10
+PRINT "1* NEW GAME"
+COLOR 66
+LOCATE 6, 10
+PRINT "2* STORY"
+COLOR 68
+LOCATE 7, 10
+PRINT "3* COMMANDS"
+COLOR 70
+LOCATE 8, 10
+PRINT "4* PASSWORD"
+COLOR 72
+LOCATE 9, 10
+PRINT "5* ORDERING INFO"
+COLOR 74
+LOCATE 10, 10
+'PRINT "6* SUPER JET 2!!!"
+PRINT ""
+COLOR 15
+PRINT " This version NOT IS SHAREWARE"
+PRINT "not distribuite is."
+PRINT "THANKS"
+100 LET c$ = INKEY$
+IF c$ = "1" THEN SCREEN 9: CLS : RUN "EPISOD1.LEV"
+IF c$ = "2" THEN SCREEN 9: GOTO Historia
+IF c$ = "3" THEN SCREEN 9: GOTO Move
+IF c$ = "4" THEN SCREEN 9: GOTO pass
+IF c$ = "5" THEN SCREEN 9: GOTO INFOO
+IF c$ = "6" THEN SCREEN 9: CLS : REM RUN "d:\super.jet\SuperJET.002\MASCAV.jet"
+FOR II = 1 TO 1000
+NEXT II
+NEXT K
+GOTO 300
+Historia:
+CLS
+PRINT "HISTORIA DEL JUEGO:"
+PRINT "JET tiene que salvar al mundo de que lo destruyan, un extraterrestre"
+PRINT "muy poderoso decide acabar con ella y tomar su centro, asi podra destruir"
+PRINT "a un planeta enemigo, pero el, para que Jet no se interponga en su camino,"
+PRINT "lo mando injustamente a la carcel interenfencial del planeta Simus con su"
+PRINT "amigo Jettecdif, a Jettecdif lo mandaron a trabajar en las minas simusinas."
+PRINT "Por un accidente Jettecdif pierde la vida ¨la habra perdido?..."
+PRINT "Jet logra salir de su celda y tiene que pasar las 4 areas Uniales, "
+PRINT "¨Lograra salvar a nuestro planeta Tierra?. . . "
+DO: LOOP WHILE INKEY$ = "": GOTO 300
+Move:
+CLS
+PRINT "COMMANDOS PARA MOVERSE:"
+PRINT
+PRINT "SPACE: DISPARO"
+PRINT ": SUBE ESCALERA"
+PRINT ": BAJA ESCALERA"
+PRINT ": VA PARA ADELANTE"
+PRINT ": VA PARA ATRAS"
+PRINT
+PRINT "Presione una tecla y continue"
+DO: LOOP WHILE INKEY$ = "": GOTO 300
+pass:
+CLS
+PRINT "ESCRIBIR PASSWORD"
+PRINT
+PRINT
+PRINT
+PRINT
+INPUT "PASSWORD: ", pass$
+IF UCASE$(pass$) = "AQU228NUE" THEN COLOR 6, 0: CLS : RUN "EPISOD1.LEV"
+IF UCASE$(pass$) = "AQU239OCH" THEN COLOR 6, 0: CLS : RUN "EPISOD2.LEV"
+IF UCASE$(pass$) = "AQU250SIE" THEN COLOR 6, 0: CLS : RUN "EPISOD3.LEV"
+IF UCASE$(pass$) = "AQU261SEI" THEN COLOR 6, 0: CLS : RUN "EPISOD4.LEV"
+IF UCASE$(pass$) = "AQU272CIN" THEN COLOR 6, 0: CLS : RUN "EPISOD5.LEV" ELSE GOTO 300
+
+INFOO:
+CLS
+LOCATE 5, 1
+PRINT "        SI EN EL MENU NO ENCUENTRA LA OPCION 'JET II' Y Ud. DESEA"
+PRINT "        ORDENAR LA VERSION SHAREWARE DEL MISMO PUEDE LLAMAR A LOS"
+PRINT "        TELEFONOS 298-6580/4454"
+PRINT
+PRINT "        EL SuperJet© ES MARCA REGISTRADA DE LA AMADOREMBAUM COMPANY(C)"
+PRINT "        TODOS LOS DERECHOS RESERVADOS 1997 "
+DO: LOOP WHILE INKEY$ = "": GOTO 300
+
+

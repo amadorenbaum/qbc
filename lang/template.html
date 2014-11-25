@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script type='text/javascript' src='../runtime/utilities.js'></script>
+    <script type='text/javascript' src='../runtime/error_handling.js'></script>
+    <script type='text/javascript' src='../runtime/types.js'></script>
+    <script type='text/javascript' src='../runtime/rng.js'></script>
+    <script type='text/javascript' src='../runtime/palette.js'></script>
+    /*$SCREENS*/
+
+    <script type='text/javascript' src='../runtime/screen.js'></script>
+    <script type='text/javascript' src='../runtime/base64.js'></script>
+    <script type='text/javascript' src='../runtime/input.js'></script>
+    <script type='text/javascript' src='../runtime/builtins.js'></script>
+    <script type='text/javascript' src='../runtime/vm.js'></script>
+    <script type='text/javascript'>
+      function init() {
+
+        var screen_container = document.getElementById('screen_container');
+        var errmsg_container = document.getElementById('errmsg_container');
+		/*$SHARED*/
+		/*$SOUNDS*/
+		/*$LABELS*/
+        var code = [/*$OPCODES*/];
+		var available_screens = /*$AVAILABLE_SCREENS*/;
+
+		var vm_state = new VirtualMachineState(
+			document,
+			screen_container,
+			errmsg_container,
+			shared,
+			available_screens,
+			code,
+			0
+		);
+
+        var vm = new VirtualMachine(vm_state);
+		vm.run();
+      }
+    </script>
+  </head>
+  <body onload='init()'>
+    <div id='screen_container'>
+    </div>
+    <div id='errmsg_container'>
+    </div>
+  </body>
+</html>

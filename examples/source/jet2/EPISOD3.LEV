@@ -1,0 +1,1643 @@
+DECLARE SUB FONDO (nf!)
+DECLARE SUB move (y, x, c, t, cop, nf)
+DECLARE SUB gameover ()
+CLS
+A = 1
+e = 1
+vd = 1
+tm = 1
+SCREEN 13
+COMMON SHARED quantum
+quantum = 100
+DIM SHARED A$(17), yyy, truc, v, ene, bal, xxx1, yyy1, player$, JUGD
+DIM SHARED b$(17)
+JUGD = 14
+v = 5
+
+LINE (97, 88)-(89, 88), 90
+LINE (89, 88)-(85, 90), 90
+LINE (97, 88)-(97, 82), 90
+LINE (97, 82)-(103, 82), 90
+LINE (103, 82)-(107, 80), 90
+LINE (107, 80)-(109, 78), 90
+LINE (109, 78)-(107, 76), 90
+LINE (107, 76)-(103, 74), 90
+LINE (103, 74)-(97, 74), 90
+LINE (97, 74)-(97, 70), 90
+LINE (97, 70)-(93, 70), 90
+LINE (93, 70)-(93, 66), 90
+LINE (93, 66)-(97, 68), 90
+LINE (97, 68)-(97, 64), 90
+LINE (95, 68)-(95, 70), 90
+LINE (97, 88)-(97, 92), 90
+LINE (97, 92)-(95, 96), 90
+LINE (95, 96)-(93, 98), 90
+LINE (93, 98)-(89, 100), 90
+LINE (89, 100)-(87, 108), 90
+LINE (87, 108)-(83, 100), 90
+LINE (83, 100)-(79, 96), 90
+LINE (79, 96)-(77, 92), 90
+LINE (77, 92)-(77, 82), 90
+LINE (77, 82)-(75, 80), 90
+LINE (75, 80)-(75, 78), 90
+LINE (75, 78)-(77, 76), 90
+LINE (77, 76)-(77, 66), 90
+LINE (77, 66)-(75, 64), 6
+LINE (75, 64)-(71, 66), 6
+LINE (77, 66)-(75, 60), 6
+LINE (75, 60)-(73, 64), 6
+LINE (79, 66)-(79, 60), 6
+LINE (79, 60)-(75, 66), 6
+LINE (81, 66)-(81, 60), 6
+LINE (81, 60)-(85, 62), 6
+LINE (83, 66)-(79, 60), 6
+LINE (85, 66)-(89, 60), 6
+LINE (87, 66)-(85, 58), 6
+LINE (85, 58)-(83, 66), 6
+LINE (89, 66)-(91, 58), 6
+LINE (91, 58)-(93, 62), 6
+LINE (91, 66)-(89, 58), 6
+LINE (89, 58)-(87, 62), 6
+LINE (93, 66)-(97, 60), 6
+LINE (97, 60)-(101, 66), 6
+LINE (95, 66)-(93, 58), 6
+LINE (93, 58)-(97, 64), 6
+LINE (95, 66)-(89, 56), 6
+LINE (89, 56)-(87, 62), 6
+LINE (97, 66)-(101, 60), 6
+LINE (101, 60)-(103, 68), 6
+'marca
+LINE (177, 86)-(181, 90), 90
+LINE (181, 90)-(177, 92), 90
+LINE (177, 92)-(177, 96), 90
+LINE (177, 96)-(173, 96), 90
+LINE (173, 96)-(169, 94), 90
+LINE (177, 96)-(175, 102), 90
+LINE (175, 102)-(169, 106), 90
+LINE (169, 106)-(169, 110), 90
+LINE (165, 110)-(165, 110), 90
+LINE (161, 110)-(161, 106), 90
+LINE (161, 106)-(159, 102), 90
+LINE (159, 102)-(157, 96), 90
+LINE (157, 96)-(155, 94), 90
+LINE (155, 94)-(155, 92), 90
+LINE (155, 92)-(157, 90), 90
+LINE (157, 90)-(157, 80), 90
+LINE (157, 80)-(159, 76), 90
+LINE (175, 76)-(177, 78), 90
+LINE (177, 78)-(177, 82), 90
+LINE (177, 82)-(173, 80), 90
+LINE (173, 80)-(173, 86), 90
+LINE (173, 86)-(177, 84), 90
+LINE (177, 84)-(177, 86), 90
+LINE (175, 84)-(175, 82), 9
+LINE (175, 76)-(177, 76), 114
+LINE (177, 76)-(179, 74), 114
+LINE (179, 74)-(157, 76), 114
+LINE (173, 76)-(159, 76), 114
+LINE (159, 76)-(155, 82), 114
+LINE (155, 82)-(153, 98), 114
+LINE (153, 98)-(151, 118), 114
+LINE (151, 118)-(153, 78), 114
+LINE (153, 78)-(161, 72), 114
+LINE (161, 72)-(179, 74), 114
+LINE (179, 72)-(159, 70), 114
+LINE (159, 70)-(153, 72), 114
+LINE (153, 72)-(151, 76), 114
+LINE (151, 76)-(149, 118), 114
+LINE (147, 118)-(151, 70), 114
+LINE (151, 70)-(155, 68), 114
+LINE (155, 68)-(181, 70), 114
+LINE (181, 70)-(183, 72), 114
+'marca
+LINE (225, 86)-(233, 86), 90
+LINE (233, 86)-(237, 88), 90
+LINE (237, 88)-(239, 90), 90
+LINE (239, 90)-(239, 92), 90
+LINE (239, 92)-(237, 94), 90
+LINE (237, 94)-(233, 96), 90
+LINE (233, 96)-(225, 96), 90
+LINE (225, 96)-(225, 100), 90
+LINE (225, 100)-(215, 100), 90
+LINE (225, 100)-(223, 106), 90
+LINE (223, 106)-(219, 110), 90
+LINE (219, 110)-(215, 110), 90
+LINE (215, 110)-(215, 110), 90
+LINE (215, 110)-(211, 116), 90
+LINE (211, 116)-(207, 110), 90
+LINE (207, 110)-(205, 104), 90
+LINE (205, 104)-(205, 96), 90
+LINE (205, 96)-(203, 94), 90
+LINE (203, 94)-(203, 92), 90
+LINE (203, 92)-(205, 90), 90
+LINE (205, 90)-(205, 82), 90
+LINE (225, 86)-(225, 84), 90
+LINE (225, 84)-(221, 84), 90
+LINE (221, 84)-(221, 76), 90
+LINE (221, 76)-(225, 80), 90
+LINE (223, 80)-(223, 84), 97
+LINE (225, 78)-(225, 74), 91
+LINE (205, 74)-(205, 84), 91
+LINE (205, 74)-(203, 78), 209
+LINE (203, 78)-(201, 82), 209
+LINE (201, 78)-(205, 72), 209
+LINE (205, 72)-(201, 76), 209
+LINE (207, 72)-(227, 70), 209
+LINE (227, 70)-(231, 72), 209
+LINE (231, 74)-(225, 70), 209
+LINE (225, 70)-(203, 74), 209
+LINE (205, 76)-(225, 70), 209
+LINE (225, 70)-(227, 74), 209
+LINE (227, 74)-(223, 70), 209
+LINE (225, 74)-(219, 72), 209
+LINE (225, 74)-(209, 76), 209
+LINE (209, 76)-(205, 78), 209
+LOCATE 15, 1: PRINT "          1         2     3"
+
+DIM player%(1 TO 10000)
+'GET (15, 50)-(200, 120), player%
+'CLS
+LOCATE 1
+COLOR JUGD
+PRINT "SELECT PLAYER"
+PRINT
+PRINT
+PRINT
+PRINT : PRINT
+PRINT "         JET      LAURA  JETTECDIF"
+'PUT (60, 50), player%
+PLAY "o0mbl10ccddcdeeccddcegg"
+
+1000 ccc$ = INKEY$
+IF ccc$ = "1" THEN
+  player$ = ""
+  GOTO 1001
+END IF
+IF ccc$ = "2" THEN
+  player$ = "з"
+  GOTO 1001
+END IF
+IF ccc$ = "3" THEN
+  player$ = "с"
+  GOTO 1001
+END IF
+GOTO 1000
+1001 CLS
+
+SCREEN 7
+CLS
+COLOR 10
+LOCATE 10, 8: PRINT "STAGE GALLERY   LEVEL ONE"
+SLEEP
+CLS : SCREEN 9
+A$(1) = "  Ы          Ы   і-і  і-Ы                                "
+A$(2) = "  Ы        і-і   і-іЯЯЯі-і                               "
+A$(3) = "  Ы        і-Ы   і-і  і-Ы I    I   м   Ы  мм мююю       "
+A$(4) = "  Ы        і-Ы   і-іЯЯЯі-ЫЯЯ####ЯЯ ЯЯЫЯЯЫЯЯЯЫЯЯЯЫЯЯЯЫ     "
+A$(5) = "  Ы   і-і і-Ы   і-і   і-Ы IIIIII   Ы   Ы-і-Ы--Ы-і-Ы     "
+A$(6) = "  ЫЯЯЯЫ-ЫЯЯЯЯЫЯЯЯЯЯЯЯЯЯЯЫЫ IIIII  мЫ    Ы-Ы-Ы-Ы-Ы-Ы-Ы     "
+A$(7) = "  Ы   і-і  і-і         Ы IIII  мЫ    ЫЫ-Ы-Ы-Ы-Ы-Ы-Ы     "
+A$(8) = "  Ы   і-і  і-ЫЯ     ЯЯЯЯЫ III  мЫ      -Ы-Ы-Ы-Ы-Ы-Ы     "
+A$(9) = "  Ы   і-і  і-Ы Я        Ы II  мЫ      Ы-Ы-Ы-Ы-Ы-Ы Ы     "
+A$(10) = "  Ы   і-іЯЯЯЯЫ  Я       Ы I   Ы       Ы-Ы-Ы-Ы-Ы-Ы-Ы     "
+A$(11) = "  Ы   і-і    Ы   Я      Ы I  Ы        Ы-Ы-Ы-Ы-Ы-Ы-Ы     "
+A$(12) = "  Ы   і-і м Ы    Я    °Ы          °Ы-Ы-і-Ы--Ы-     "
+A$(13) = "  ЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЫЯЯЯЯЯЯЯЯЯЯЯЯЯЯЫЯЯЯЯЯЯЯЯЯЯЯЯЯ     "
+A$(14) = "                                                          "
+A$(15) = "                                                          "
+move 22, 4, 6, 100, 2, 1
+
+SCREEN 7
+CLS
+COLOR 10
+LOCATE 10, 8: PRINT "STAGE GALLERY     LEVEL TWO"
+SLEEP
+CLS : SCREEN 9
+A$(1) = "                                         ЫЯЯЯЯЯЯЯЯЫЯЫ     "
+A$(2) = "  ЫЯЯЯЯЯЯЫЯЯЯЯЯЯЯЯЫЯЯЯЯЯЯЯЯЯЯЯЯЯЯЫЯЯЯЯЯЯЯЯ        Ы Ы     "
+A$(3) = "  Ы      Ы        Ы             Ы     і-і         Ы     "
+A$(4) = "  Ы     Ы        ЫЫЫ  I     I        і-іЯЯЯЫЫЫЫЫЫ Ы     "
+A$(5) = "  Ы      Ы     і-і  ЯЯЯЯЯ#####ЯЯЯЫЯі-і і-і ЭЫЫ-ЫЫ Ы     "
+A$(6) = "  Ы -  Ы    і-іЫI       I мм Ы і-і і-іЫЫЫЫ--ЫЫЫ Ы     "
+A$(7) = "  Ы  -ЯЯЯЯЯЯЯЯЯі-іЫЫ#######ЫЫЫЫЫЫЫЯі-іЯЯЯЯ Ы----ЫЫЫ Ы     "
+A$(8) = "  Ы  -         і-іЫ              Ы і-і    ЫЫ---ЫЫЫ Ы     "
+A$(9) = "  Ы  - і-і   і-іЫ Я^Я^Я^Я°     Ы і-і   ЫЫ-------Ы Ы     "
+A$(10) = "  ЫЯЯЯЯі-іЯЯЯЯЯЯЯЯЫ              Э і-і  ЫЫ-------Ы Ы     "
+A$(11) = "  Ы    і-і   ммм  ЫЫЫЫЫЫЫЫЫюЫЫЫЫЫЫЫЫЫЫЫ   --------Ы Ы     "
+A$(12) = "  ЯЯЯЯЯЯЯЯЯЯЯЯЯЯЫ  ЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯ Ы     "
+A$(13) = "                ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ     "
+A$(14) = "                                                          "
+A$(15) = "                                                          "
+move 21, 5, 2, 65, 5, 1
+
+SCREEN 7
+CLS
+COLOR 10
+LOCATE 10, 8: PRINT "STAGE CASTLE      LEVEL ONE"
+SLEEP
+CLS : SCREEN 9
+A$(1) = "°°Ыі       і                  і                           "
+A$(2) = "°°Ыі^ ^    і      ^   ^   ^   і               ^^ ^        "
+A$(3) = "°°Ыі ^     і    ^        ^ ^  і      -                  "
+A$(4) = "°°Ыі       і        ^  ^      і     --ЯЯЯЯЯЯЯЯЯЯЯ         "
+A$(5) = "°°Ыі       і                  і    --            Я        "
+A$(6) = "°°Ыі   ЫЫЫЫЫЫЫЫЫЫ             і   --      Ы     Я         "
+A$(7) = "°°Ыі ЫЫЫЫЫЫЫЫЫЫЫЫЫ     -      і   -       Ы   Я          "
+A$(8) = "°°ЫіЫ Ы Ы Ы Ы Ы Ы Ы  ---ЫЫЫЫЫЫЫЫЫЫЫ       ЯЯЯЯЯ           "
+A$(9) = "°°Ыі         - ЫЫЫЫЫЫЫЫЫЫЫЫЫ                      "
+A$(10) = "°°Ыі^              ^ -Ы Ы Ы Ы Ы Ы Ы Ы                     "
+A$(11) = "°°Ыі   ^  ^         -                            "
+A$(12) = "°°Ыі ^  ^ ^^ЫЫЫЫЫЫЫЫЫЫЫЫЫЫ     ^                   Э     "
+A$(13) = "°°Ыі    ^   ^  ^  ^  ^   ^  ^^  ^      ЫЫЫЫЫЫЫЫЫЫЫЫЫЫ     "
+A$(14) = "                                                          "
+A$(15) = "                                                          "
+move 15, 10, 14, 50, 1, 2
+CLS : SCREEN 9
+A$(1) = "  Ы           Ы-Ы                  "
+A$(2) = "  Ы          Ы----------^^^^^^^^^^^^^^^^Ы                 "
+A$(3) = "  Ы         Ы------------^^^^^^^^^^^^^^^^Ы                "
+A$(4) = "  Ы        Ы--------------^^^^^^^^^^^^^^^^Ы               "
+A$(5) = "  Ы       Ы-----------------^^^^^^^^^^^^^^^Ы              "
+A$(6) = "  Ы      Ы------------------^^^^^^^^^^^^^^^^Ы             "
+A$(7) = "  Ы     Ы--------------------^^^^^^^^^^^^^^^^Ы            "
+A$(8) = "  Ы    Ы--------------------^^^^^^^^^^^^^^^^^^Ы           "
+A$(9) = "  Ы   Ы-------------------^^^^^^^^^^^^^^^^^^^^^Ы          "
+A$(10) = "  Ы  Ы--------------------^^^^^^^^^^^^^^^^^^^^^^Ы         "
+A$(11) = "  Ы Ы-------------------^^^^^^^^^^^^^^^^^^^^^^^^^Ы        "
+A$(12) = "  ЫЫ----------------------------------------------Ы       "
+A$(13) = "  Ы------------------------------------------------Ы      "
+move 22, 12, 14, 999, 0, 2
+
+SCREEN 7
+CLS
+COLOR 10
+LOCATE 10, 8: PRINT "STAGE CASTLE       LEVEL TWO"
+SLEEP
+CLS : SCREEN 9
+A$(1) = "  Ы  Ы ЫЫЫ Ы Ы Ы Ы Ы Ы Ы Ы Ы Ы Ы Ы Ы Ы         Ы ЫЫЫЫ     "
+A$(2) = "  Ы    Ы   -                                    Ы     "
+A$(3) = "  Ы    Ы-мм-    і-і                           Ы     "
+A$(4) = "  Ы    Ы-ЯЯ- ЯЯЯЯЯі-і      м    ю        м і-і Ы     "
+A$(5) = "  Ы    Ы-  -      і-і   ЯЯЯЯЯЯЯЯ^^^^^ЯЯЯЯі-і Ы     "
+A$(6) = "  Ы    Ы-  -      ЯЯЯЯЯЯЯЯЯ                 і-і Ы     "
+A$(7) = "  Ы-  ° Э- м-м   ммм   I     I мм  м і-і      "
+A$(8) = "  Ы-Ы°Ы°Ы°ЫЫЫ Ы-ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ#####ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ     "
+A$(9) = "  Ы-    Ы   -         Ы      ^^^^^^                    "
+A$(10) = "  Ы-    Ы   -       Ы Ы Ы  ^^^^^^^^^^^                 "
+A$(11) = "  Ы-    Ы   -    Ы Ы  Ы  Ы Ы^^^^^^^^^^^                "
+A$(12) = "  Ы-   Ы мм-         Ы    ^^^^^^^^    ю  ю          "
+A$(13) = "  ЫЫЫЫЫЫЫЫЫЫ ЫЫЫ Ы Ы Ы Ы Ы Ы Ы ^^^^^^Ы Ы Ы Ы Ы Ы Ы        "
+move 17, 5, 6, 100, 4, 2
+SCREEN 13
+CLS
+PRINT "MMH!, alli esta la puerta al final"
+LINE (30, 80)-(30, 76), 25
+LINE (30, 76)-(38, 80), 25
+LINE (38, 80)-(30, 80), 25
+LINE (32, 80)-(32, 78), 25
+LINE (40, 76)-(40, 86), 25
+LINE (40, 86)-(46, 86), 25
+LINE (46, 86)-(50, 88), 25
+LINE (50, 88)-(50, 90), 25
+LINE (50, 90)-(46, 92), 25
+LINE (46, 92)-(40, 92), 25
+LINE (40, 92)-(40, 98), 25
+LINE (40, 98)-(30, 98), 25
+LINE (30, 98)-(26, 100), 25
+LINE (40, 98)-(38, 102), 25
+LINE (38, 102)-(34, 106), 25
+LINE (34, 106)-(30, 108), 25
+LINE (40, 76)-(46, 74), 24
+LINE (46, 74)-(50, 76), 24
+LINE (50, 76)-(42, 70), 23
+LINE (42, 70)-(38, 76), 23
+LINE (38, 76)-(32, 66), 23
+LINE (32, 66)-(30, 70), 23
+LINE (36, 76)-(38, 68), 22
+LINE (38, 68)-(34, 72), 22
+LINE (34, 76)-(24, 66), 22
+LINE (24, 66)-(24, 72), 22
+LINE (32, 76)-(34, 66), 22
+LINE (30, 76)-(28, 68), 22
+LINE (28, 76)-(22, 66), 22
+LINE (22, 66)-(20, 72), 22
+LINE (26, 78)-(18, 74), 22
+LINE (18, 74)-(18, 78), 22
+LINE (24, 80)-(22, 66), 22
+LINE (22, 66)-(20, 74), 22
+LINE (22, 80)-(22, 90), 24
+LINE (22, 90)-(20, 92), 24
+LINE (20, 92)-(20, 94), 24
+LINE (20, 94)-(22, 96), 24
+LINE (22, 96)-(22, 100), 24
+LINE (22, 100)-(24, 104), 24
+LINE (24, 104)-(26, 108), 24
+LINE (26, 108)-(30, 110), 24
+LINE (30, 110)-(32, 108), 24
+LINE (32, 108)-(44, 124), 112
+LINE (44, 124)-(44, 130), 112
+LINE (44, 130)-(38, 132), 112
+LINE (38, 132)-(36, 126), 112
+LINE (36, 126)-(32, 120), 112
+LINE (32, 120)-(34, 146), 112
+LINE (34, 146)-(12, 148), 112
+LINE (12, 148)-(22, 118), 112
+LINE (22, 118)-(10, 126), 112
+LINE (10, 126)-(8, 128), 112
+LINE (8, 128)-(4, 124), 112
+LINE (4, 124)-(26, 108), 112
+LINE (12, 148)-(8, 178), 117
+LINE (8, 178)-(2, 180), 120
+LINE (2, 180)-(0, 184), 120
+LINE (0, 184)-(16, 184), 120
+LINE (16, 184)-(16, 178), 120
+LINE (16, 178)-(8, 178), 120
+LINE (16, 178)-(26, 156), 116
+LINE (26, 156)-(32, 178), 116
+LINE (34, 148)-(34, 146), 116
+LINE (34, 146)-(46, 176), 116
+LINE (46, 176)-(32, 178), 117
+LINE (32, 178)-(32, 182), 117
+LINE (32, 182)-(52, 182), 118
+LINE (52, 182)-(48, 178), 118
+LINE (48, 178)-(46, 176), 118
+LINE (44, 130)-(42, 136), 139
+LINE (42, 136)-(40, 136), 139
+LINE (40, 136)-(38, 132), 139
+LINE (8, 128)-(4, 130), 139
+LINE (4, 130)-(2, 128), 139
+LINE (2, 128)-(4, 124), 139
+LINE (4, 124)-(0, 124), 139
+LINE (0, 124)-(0, 122), 139
+LINE (0, 122)-(4, 124), 139
+LINE (44, 130)-(48, 134), 139
+LINE (48, 134)-(46, 136), 139
+LINE (46, 136)-(44, 130), 139
+LINE (144, 4)-(136, 34), 154
+LINE (136, 34)-(146, 36), 154
+LINE (146, 36)-(156, 4), 154
+LINE (142, 36)-(138, 50), 154
+LINE (138, 50)-(134, 48), 154
+LINE (134, 48)-(138, 36), 154
+LINE (136, 50)-(132, 58), 154
+LINE (132, 58)-(128, 62), 98
+LINE (128, 62)-(134, 60), 98
+LINE (134, 60)-(138, 64), 98
+LINE (138, 64)-(136, 60), 98
+LINE (136, 60)-(142, 64), 98
+LINE (142, 64)-(132, 58), 98
+SLEEP
+CLS
+PRINT "AAAAAAAAAAAH!!!! El rayo me encogio! "
+LINE (126, 86)-(126, 86), 98
+LINE (188, 0)-(156, 132), 98
+LINE (156, 132)-(170, 128), 98
+LINE (170, 128)-(156, 138), 98
+LINE (156, 138)-(170, 144), 98
+LINE (170, 144)-(148, 140), 98
+LINE (148, 140)-(116, 144), 98
+LINE (116, 144)-(140, 134), 98
+LINE (140, 134)-(116, 120), 98
+LINE (116, 120)-(154, 128), 98
+LINE (154, 128)-(168, 0), 98
+LINE (148, 132)-(146, 136), 105
+LINE (146, 136)-(150, 136), 105
+LINE (150, 136)-(148, 132), 105
+LINE (148, 132)-(152, 132), 105
+LINE (148, 132)-(144, 132), 105
+CIRCLE (148, 130), 1, 21
+SLEEP
+CLS
+
+SCREEN 7
+CLS
+COLOR 10
+LOCATE 10, 8: PRINT "STAGE GIGANTUS      LEVEL ONE"
+SLEEP
+CLS : SCREEN 9
+A$(1) = "  Ы                    ЫЫ  Ы                ЫЫ-ЫЫЫ        "
+A$(2) = "  Ы                    ЫЫ  Ы                ЫЫ-Ы-ЫЫЫ      "
+A$(3) = "  Ы                    Э Ы                ЫЫ-Ы---Ы      "
+A$(4) = "  Ы   ЫЫЫі-----іЫЫЫЫЫЫЫЫЫЫЫЫ                ЫЫ-Ы-Ы-Ы      "
+A$(5) = "  Ы      і-----і        Ы             і--і  --Ы-Ы-Ы      "
+A$(6) = "  Ы      і-----і        ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫі--іЫЫЫ-Ы-Ы-Ы      "
+A$(7) = "  Ы      і-----і                       і--і ЫЫ-Ы-ЫЫЫ      "
+A$(8) = "  Ы      і-----і                       і--і ЫЫ-Ы---Ы      "
+A$(9) = "  Ы      і-----і       ЫЫЫЫЫЫЫі----іЫЫЫЫЫЫЫЫЫЫ-Ы-Ы-Ы      "
+A$(10) = "  Ы      і-----і              і----і ЫЫ--------Ы-Ы-Ы      "
+A$(11) = "  ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ        і----і ЫЫ-ЫЫЫЫЫЫЫЫ-Ы-ЫЫ     "
+A$(12) = "  ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ    і----і ЫЫ----------Ы--     "
+A$(13) = "  ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ---ЫЫЫЫЫЫЫЫЫЫЫ     "
+A$(14) = "                                                          "
+A$(15) = "                                                          "
+move 20, 5, 6, 100, 2, 3
+SCREEN 7
+CLS
+COLOR 10
+LOCATE 10, 8: PRINT "STAGE GIGANTUS      LEVEL 1.5"
+SLEEP
+CLS : SCREEN 9
+A$(1) = "  ЫЫЫЫЫЫЫЫЫЫЫЫ               Ы               --          "
+A$(2) = "  ЫЫЫЫЫЫЫЫЫЫЫЫ               Ы              --ЫЫЫЫЫЫЫ     "
+A$(3) = "  ЫЫЫЫЫЫЫЫЫЫЫЫ        і---і Ы             --Ы            "
+A$(4) = "  Ы          ЫЫЫЫЫЫЫЫЫЫі---і Ы            --Ы             "
+A$(5) = "  Ы                    і---і    і---і     -Ы              "
+A$(6) = "  Ы і---і              і---і    і---іЫЫЫЫЫЫ               "
+A$(7) = "  Ы і---іЫЫЫЫЫЫЫЫЫ######ЫЫЫЫЫЫ  і---і                     "
+A$(8) = "  Ы і---і                    Ы  і---і                     "
+A$(9) = "  Ы і---і                    Ы  і---і                     "
+A$(10) = "  Ы і---і                   Э  і---і                    "
+A$(11) = "  ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ^^^^^ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ     "
+A$(12) = "  ЫЫЫЫЫЫЫЫЫЫЫ^^^^^^^^^^^^^^^^ЫЫЫЫЫЫ^^^^^Ы^^^^Ы^^^^^ЫЫ     "
+A$(13) = "  ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ^^^^^ЫЫЫЫЫ^^^^^^^^ЫЫЫ^^^ЫЫ^^^^^Ы^^^     "
+A$(14) = "                                                          "
+A$(15) = "                                                          "
+move 20, 4, 6, 100, 2, 3
+SCREEN 7
+CLS
+COLOR 10
+LOCATE 10, 8: PRINT "STAGE GIGANTUS     LEVEL TWO"
+SLEEP
+CLS : SCREEN 9
+A$(1) = "                   Ы                          ЫЫ       "
+A$(2) = " ЫЫЫЫЫЫЫЫЫЫЫ        Ы                                  "
+A$(3) = "                   ЫЫЫЫЫЫЫЫЫЫЫЫ                        "
+A$(4) = "                           ЫЫЫЫЫЫЫЫ                "
+A$(5) = "            ЫЫЫЫЫЫЫЫЫЫ                 ЫЫЫЫЫЫЫЫЫ       "
+A$(6) = "                                                      "
+A$(7) = "                                                        "
+A$(8) = "                                                        "
+A$(9) = "  ЫЫЫЫЫЫЫЫЫ            ЫЫЫЫЫЫЫЫЫ                        "
+A$(10) = "                                                        "
+A$(11) = "                                                 Э     "
+A$(12) = "           ЫЫЫ      ЫЫЫЫЫЫЫЫЫЫЫЫ#########Ы###ЫЫЫЫ°°ЫЫ     "
+A$(13) = "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ЫЫЫ      "
+A$(14) = "                                                          "
+A$(15) = "                                                          "
+move 11, 2, 6, 100, 0, 3
+CLS
+PRINT "AAAYYY!, ME VOLVI A AGRANDAR DE GOLPE!"
+LINE (40, 158)-(78, 124), 14
+LINE (78, 124)-(90, 106), 14
+LINE (90, 106)-(86, 92), 14
+LINE (86, 92)-(74, 78), 14
+LINE (74, 78)-(60, 70), 14
+LINE (58, 68)-(60, 70), 14
+LINE (60, 70)-(62, 70), 14
+LINE (58, 68)-(70, 60), 14
+LINE (70, 60)-(84, 50), 14
+LINE (84, 50)-(90, 42), 14
+LINE (90, 42)-(90, 44), 14
+LINE (90, 44)-(92, 30), 14
+LINE (92, 30)-(88, 20), 14
+LINE (88, 20)-(80, 16), 14
+LINE (80, 16)-(72, 14), 14
+LINE (72, 14)-(82, 12), 14
+LINE (82, 12)-(88, 6), 14
+LINE (90, 6)-(94, 0), 14
+LINE (94, 0)-(94, -4), 14
+LINE (88, 6)-(90, 6), 14
+LINE (188, -2)-(196, 4), 14
+LINE (196, 4)-(206, 8), 14
+LINE (206, 8)-(212, 10), 14
+LINE (212, 10)-(202, 14), 14
+LINE (202, 14)-(198, 20), 14
+LINE (198, 20)-(198, 28), 14
+LINE (198, 28)-(202, 36), 14
+LINE (202, 36)-(212, 42), 14
+LINE (212, 42)-(232, 48), 14
+LINE (232, 48)-(242, 52), 14
+LINE (242, 52)-(234, 58), 14
+LINE (234, 58)-(220, 74), 14
+LINE (220, 74)-(214, 84), 14
+LINE (214, 84)-(218, 98), 14
+LINE (218, 98)-(226, 106), 14
+LINE (226, 106)-(260, 148), 14
+LINE (260, 148)-(268, 160), 14
+LINE (182, -2)-(188, 120), 33
+LINE (188, 120)-(146, 122), 33
+LINE (146, 122)-(150, -4), 33
+LINE (136, -4)-(120, 116), 33
+LINE (120, 116)-(146, 116), 33
+LINE (146, 122)-(156, 160), 41
+LINE (156, 160)-(162, 166), 41
+LINE (162, 166)-(168, 168), 41
+LINE (168, 168)-(188, 168), 41
+LINE (188, 168)-(194, 164), 41
+LINE (194, 164)-(202, 156), 41
+LINE (202, 156)-(206, 148), 41
+LINE (206, 148)-(188, 122), 41
+LINE (198, 144)-(192, 152), 41
+LINE (192, 152)-(184, 156), 41
+LINE (184, 156)-(168, 156), 41
+LINE (168, 156)-(162, 152), 41
+LINE (170, 142)-(176, 140), 41
+LINE (176, 140)-(182, 140), 41
+LINE (182, 140)-(188, 142), 41
+LINE (188, 134)-(182, 132), 41
+LINE (182, 132)-(170, 132), 41
+LINE (170, 132)-(166, 134), 41
+LINE (146, 116)-(142, 132), 41
+LINE (142, 132)-(134, 136), 41
+LINE (134, 136)-(94, 136), 41
+LINE (92, 136)-(96, 136), 41
+LINE (92, 136)-(88, 132), 41
+LINE (88, 132)-(88, 126), 41
+LINE (88, 126)-(120, 116), 41
+LINE (108, 120)-(112, 124), 41
+LINE (112, 124)-(114, 128), 41
+LINE (100, 122)-(104, 126), 41
+LINE (104, 126)-(106, 130), 41
+SLEEP
+CLS
+PRINT "UUY!, mira que tenemos aqui!"
+LINE (104, 64)-(126, 106), 9
+LINE (126, 106)-(124, 64), 11
+LINE (124, 64)-(128, 62), 11
+LINE (128, 62)-(140, 62), 3
+LINE (140, 62)-(142, 64), 3
+LINE (142, 64)-(140, 106), 3
+LINE (140, 106)-(138, 108), 3
+LINE (136, 108)-(138, 108), 3
+LINE (138, 108)-(128, 108), 3
+LINE (128, 108)-(126, 106), 3
+LINE (140, 108)-(164, 66), 1
+LINE (164, 66)-(142, 64), 1
+LINE (124, 64)-(104, 64), 9
+LINE (118, 56)-(104, 84), 15
+LINE (118, 70)-(104, 64), 15
+SLEEP
+CLS
+PRINT "ORDER THE FOUR EPISODES!"
+PRINT "CALL TOLL FREE:"
+PRINT " 0-800-SJET-2"
+PRINT "ONE ANY EPISODE................15$"
+PRINT "FOUR EPISODES..................40$"
+SLEEP
+RUN "MENU.000"
+
+SUB FONDO (nf!)
+IF nf! = 1 THEN
+LINE (278, -4)-(278, 50), 8
+LINE (278, 50)-(226, 70), 7
+LINE (226, 70)-(222, 74), 7
+LINE (222, 74)-(278, 74), 7
+LINE (278, 74)-(336, 74), 15
+LINE (336, 74)-(332, 70), 15
+LINE (332, 70)-(280, 50), 15
+LINE (278, 50)-(294, 66), 15
+LINE (294, 66)-(298, 74), 15
+LINE (222, 74)-(0, 128), 14
+LINE (336, 74)-(644, 130), 14
+LINE (594, 112)-(594, 44), 6
+LINE (594, 24)-(594, 10), 6
+LINE (548, 10)-(548, 70), 6
+LINE (502, 100)-(502, 34), 6
+LINE (458, 8)-(458, 88), 6
+LINE (404, 84)-(404, 60), 6
+LINE (404, 36)-(404, 22), 6
+LINE (346, 22)-(346, 54), 6
+LINE (252, 46)-(252, 8), 6
+LINE (190, 8)-(190, 22), 6
+LINE (190, 50)-(190, 76), 6
+LINE (142, 88)-(142, 24), 6
+LINE (88, 4)-(88, 72), 6
+LINE (36, 98)-(36, 44), 6
+ELSEIF nf! = 2 THEN
+LINE (66, 70)-(66, 52), 15
+LINE (66, 52)-(72, 52), 15
+LINE (72, 52)-(72, 70), 15
+LINE (84, 70)-(84, 58), 15
+LINE (84, 58)-(90, 58), 15
+LINE (90, 58)-(90, 70), 15
+LINE (102, 70)-(102, 50), 15
+LINE (102, 50)-(108, 50), 15
+LINE (108, 50)-(108, 70), 15
+LINE (108, 70)-(102, 70), 14
+LINE (102, 70)-(104, 72), 14
+LINE (104, 72)-(104, 78), 14
+LINE (104, 78)-(102, 80), 14
+LINE (102, 80)-(92, 80), 14
+LINE (92, 80)-(90, 78), 14
+LINE (90, 78)-(90, 72), 14
+LINE (90, 72)-(92, 70), 14
+LINE (92, 70)-(82, 70), 14
+LINE (82, 70)-(84, 72), 14
+LINE (84, 72)-(84, 78), 14
+LINE (84, 78)-(82, 80), 14
+LINE (82, 80)-(74, 80), 14
+LINE (74, 80)-(72, 78), 14
+LINE (72, 78)-(72, 72), 14
+LINE (72, 72)-(74, 70), 14
+LINE (74, 70)-(64, 70), 14
+LINE (64, 70)-(66, 72), 14
+LINE (66, 72)-(66, 80), 14
+LINE (66, 80)-(70, 84), 14
+LINE (70, 84)-(82, 84), 14
+LINE (82, 84)-(84, 86), 14
+LINE (84, 86)-(84, 98), 14
+LINE (84, 98)-(76, 98), 14
+LINE (76, 98)-(76, 100), 14
+LINE (76, 100)-(100, 100), 14
+LINE (100, 100)-(100, 98), 14
+LINE (100, 98)-(90, 98), 14
+LINE (90, 98)-(90, 86), 14
+LINE (90, 86)-(92, 84), 14
+LINE (92, 84)-(104, 84), 14
+LINE (104, 84)-(108, 80), 14
+LINE (108, 80)-(108, 72), 14
+LINE (108, 72)-(110, 70), 14
+LINE (110, 70)-(108, 70), 14
+LINE (106, 50)-(108, 44), 12
+LINE (108, 44)-(106, 40), 4
+LINE (106, 40)-(104, 44), 4
+LINE (104, 44)-(106, 50), 4
+LINE (88, 58)-(90, 52), 4
+LINE (90, 52)-(86, 48), 4
+LINE (86, 48)-(86, 54), 4
+LINE (86, 54)-(88, 58), 4
+LINE (70, 52)-(72, 46), 4
+LINE (72, 46)-(68, 42), 4
+LINE (68, 42)-(66, 48), 4
+LINE (66, 48)-(70, 52), 4
+LINE (60, 100)-(114, 100), 6
+LINE (114, 100)-(114, 104), 6
+LINE (114, 104)-(60, 104), 6
+LINE (60, 104)-(60, 100), 6
+LINE (70, 104)-(58, 114), 6
+LINE (68, 114)-(78, 104), 6
+LINE (104, 104)-(94, 114), 6
+LINE (98, 114)-(108, 104), 6
+LINE (206, 88)-(308, 88), 6
+LINE (308, 88)-(308, 82), 6
+LINE (308, 82)-(206, 82), 6
+LINE (206, 82)-(206, 88), 6
+LINE (218, 82)-(218, 22), 1
+LINE (218, 22)-(222, 10), 1
+LINE (222, 10)-(228, 4), 1
+LINE (228, 4)-(238, 0), 1
+LINE (238, 0)-(284, 0), 1
+LINE (284, 0)-(294, 2), 1
+LINE (294, 2)-(294, 4), 1
+LINE (294, 2)-(300, 8), 1
+LINE (300, 8)-(304, 22), 1
+LINE (304, 22)-(304, 82), 1
+LINE (288, 82)-(288, 22), 9
+LINE (288, 22)-(284, 10), 9
+LINE (284, 10)-(276, 6), 9
+LINE (276, 6)-(234, 6), 9
+LINE (234, 6)-(228, 8), 9
+LINE (228, 8)-(224, 10), 9
+CIRCLE (234, 18), 1, 15
+CIRCLE (254, 30), 1, 15
+CIRCLE (268, 20), 1, 15
+CIRCLE (268, 60), 1, 15
+CIRCLE (238, 54), 1, 15
+CIRCLE (254, 74), 1, 15
+LINE (394, 72)-(472, 72), 8
+LINE (432, 72)-(432, 54), 8
+LINE (360, 54)-(458, 54), 8
+LINE (404, 54)-(404, 72), 8
+LINE (382, 36)-(450, 36), 8
+LINE (438, 36)-(438, 54), 8
+LINE (412, 54)-(412, 36), 8
+LINE (386, 36)-(386, 54), 8
+LINE (158, 28)-(128, 28), 8
+LINE (128, 28)-(70, 28), 7
+LINE (82, 30)-(82, 46), 7
+LINE (78, 46)-(104, 46), 7
+LINE (110, 46)-(128, 46), 7
+LINE (128, 46)-(160, 46), 8
+LINE (136, 46)-(136, 28), 8
+LINE (142, 64)-(128, 64), 8
+LINE (128, 64)-(112, 64), 7
+LINE (122, 64)-(122, 46), 7
+ELSEIF nf! = 3 THEN
+LINE (100, 114)-(106, 56), 10
+LINE (106, 56)-(104, 34), 2
+LINE (100, 34)-(108, 34), 14
+LINE (108, 34)-(116, 32), 14
+LINE (116, 32)-(118, 30), 14
+LINE (118, 30)-(114, 28), 14
+LINE (114, 28)-(106, 26), 14
+LINE (106, 26)-(98, 26), 14
+LINE (98, 26)-(92, 28), 14
+LINE (92, 28)-(90, 30), 14
+LINE (90, 30)-(94, 32), 14
+LINE (94, 32)-(100, 34), 14
+LINE (102, 36)-(86, 44), 15
+LINE (86, 44)-(68, 48), 15
+LINE (68, 48)-(46, 48), 15
+LINE (46, 48)-(40, 46), 15
+LINE (40, 46)-(36, 42), 15
+LINE (36, 42)-(34, 32), 15
+LINE (34, 32)-(38, 26), 15
+LINE (38, 26)-(54, 24), 15
+LINE (54, 24)-(92, 26), 15
+LINE (92, 26)-(68, 12), 15
+LINE (68, 12)-(66, 6), 15
+LINE (66, 6)-(72, 0), 15
+LINE (72, 0)-(80, 0), 15
+LINE (80, 0)-(94, 4), 15
+LINE (94, 4)-(100, 8), 15
+LINE (100, 8)-(104, 24), 15
+LINE (104, 24)-(128, 10), 15
+LINE (128, 10)-(138, 6), 15
+LINE (138, 6)-(146, 4), 15
+LINE (146, 4)-(154, 6), 15
+LINE (154, 8)-(154, 6), 15
+LINE (154, 6)-(160, 12), 15
+LINE (160, 12)-(160, 18), 15
+LINE (160, 18)-(156, 22), 15
+LINE (156, 22)-(120, 30), 15
+LINE (120, 30)-(172, 34), 15
+LINE (172, 34)-(176, 38), 15
+LINE (176, 38)-(178, 46), 15
+LINE (178, 46)-(174, 54), 15
+LINE (174, 54)-(168, 58), 15
+LINE (168, 58)-(162, 60), 15
+LINE (162, 60)-(146, 60), 15
+LINE (146, 60)-(126, 54), 15
+LINE (126, 54)-(106, 36), 15
+LINE (102, 114)-(108, 102), 10
+LINE (108, 102)-(114, 98), 10
+LINE (114, 98)-(110, 104), 10
+LINE (110, 104)-(106, 114), 10
+LINE (98, 114)-(86, 104), 10
+LINE (86, 104)-(80, 100), 10
+LINE (80, 100)-(84, 106), 10
+LINE (84, 106)-(92, 116), 10
+LINE (210, 114)-(210, -10), 11
+LINE (522, 114)-(522, -4), 11
+LINE (394, 114)-(394, -8), 6
+LINE (260, -2)-(260, 112), 6
+LINE (210, 114)-(522, 114), 9
+LINE (522, 114)-(528, 102), 2
+LINE (528, 114)-(532, 96), 2
+LINE (532, 114)-(538, 94), 2
+LINE (536, 114)-(530, 94), 2
+LINE (540, 114)-(542, 96), 2
+LINE (544, 114)-(532, 92), 2
+LINE (548, 114)-(554, 92), 2
+LINE (552, 114)-(552, 114), 2
+LINE (552, 114)-(546, 96), 2
+LINE (208, 114)-(202, 104), 2
+LINE (204, 114)-(206, 96), 2
+LINE (200, 112)-(200, 114), 2
+LINE (200, 114)-(196, 100), 2
+LINE (196, 114)-(198, 102), 2
+LINE (192, 114)-(184, 96), 2
+LINE (188, 114)-(190, 98), 2
+END IF
+END SUB
+
+SUB gameover
+ 
+SCREEN 13
+COLOR 4
+LOCATE 10, 15: PRINT "GAME OVER        "
+PLAY "o0l10b2agfe5p10bb5agfg5e2o4"
+SLEEP
+RUN "MENU.000"
+
+END SUB
+
+SUB move (y, x, c, t, cop, nf)
+A = 1
+e = 1
+vd = 1
+tm = 1
+b$(1) = A$(1)
+b$(2) = A$(2)
+b$(3) = A$(3)
+b$(4) = A$(4)
+b$(5) = A$(5)
+b$(6) = A$(6)
+b$(7) = A$(7)
+b$(8) = A$(8)
+b$(9) = A$(9)
+b$(10) = A$(10)
+b$(11) = A$(11)
+b$(12) = A$(12)
+b$(13) = A$(13)
+bal2 = bal
+tt = t
+FONDO nf
+bal = 3
+yyy1 = y
+xxx1 = x
+ene = 5
+IF y = 0 THEN y = yyy
+jkl = 0
+0 FOR i = 1 TO quantum
+IF SCREEN(y + 1, x) = ASC("^") THEN GOSUB lost
+c$ = INKEY$
+COLOR 9
+LOCATE 1, 1
+PRINT "TIME: "; t
+COLOR JUGD
+IF ene > 0 THEN LOCATE 1, 30: PRINT STRING$(ene, "Ы"); " "
+COLOR 2
+LOCATE 1, 47: PRINT "SHOTS: "; bal
+COLOR 4
+IF v > 0 THEN LOCATE 1, 65: PRINT "LIFE:"; STRING$(v, ""); " "
+
+
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 11, 1: PRINT A$(1)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 12, 1: PRINT A$(2)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 13, 1: PRINT A$(3)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 14, 1: PRINT A$(4)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 15, 1: PRINT A$(5)
+
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 16, 1: PRINT A$(6)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 17, 1: PRINT A$(7)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 18, 1: PRINT A$(8)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 19, 1: PRINT A$(9)
+
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 20, 1: PRINT A$(10)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 21, 1: PRINT A$(11)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 22, 1: PRINT A$(12)
+COLOR JUGD: LOCATE y, x: PRINT player$
+COLOR c: LOCATE 23, 1: PRINT A$(13)
+
+COLOR JUGD
+LOCATE y, x: PRINT player$
+COLOR c
+IF SCREEN(y + 1, x) = ASC("°") THEN GOSUB Ascensor
+IF SCREEN(y + 1, x) <> ASC("#") THEN jpuente = 0: puentecae = 0
+IF SCREEN(y + 1, x) = ASC("#") THEN puentecae = 1
+IF SCREEN(y + 1, x) <> ASC("Я") AND SCREEN(y + 1, x) <> ASC("Ы") AND SCREEN(y + 1, x) <> ASC("і") AND SCREEN(y + 1, x) <> ASC("-") AND SCREEN(y + 1, x) <> ASC("#") THEN GOTO cae
+IF SCREEN(y, x + 1) = ASC("") THEN GOSUB Enemigoa: LOCATE y, x + 1: PRINT " "
+IF SCREEN(y, x - 1) = ASC("") THEN GOSUB Enemigob: LOCATE y, x + 1: PRINT " "
+IF c$ = CHR$(0) + "M" AND SCREEN(y, x + 1) <> ASC("Ы") THEN LOCATE y, x: PRINT " ": x = x + 1: h = 1
+IF c$ = CHR$(0) + "K" AND SCREEN(y, x - 1) <> ASC("Ы") THEN LOCATE y, x: PRINT " ": x = x - 1: h = 0
+IF c$ = CHR$(0) + "H" AND SCREEN(y - 1, x) = ASC("-") THEN LOCATE y, x: PRINT " ": y = y - 1
+IF c$ = CHR$(0) + "P" AND SCREEN(y + 1, x) = ASC("-") THEN LOCATE y, x: PRINT " ": y = y + 1
+IF SCREEN(y, x) = ASC("") THEN jkl = jkl + 1: PLAY "o4l64cdefgabagfedc": MID$(A$(y - 10), x, 1) = " ": MID$(b$(y - 10), x, 1) = " "
+COLOR 10
+IF c$ = CHR$(13) AND h = 1 AND bal > 1 THEN LOCATE y, x + 1: PRINT ">": FOR i = 1 TO 3000: NEXT i: LOCATE y, x + 1: PRINT " ": bal = bal - A
+IF c$ = CHR$(13) AND h = 0 AND bal > 1 THEN LOCATE y, x - 1: PRINT "<": FOR i = 1 TO 3000: NEXT i: LOCATE y, x - 1: PRINT " ": bal = bal - A
+IF MID$(A$(y - 10), x, 1) = "" THEN jkl = jkl + 1: PLAY "o4l64cdefgabagfedc": MID$(A$(y - 10), x, 1) = " "
+IF c$ = " " AND h = 1 AND x < 70 AND SCREEN(y, x + 1) <> 219 AND SCREEN(y, x + 2) <> 219 AND SCREEN(y, x + 3) <> 219 THEN GOSUB salta1: GOTO 0
+IF c$ = " " AND h = 0 AND x > 9 THEN GOSUB salta2: GOTO 0
+IF UCASE$(c$) = "Q" THEN SYSTEM
+IF UCASE$(c$) = "L" THEN GOSUB pelot
+IF truc = 0 AND (c$ = "J" OR c$ = "j") THEN truc = 1
+IF truc = 1 AND (c$ = "E" OR c$ = "e") THEN truc = 2
+IF truc = 2 AND (c$ = "T" OR c$ = "t") THEN truc = 3
+IF UCASE$(c$) = "M" THEN jkl = cop
+IF truc = 3 AND (c$ = "@" OR c$ = "2") THEN truc = 0: PLAY "l10ccecef5p10o0c5o4"
+IF sec = 0 AND UCASE$(c$) = "S" THEN sec = 1
+IF sec = 1 AND UCASE$(c$) = "E" THEN sec = 2
+IF sec = 2 AND UCASE$(c$) = "C" THEN sec = 0: GOTO persecs
+IF sup = 0 AND UCASE$(c$) = "S" THEN sup = 1
+IF sup = 1 AND UCASE$(c$) = "U" THEN sup = 2
+IF sup = 2 AND UCASE$(c$) = "P" THEN sup = 0: GOTO Super
+IF UCASE$(c$) = "A" THEN A = 0
+IF UCASE$(c$) = "E" THEN ENRG = 1
+IF ENRG = 1 AND UCASE$(c$) = "N" THEN e = 0
+IF UCASE$(c$) = "V" THEN vd = 0
+IF UCASE$(c$) = "T" THEN TME1 = 1
+IF TME1 = 1 AND UCASE$(c$) = "T" THEN tm = 0
+
+IF c$ = "x" OR c$ = "X" THEN GOTO FIN
+IF c$ = "p" OR c$ = "P" THEN COLOR 11: LOCATE 2, 1: PRINT "JUEGO PAUSADO": SLEEP : LOCATE 2, 1: PRINT "             ": FONDO nf
+IF SCREEN(y, x) = ASC("м") THEN bal = bal + 3: MID$(A$(y - 10), x, 1) = " ": PLAY "l64cdfgg"
+IF SCREEN(y, x) = ASC("и") THEN t = t + 10: MID$(A$(y - 10), x, 1) = " ": PLAY "l64bacdfe"
+IF SCREEN(y, x) = ASC("") AND v < 5 THEN v = v + 1: MID$(A$(y - 10), x, 1) = " ":  MID$(b$(y - 10), x, 1) = " ": PLAY "mnl64c.c.a.a.d.d.g.g.e.e.f.f.b.b"
+IF SCREEN(y, x) = ASC("") AND v >= 5 THEN MID$(A$(y - 10), x, 1) = " ":  MID$(b$(y - 10), x, 1) = " ": PLAY "mnl64c.c.a.a.d.d.g.g.e.e.f.f.b.b"
+IF SCREEN(y, x) = ASC("ю") THEN ene = 5: MID$(A$(y - 10), x, 1) = " ": MID$(b$(y - 10), x, 1) = " ": PLAY "mll64cdefgabagmn"
+IF SCREEN(y, x) = ASC("") AND jkl < cop THEN LOCATE y, x: PRINT "": x = x + 1
+IF SCREEN(y, x) = ASC("") AND jkl < cop THEN LOCATE y, x: PRINT "": x = x - 1
+IF SCREEN(y, x) = ASC("") AND jkl >= cop THEN GOTO FIN
+IF SCREEN(y, x) = ASC("") AND jkl >= cop THEN GOTO FIN
+IF SCREEN(y, x) = ASC("") THEN PLAY "o4l64bo5co3do6go1eo0fo4ao4go5fo6do4eo0bo1": llave = 1: MID$(A$(y - 10), x, 1) = " "
+IF SCREEN(y, x) = ASC("Э") AND llave <> 1 THEN LOCATE y, x: PRINT "Э": x = x - 1: PLAY "o0l20cc10o4"
+IF SCREEN(y, x) = ASC("Ю") AND llave <> 1 THEN LOCATE y, x: PRINT "Ю": x = x + 1: PLAY "o0l20cc10o4"
+IF SCREEN(y, x) = ASC("Э") AND llave = 1 THEN MID$(A$(y - 10), x, 1) = " ": PLAY "o0l20ccddeeo2bbbbo4"
+IF SCREEN(y, x) = ASC("Ю") AND llave = 1 THEN MID$(A$(y - 10), x, 1) = " ": PLAY "o0l20ccddeeo2bbbbo4"
+
+
+
+IF SCREEN(y - 1, x) = ASC("") THEN dist = 1: GOSUB Pinche
+IF SCREEN(y - 2, x) = ASC("") THEN dist = 2: GOSUB Pinche
+IF SCREEN(y - 3, x) = ASC("") THEN dist = 3: GOSUB Pinche
+IF SCREEN(y - 4, x) = ASC("") THEN dist = 4: GOSUB Pinche
+IF SCREEN(y - 5, x) = ASC("") THEN dist = 5: GOSUB Pinche
+IF SCREEN(y - 6, x) = ASC("") THEN dist = 6: GOSUB Pinche
+IF SCREEN(y - 7, x) = ASC("") THEN dist = 7: GOSUB Pinche
+IF SCREEN(y - 8, x) = ASC("") THEN dist = 8: GOSUB Pinche
+NEXT i
+t = t - tm
+IF t = 0 THEN GOSUB lost
+IF puentecae = 1 THEN jpuente = jpuente + 1
+IF jpuente = 3 THEN puentecae = 0: jpuente = 0: GOTO cae
+GOTO 0
+salta1: COLOR JUGD
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+y = y - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+
+x = x + 1
+y = y - 1
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+y = y - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+y = y + 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+y = y + 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x + 1) = ASC("Ы") OR SCREEN(y, x + 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x + 1
+y = y + 1
+FONDO nf
+RETURN
+salta2: COLOR JUGD
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+y = y - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+
+x = x - 1
+y = y - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+y = y - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+y = y + 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+y = y + 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("Ы") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y + 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("Я") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("Ы") THEN GOSUB cae2
+IF SCREEN(y - 1, x) = ASC("-") THEN RETURN
+IF SCREEN(y - 1, x) = ASC("і") THEN RETURN
+IF SCREEN(y, x - 1) = ASC("Ы") OR SCREEN(y, x - 1) = ASC("Я") THEN GOSUB cae2
+LOCATE y, x: PRINT player$
+FOR i = 1 TO 1000
+NEXT i
+LOCATE y, x: PRINT " ": FONDO nf
+x = x - 1
+y = y + 1
+FONDO nf
+RETURN
+
+
+
+
+cae: COLOR JUGD
+kl = 0
+FOR y = y + 1 TO 23
+LOCATE y, x: PRINT player$
+LOCATE y - 1, x: PRINT " "
+
+c$ = INKEY$
+IF c$ = CHR$(0) + "M" THEN LOCATE y, x: PRINT " ": x = x + 1
+IF c$ = CHR$(0) + "K" THEN LOCATE y, x: PRINT " ": x = x - 1
+IF SCREEN(y + 1, x) = ASC("Я") AND kl < 5 THEN GOTO 0
+IF SCREEN(y + 1, x) = ASC("Ы") AND kl < 5 THEN GOTO 0
+IF SCREEN(y + 1, x) = ASC("°") AND kl < 5 THEN GOTO 0
+IF SCREEN(y + 1, x) = ASC("-") AND kl < 5 THEN GOTO 0
+IF SCREEN(y + 1, x) = ASC("і") AND kl < 5 THEN GOTO 0
+IF SCREEN(y + 1, x) = ASC("^") THEN GOSUB lost
+kl = kl + 1
+FOR i = 1 TO 1000
+NEXT i
+NEXT y
+CLS
+GOSUB lost
+
+cae2: COLOR JUGD
+
+FOR y = y + 1 TO 23
+LOCATE y, x: PRINT player$
+LOCATE y - 1, x: PRINT " "
+
+c$ = INKEY$
+IF c$ = CHR$(0) + "M" THEN LOCATE y, x: PRINT " ": x = x + 1
+IF c$ = CHR$(0) + "K" THEN LOCATE y, x: PRINT " ": x = x - 1
+IF SCREEN(y + 1, x) = ASC("Я") THEN
+  ene = ene - e
+  IF ene = 0 THEN
+    GOSUB lost
+  ELSE
+    GOTO 0
+  END IF
+END IF
+IF SCREEN(y + 1, x) = ASC("Ы") THEN
+  ene = ene - e
+  IF ene = 0 THEN
+    GOSUB lost
+  ELSE
+    GOTO 0
+  END IF
+END IF
+IF SCREEN(y + 1, x) = ASC("°") THEN
+  ene = ene - e
+  IF ene = 0 THEN
+    GOSUB lost
+  ELSE
+    GOTO 0
+  END IF
+END IF
+IF SCREEN(y + 1, x) = ASC("-") THEN GOTO 0
+IF SCREEN(y + 1, x) = ASC("і") THEN GOTO 0
+IF SCREEN(y + 1, x) = ASC("^") THEN GOSUB lost
+
+FOR i = 1 TO 1000
+NEXT i
+NEXT y
+CLS
+GOSUB lost
+
+
+Enemigoa:
+disp = 0
+2223 FOR i = 1 TO 5000
+c$ = INKEY$
+IF c$ = CHR$(13) AND bal > 0 THEN disp = disp + 1: PLAY "mbo0l64cbdecfdgeo4"
+IF disp = 3 THEN xd = x * 8: yd = y * 14: GOSUB Explo: MID$(A$(y - 10), x + 1, 1) = " ": bal = bal - (A * 3): GOTO 0
+NEXT i
+ene = ene - e / 10
+COLOR 4
+IF ene = 0 THEN GOSUB lost
+IF v = 0 THEN GOTO Muere
+COLOR JUGD
+LOCATE 1, 30: PRINT STRING$(ene, "Ы"); " "
+GOTO 2223
+Explo:
+FOR l = 1 TO 10
+FOR i = 1 TO 20
+CIRCLE (xd, yd), i, 4
+NEXT i
+FOR i = 1 TO 20
+CIRCLE (xd, yd), i, 14
+NEXT i
+FOR i = 1 TO 20
+CIRCLE (xd, yd), i, 0
+NEXT i
+NEXT l
+7 RETURN
+
+Enemigob:
+disp = 0
+2222 FOR i = 1 TO 5000
+c$ = INKEY$
+IF c$ = CHR$(13) AND bal > 0 THEN disp = disp + 1: PLAY "mbo0l64cbdecfdgeo4"
+IF disp = 3 THEN xd = x * 8: yd = y * 14: GOSUB Explo: MID$(A$(y - 10), x - 1, 1) = " ": bal = bal - 3: GOTO 0
+NEXT i
+ene = ene - e / 10
+COLOR 4
+IF ene = 0 THEN GOSUB lost
+IF v = 0 THEN GOTO Muere
+COLOR JUGD
+LOCATE 1, 30: PRINT STRING$(ene, "Ы"); " "
+GOTO 2222
+Muere:
+xd = x * 8: yd = y * 14
+GOSUB Explo
+gameover
+Pinche:
+FOR i = y - dist TO y
+COLOR c
+LOCATE i - 1, x: PRINT " "
+LOCATE i, x: PRINT ""
+COLOR JUGD
+LOCATE y, x: PRINT player$
+FOR kk = 1 TO 50
+c$ = INKEY$
+IF c$ = CHR$(0) + "M" THEN LOCATE y, x: PRINT " ": x = x + 1: h = 1: GOTO 0
+IF c$ = CHR$(0) + "K" THEN LOCATE y, x: PRINT " ": x = x - 1: h = 2: GOTO 0
+IF c$ = " " AND h = 1 AND x < 70 AND SCREEN(y, x + 1) <> 219 AND SCREEN(y, x + 2) <> 219 AND SCREEN(y, x + 3) <> 219 THEN GOSUB salta1
+IF c$ = " " AND h = 0 AND x > 9 THEN GOSUB salta2
+
+NEXT kk
+NEXT i
+MID$(A$(y - 10 - dist), x, 1) = " "
+ene = ene - e
+COLOR 4
+IF ene = 0 THEN GOSUB lost
+IF v = 0 THEN GOTO Muere
+COLOR JUGD
+LOCATE 1, 30: PRINT STRING$(ene, "Ы"); " "
+GOTO 0
+
+
+Ascensor:
+yy = y
+9002 c$ = INKEY$
+COLOR JUGD
+LOCATE y, x: PRINT player$
+IF c$ = CHR$(0) + "H" AND SCREEN(y - 1, x) <> ASC("°") AND SCREEN(y - 1, x) <> ASC("Я") AND SCREEN(y - 1, x) <> ASC("Ы") AND SCREEN(y - 1, x) <> ASC("і") AND SCREEN(y - 1, x) <> ASC("-") THEN y = y - 1: COLOR 4: LOCATE y + 2, x: PRINT "": COLOR JUGD: COLOR 9: LOCATE y + 1, x: PRINT "°": PLAY "mlo0c5mno4"
+IF c$ = CHR$(0) + "P" AND SCREEN(y + 2, x) <> ASC("°") AND SCREEN(y + 2, x) <> ASC("Я") AND SCREEN(y + 2, x) <> ASC("Ы") AND SCREEN(y + 2, x) <> ASC("і") AND SCREEN(y + 2, x) <> ASC("-") THEN COLOR 4: LOCATE y, x: PRINT "": COLOR JUGD: y = y + 1: COLOR 9: LOCATE y + 1, x: PRINT "°": PLAY "mlo0c5mno4"
+
+
+IF c$ = CHR$(0) + "M" AND SCREEN(y, x + 1) <> ASC("°") AND SCREEN(y, x + 1) <> ASC("Я") AND SCREEN(y, x + 1) <> ASC("Ы") AND SCREEN(y, x + 1) <> ASC("і") AND SCREEN(y, x + 1) <> ASC("-") THEN LOCATE y, x: PRINT " ": x = x + 1: MID$(A$(yy - 10 + 1), x - 1, 1) = "": MID$(A$(y - 10 + 1), x - 1, 1) = "°": GOTO 0
+IF c$ = CHR$(0) + "K" AND SCREEN(y, x - 1) <> ASC("°") AND SCREEN(y, x - 1) <> ASC("Я") AND SCREEN(y, x - 1) <> ASC("Ы") AND SCREEN(y, x - 1) <> ASC("і") AND SCREEN(y, x - 1) <> ASC("-") THEN LOCATE y, x: PRINT " ": x = x - 1: MID$(A$(yy - 10 + 1), x + 1, 1) = "": MID$(A$(y - 10 + 1), x + 1, 1) = "°": GOTO 0
+IF MID$(A$(y - 10), x, 1) = "" THEN jkl = jkl + 1: PLAY "o4l64cdefgabagfedc": MID$(A$(y - 10), x, 1) = "": GOTO 9002
+IF MID$(A$(y - 10), x, 1) = "" THEN PLAY "o4l64bo5co3do6go1eo0fo4ao4go5fo6do4eo0bo1": llave = 1: MID$(A$(y - 10), x, 1) = " "
+
+GOTO 9002
+lost:
+CLS
+SCREEN 13
+COLOR 4
+LOCATE 10, 15: PRINT "YOU HAVE DIED!"
+SLEEP
+v = v - vd
+IF v = 0 THEN gameover
+t = tt
+x = xxx1
+y = yyy1
+ene = 5
+bal = bal2
+A$(1) = b$(1)
+A$(2) = b$(2)
+A$(3) = b$(3)
+A$(4) = b$(4)
+A$(5) = b$(5)
+A$(6) = b$(6)
+A$(7) = b$(7)
+A$(8) = b$(8)
+A$(9) = b$(9)
+A$(10) = b$(10)
+A$(11) = b$(11)
+A$(12) = b$(12)
+A$(13) = b$(13)
+SCREEN 9
+FONDO nf
+GOTO 0
+
+
+persecs:
+CLS
+SCREEN 13
+LINE (62, 36)-(52, 26), 14
+LINE (52, 26)-(66, 32), 14
+LINE (66, 32)-(66, 20), 14
+LINE (66, 20)-(76, 30), 14
+LINE (76, 30)-(76, 18), 14
+LINE (76, 18)-(84, 30), 14
+LINE (84, 30)-(92, 20), 14
+LINE (92, 20)-(94, 30), 14
+LINE (94, 30)-(104, 26), 14
+LINE (104, 26)-(94, 40), 14
+LINE (94, 40)-(62, 36), 14
+LINE (62, 36)-(62, 66), 13
+LINE (62, 66)-(68, 72), 13
+LINE (68, 72)-(92, 72), 13
+LINE (92, 72)-(96, 66), 13
+LINE (96, 66)-(94, 40), 13
+LINE (68, 46)-(72, 46), 11
+LINE (72, 46)-(72, 48), 11
+LINE (72, 48)-(68, 48), 11
+LINE (68, 48)-(68, 46), 11
+LINE (84, 46)-(84, 46), 11
+LINE (84, 46)-(84, 48), 11
+LINE (84, 48)-(88, 48), 11
+LINE (88, 48)-(88, 46), 11
+LINE (88, 46)-(84, 46), 11
+LINE (76, 52)-(74, 58), 13
+LINE (74, 58)-(80, 58), 13
+LINE (70, 66)-(84, 66), 12
+LINE (84, 66)-(84, 64), 12
+LINE (84, 64)-(70, 64), 12
+LINE (70, 66)-(70, 66), 12
+LINE (70, 66)-(70, 66), 12
+LINE (130, 36)-(126, 22), 10
+LINE (132, 22)-(130, 36), 10
+LINE (130, 36)-(140, 22), 10
+LINE (136, 36)-(142, 24), 10
+LINE (140, 36)-(136, 24), 10
+LINE (142, 36)-(146, 26), 10
+LINE (146, 36)-(150, 26), 10
+LINE (150, 36)-(152, 26), 10
+LINE (154, 36)-(154, 36), 10
+LINE (154, 36)-(146, 26), 10
+LINE (156, 36)-(156, 26), 10
+LINE (160, 36)-(160, 26), 10
+LINE (162, 36)-(164, 28), 10
+LINE (162, 38)-(130, 38), 7
+LINE (130, 38)-(130, 64), 7
+LINE (130, 64)-(140, 80), 7
+LINE (140, 80)-(150, 80), 7
+LINE (150, 80)-(160, 64), 7
+LINE (160, 64)-(162, 38), 7
+LINE (144, 50)-(136, 54), 7
+LINE (136, 54)-(136, 56), 7
+LINE (136, 56)-(146, 54), 7
+LINE (140, 66)-(146, 64), 4
+LINE (146, 64)-(152, 66), 4
+LINE (152, 66)-(146, 70), 4
+LINE (146, 70)-(140, 66), 4
+LINE (150, 46)-(156, 46), 6
+LINE (156, 46)-(156, 48), 6
+LINE (156, 48)-(150, 48), 6
+LINE (150, 48)-(150, 46), 6
+LINE (134, 46)-(134, 46), 6
+LINE (134, 46)-(134, 48), 6
+LINE (134, 48)-(140, 48), 6
+LINE (140, 48)-(140, 46), 6
+LINE (140, 46)-(134, 46), 6
+LINE (204, 42)-(206, 70), 12
+LINE (206, 70)-(210, 74), 12
+LINE (210, 74)-(216, 76), 12
+LINE (216, 76)-(226, 76), 12
+LINE (226, 76)-(234, 72), 12
+LINE (234, 72)-(238, 54), 12
+LINE (238, 54)-(236, 38), 12
+LINE (236, 38)-(204, 42), 12
+LINE (204, 42)-(196, 32), 42
+LINE (196, 32)-(208, 34), 42
+LINE (208, 34)-(226, 30), 42
+LINE (226, 30)-(240, 30), 42
+LINE (240, 30)-(244, 42), 42
+LINE (244, 42)-(250, 66), 42
+LINE (250, 66)-(246, 74), 42
+LINE (246, 74)-(244, 64), 42
+LINE (244, 64)-(240, 74), 42
+LINE (240, 74)-(238, 62), 42
+LINE (204, 56)-(202, 70), 42
+LINE (202, 70)-(206, 70), 42
+LINE (208, 48)-(214, 48), 46
+LINE (214, 48)-(214, 50), 46
+LINE (214, 50)-(208, 50), 46
+LINE (208, 50)-(208, 48), 46
+LINE (222, 48)-(222, 48), 46
+LINE (222, 48)-(222, 50), 46
+LINE (222, 50)-(228, 50), 46
+LINE (228, 50)-(228, 48), 46
+LINE (228, 48)-(222, 48), 46
+LINE (218, 54)-(216, 60), 12
+LINE (216, 60)-(216, 62), 12
+LINE (216, 62)-(220, 62), 12
+LINE (220, 62)-(220, 60), 12
+LINE (212, 68)-(224, 68), 4
+REM Maestro
+LINE (112, 122)-(108, 114), -1
+LINE (108, 114)-(116, 120), -1
+LINE (116, 120)-(116, 112), -1
+LINE (116, 112)-(120, 120), -1
+LINE (120, 120)-(124, 112), -1
+LINE (124, 112)-(124, 120), -1
+LINE (124, 120)-(130, 112), -1
+LINE (130, 112)-(128, 120), -1
+LINE (128, 120)-(136, 112), -1
+LINE (136, 112)-(134, 120), -1
+LINE (134, 120)-(142, 112), -1
+LINE (142, 112)-(140, 120), -1
+LINE (140, 120)-(146, 112), -1
+LINE (146, 112)-(146, 120), -1
+LINE (146, 120)-(150, 112), -1
+LINE (150, 112)-(148, 124), -1
+LINE (148, 124)-(114, 124), -1
+LINE (114, 124)-(112, 122), -1
+LINE (114, 124)-(114, 152), 3
+LINE (114, 152)-(120, 160), 3
+LINE (120, 160)-(140, 160), 3
+LINE (140, 160)-(146, 152), 3
+LINE (146, 152)-(148, 124), 3
+LINE (118, 132)-(126, 130), 14
+LINE (136, 130)-(144, 132), 14
+LINE (128, 134)-(126, 144), 11
+LINE (130, 134)-(130, 138), 11
+LINE (130, 138)-(132, 138), 11
+LINE (132, 138)-(132, 142), 11
+LINE (124, 152)-(138, 152), 9
+LOCATE 2, 1
+PRINT "A.Jetteck"
+LOCATE 3, 1
+PRINT "Hermano de Jet"
+LOCATE 12, 15
+PRINT "B.Midjent"
+LOCATE 13, 15
+PRINT "Agente amigo"
+LOCATE 2, 30
+PRINT "C.Jettina"
+LOCATE 3, 25
+PRINT "Novia de Jet"
+LOCATE 23, 15
+PRINT "D.Mitrack"
+LOCATE 24, 15
+PRINT "Maestro de Jet"
+esp:
+LET A$ = INKEY$
+IF UCASE$(A$) = "A" THEN player$ = "Ч": CLS : GOTO FIN
+IF UCASE$(A$) = "B" THEN player$ = "С": CLS : GOTO FIN
+IF UCASE$(A$) = "C" THEN player$ = "Ђ": CLS : GOTO FIN
+IF UCASE$(A$) = "D" THEN player$ = "б": CLS : GOTO FIN
+GOTO esp
+Super:
+SCREEN 13
+CLS
+LINE (66, 70)-(60, 76), 12
+LINE (60, 76)-(60, 82), 12
+LINE (60, 82)-(68, 80), 12
+LINE (68, 80)-(66, 94), 12
+LINE (66, 94)-(94, 94), 12
+LINE (74, 94)-(76, 102), 12
+LINE (76, 102)-(88, 110), 12
+LINE (88, 110)-(88, 122), 12
+LINE (114, 122)-(114, 112), 12
+LINE (114, 114)-(120, 100), 12
+LINE (120, 100)-(118, 54), 12
+LINE (118, 54)-(66, 58), 12
+LINE (66, 58)-(66, 70), 12
+LINE (66, 66)-(74, 66), 11
+LINE (74, 66)-(72, 62), 11
+LINE (72, 62)-(66, 62), 11
+LINE (66, 62)-(66, 66), 11
+LINE (66, 58)-(52, 44), 6
+LINE (52, 44)-(52, 38), 6
+LINE (52, 38)-(60, 40), 6
+LINE (60, 40)-(68, 48), 6
+LINE (68, 48)-(72, 36), 6
+LINE (72, 36)-(76, 32), 6
+LINE (76, 32)-(82, 38), 6
+LINE (82, 38)-(84, 46), 6
+LINE (84, 46)-(92, 28), 6
+LINE (92, 28)-(96, 34), 6
+LINE (96, 34)-(98, 40), 6
+LINE (98, 40)-(106, 34), 6
+LINE (106, 36)-(106, 34), 6
+LINE (106, 34)-(106, 46), 6
+LINE (106, 46)-(118, 32), 6
+LINE (118, 32)-(118, 46), 6
+LINE (118, 46)-(128, 56), 6
+LINE (128, 56)-(118, 60), 6
+LINE (130, 84)-(160, 84), 2
+LINE (160, 84)-(156, 78), 2
+LINE (160, 84)-(156, 88), 2
+LINE (190, 68)-(184, 76), 4
+LINE (184, 76)-(184, 80), 4
+LINE (184, 80)-(192, 80), 4
+LINE (192, 80)-(190, 92), 4
+LINE (190, 92)-(218, 92), 4
+LINE (200, 92)-(204, 98), 4
+LINE (204, 98)-(218, 104), 4
+LINE (218, 104)-(218, 118), 4
+LINE (246, 118)-(246, 104), 4
+LINE (246, 106)-(250, 94), 4
+LINE (250, 94)-(248, 46), 4
+LINE (248, 46)-(192, 44), 4
+LINE (192, 44)-(190, 68), 4
+LINE (192, 54)-(200, 54), 14
+LINE (200, 54)-(202, 58), 14
+LINE (202, 58)-(192, 58), 14
+LINE (192, 44)-(180, 32), 9
+LINE (180, 32)-(194, 32), 9
+LINE (194, 32)-(202, 40), 9
+LINE (204, 38)-(208, 20), 9
+LINE (208, 20)-(214, 26), 9
+LINE (214, 26)-(218, 38), 9
+LINE (218, 38)-(228, 20), 9
+LINE (228, 20)-(232, 32), 9
+LINE (232, 32)-(230, 38), 9
+LINE (230, 38)-(240, 26), 9
+LINE (240, 26)-(246, 36), 9
+LINE (246, 36)-(246, 38), 9
+LINE (246, 36)-(246, 36), 9
+LINE (246, 36)-(242, 40), 9
+LINE (242, 40)-(260, 44), 9
+LINE (260, 44)-(250, 60), 9
+LINE (250, 60)-(250, 60), 9
+LOCATE 1, 1
+PRINT "Now Jet is SuperJet"
+player$ = ""
+JUGD = 4
+SLEEP
+CLS
+
+pelot:
+ FOR FILA = 11 TO 23
+  FOR COLUMNA = 1 TO 78
+     IF SCREEN(FILA, COLUMNA) = ASC("") THEN
+         A$(FILA - 10) = MID$(A$(FILA - 10), 1, COLUMNA - 1) + " " + MID$(A$(FILA - 10), COLUMNA + 1, 77 - COLUMNA)
+     END IF
+  NEXT COLUMNA
+ NEXT FILA
+RETURN
+
+
+FIN:                                         
+SCREEN 7
+CLS
+yyy = y
+END SUB
+
